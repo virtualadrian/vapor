@@ -1,0 +1,31 @@
+.wizard-card {
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  display: flex;
+  width: $wizard-card-small-width;
+
+  background-color: $light-grey;
+  border: 1px solid $medium-grey;
+
+  &-body {
+    margin-bottom: auto;
+  }
+
+  &-footer {
+    align-self: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    display: flex;
+    width: 100%;
+    padding: $modal-footer-padding;
+    margin-top: auto;
+
+    .btn {
+      width: auto;
+      margin: 0;
+    }
+  }
+}
