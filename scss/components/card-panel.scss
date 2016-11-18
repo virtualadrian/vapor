@@ -1,52 +1,50 @@
 .card-container {
-    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
 
-    .card-wrapper {
-        margin: 15px 15px 15px 15px;
+  .card-wrapper {
+    margin: 15px 15px 15px 15px;
 
-        .config-card-small {
-            width: 350px;
-        }
-
-        .config-card {
-            display: flex;
-            flex-direction: column;
-
-            height: 100%;
-            padding-top: 0;
-            padding-bottom: 0;
-
-            border: 1px solid $medium-grey;
-            background-color: $light-grey;
-
-            flex-wrap: wrap;
-            align-content: flex-start;
-
-            .card-body {
-                width: 100%;
-                margin-bottom: auto;
-                padding: 1.5em 1.5em 0 1.5em;
-            }
-
-            .card-footer {
-                display: flex;
-
-                width: 100%;
-                margin-top: auto;
-                padding: 24px 40px;
-
-                justify-content: flex-end;
-                flex-wrap: wrap;
-                align-self: flex-end;
-
-                .btn {
-                    width: auto;
-                    margin: 0;
-                }
-            }
-        }
+    .config-card-small {
+      width: 350px;
     }
+
+    .config-card {
+      align-content: flex-start;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      display: flex;
+      height: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      background-color: $light-grey;
+      border: 1px solid $medium-grey;
+
+      .card-body {
+        width: 100%;
+        padding: 1.5em 1.5em 0 1.5em;
+        margin-bottom: auto;
+      }
+
+      .card-footer {
+        align-self: flex-end;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        display: flex;
+        width: 100%;
+        padding: 24px 40px;
+        margin-top: auto;
+
+        .btn {
+          width: auto;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
