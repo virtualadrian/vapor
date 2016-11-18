@@ -1,0 +1,49 @@
+.card-container {
+  display: flex;
+
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  .config-card-small {
+    width: 350px;
+  }
+
+  .config-card {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border: 1px solid $medium-grey;
+    background-color: $light-grey;
+
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .card-body {
+      width: 100%;
+      margin-bottom: auto;
+      padding: 1.5em 1.5em 0 1.5em;
+    }
+
+    .card-footer {
+      display: flex;
+
+      width: 100%;
+      margin-top: auto;
+      padding: 24px 40px;
+
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      align-self: flex-end;
+
+      .btn {
+        width: auto;
+        margin: 0;
+      }
+    }
+  }
+}
