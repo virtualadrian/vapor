@@ -4,29 +4,43 @@
   flex-wrap: wrap;
 
   display: flex;
-  width: $wizard-card-small-width;
+  width: $wizard-card-width;
 
   background-color: $light-grey;
   border: 1px solid $medium-grey;
   border-radius: $border-radius;
 
-  &-body {
+  .wizard-card-body {
     margin-bottom: auto;
+
+    .coveo-form {
+      padding-top: $wizard-card-form-padding;
+      padding-right: $wizard-card-form-padding;
+      padding-left: $wizard-card-form-padding;
+    }
   }
 
-  &-footer {
+  .wizard-card-footer {
     align-self: flex-end;
     flex-wrap: wrap;
     justify-content: flex-end;
 
     display: flex;
     width: 100%;
-    padding: $modal-footer-padding;
+    padding: $wizard-card-form-padding;
     margin-top: auto;
 
     .btn {
       width: auto;
       margin: 0;
     }
+  }
+
+  &.mod-small {
+    width: $wizard-card-small-width;
+  }
+
+  &.mod-large {
+    width: $wizard-card-large-width;
   }
 }

@@ -28,8 +28,12 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
-  .splash-wizard-container {
-    width: $splash-two-cards-wizard-width;
+  &.mod-wizard-container {
+    width: $splash-wizard-width;
+  }
+
+  &.mod-large-wizard-container {
+    width: $splash-large-wizard-width;
   }
 }
 
