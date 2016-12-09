@@ -67,7 +67,8 @@
 
               display: flex;
               height: 30px;
-              padding: 0 (2 * $navigation-section-icon-margin + $navigation-section-icon-size - $navigation-active-border-width);
+              padding-left: 2 * $navigation-section-icon-margin + $navigation-section-icon-size - $navigation-active-border-width;
+              margin-right: 2 * $navigation-section-icon-margin + $navigation-section-icon-size - $navigation-active-border-width;
 
               color: $white;
 
