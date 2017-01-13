@@ -26,7 +26,7 @@
         flex-basis: initial;
         flex-grow: initial;
 
-        min-height: calc(#{$modal-prompt-min-height} - #{$modal-prompt-header-height} - #{$modal-prompt-footer-height}); // Use all the space left
+        min-height: $modal-prompt-body-min-height;
 
         &.mod-header-padding {
           padding-right: $modal-prompt-horizontal-padding;
