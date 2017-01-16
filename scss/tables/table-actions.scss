@@ -99,3 +99,21 @@
     padding-right: $header-padding;
   }
 }
+
+.coveo-item-filter {
+  flex-grow: 1;
+}
+
+.coveo-item-filter-item {
+  display: inline-block;
+  margin: 0 $table-item-filter-padding-x;
+
+  color: $blue;
+}
+
+.coveo-item-filter-clear {
+  padding: 0;
+
+  background: none;
+  border: none;
+}

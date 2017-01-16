@@ -6,6 +6,13 @@ stylesheet: '/scss/tables/table-actions.scss'
 ---
 
 <div class="coveo-table-actions-container mod-border-top mod-align-header">
+    <div class="coveo-table-actions coveo-item-filter">
+        <span class="coveo-item-filter-label">Filter label: </span>
+        <span class="coveo-item-filter-item">item we are filtering on</span>
+        <button class="coveo-item-filter-clear">
+            <i class="icon fill-dark-blue">{{ site.data.icons['clear'] }}</i>
+        </button>
+    </div>
     <div class="coveo-table-actions">
         <div class="actions-row">
             <span class="enabled action primary action">
