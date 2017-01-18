@@ -86,9 +86,10 @@ $base-modal-z-index: 1050;
       height: $modal-header-height;
       padding: 0 $header-padding;
 
-      color: $pure-white;
+      color: $dark-blue;
 
       background-color: $pure-white;
+      border-bottom: 1px solid $medium-grey;
       border-radius: 2px 2px 0 0;
 
       &.mod-confirmation {
