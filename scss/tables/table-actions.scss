@@ -100,18 +100,18 @@
   }
 }
 
-.coveo-item-filter {
+.item-filter {
   flex-grow: 1;
 }
 
-.coveo-item-filter-item {
+.item-filter-item {
   display: inline-block;
   margin: 0 $table-item-filter-padding-x;
 
   color: $blue;
 }
 
-.coveo-item-filter-clear {
+.item-filter-clear {
   padding: 0;
 
   background: none;
