@@ -1,5 +1,6 @@
 $base-backdrop-z-index: 1049;
 $base-modal-z-index: 1050;
+$icon-size: (4em / 3);
 
 // This generate classes layer-1, layer-2, ..., layer-10.
 @mixin generate-layers($nbr-layers, $base) {
@@ -86,7 +87,7 @@ $base-modal-z-index: 1050;
       height: $modal-header-height;
       padding: 0 $header-padding;
 
-      color: $dark-blue;
+      color: $pure-white;
 
       background-color: $pure-white;
       border-bottom: 1px solid $medium-grey;
@@ -109,20 +110,23 @@ $base-modal-z-index: 1050;
 
         overflow: hidden;
 
+        color: $medium-blue;
         line-height: 30px;
         text-overflow: ellipsis;
         white-space: nowrap;
       }
 
       .small-close {
-        margin-left: 20px;
+        position: absolute;
+        top: -($icon-size + pxtoem(10));
+        right: 0;
 
         cursor: pointer;
 
         // Make both the icon and his containing span the same size.
         &, & .icon {
-          width: (4em / 3);
-          height: (4em / 3);
+          width: $icon-size;
+          height: $icon-size;
         }
       }
     }
