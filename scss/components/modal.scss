@@ -90,8 +90,8 @@ $icon-size: (4em / 3);
       color: $pure-white;
 
       background-color: $pure-white;
-      border-bottom: 1px solid $medium-grey;
-      border-radius: 2px 2px 0 0;
+      border-bottom: $default-border;
+      border-radius: $border-radius $border-radius 0 0;
 
       &.mod-confirmation {
         background-color: $yellow;
@@ -149,8 +149,8 @@ $icon-size: (4em / 3);
       overflow: hidden;
 
       background-color: $white;
-      border-top: solid 1px $medium-grey;
-      border-radius: 0 0 2px 2px;
+      border-top: $default-border;
+      border-radius: 0 0 $border-radius $border-radius;
     }
   }
 
