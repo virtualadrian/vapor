@@ -1,3 +1,11 @@
+.date-picker-box {
+  width: 562px;
+
+  background-color: $pure-white;
+  border: $default-border;
+  border-radius: $border-radius;
+}
+
 .calendar {
   .calendar-grid {
     width: 280px;
@@ -26,13 +34,19 @@
       border-top: none;
       border-left: none;
 
-      &:first-child {
-        border-left: 1px solid $light-grey;
+      &:last-child {
+        border-right: none;
       }
     }
 
     tr:hover td {
       background: none;
+    }
+
+    tr:last-child {
+      td {
+        border-bottom: none;
+      }
     }
   }
 }
@@ -55,4 +69,129 @@
   outline: none;
 
   cursor: pointer;
+}
+
+.option-picker {
+  li {
+    width: 50%;
+
+    button {
+      display: block;
+      width: 100%;
+      padding: $dropdown-choices-top-bottom-margin;
+
+      color: $medium-blue;
+      font-size: $button-font-size;
+
+      background: none;
+      border: $default-border;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      outline: none;
+
+      cursor: pointer;
+    }
+
+    &:first-child {
+      @include button-border('top', 'left', true);
+    }
+
+    &:nth-child(2) {
+      @include button-border('top', 'right', true);
+    }
+
+    &:nth-child(-1):not(:nth-child(2n)), &:last-child:nth-child(2n+1) {
+      @include button-border('bottom', 'left');
+    }
+
+    &:last-child:not(:nth-child(2n+1)) {
+      @include button-border('bottom', 'right');
+    }
+
+    &:nth-child(2n-1) {
+      button {
+        border-left: $default-border;
+      }
+    }
+
+    &:nth-child(1n) {
+      button {
+        &:hover, &.active {
+          background-color: rgba($light-blue, 0.2);
+        }
+
+        &.active {
+          border-color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.date-picker {
+  justify-content: space-between;
+
+  input {
+    width: calc(100% - #{$button-margin-width} - #{$date-picker-dimension});
+    padding: $dropdown-choices-top-bottom-margin;
+
+    font-size: $default-font-size;
+
+    border-radius: $border-radius;
+
+    &:not(.picking-date):not(.date-picked) {
+      border: $default-border;
+    }
+
+    &.picking-date, &.date-picked {
+      border-style: solid;
+      border-width: 2px;
+    }
+
+    &.date-picked {
+      color: $pure-white;
+    }
+  }
+}
+
+.mod-inline {
+  justify-content: space-between;
+
+  .date-picker {
+    width: calc(50% - #{$button-margin-width});
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.date-button {
+  display: block;
+  width: $date-picker-dimension;
+  height: $date-picker-dimension;
+
+  background: none;
+  border: $default-border;
+  border-radius: $border-radius;
+
+  cursor: pointer;
+}
+
+.date-separator {
+  font-size: $default-font-size;
+  line-height: $date-picker-dimension;
+
+  &.mod-vertical {
+    display: block;
+
+    line-height: $default-font-size;
+    text-align: center;
+
+    span {
+      display: inline-block;
+
+      transform: rotate(90deg);
+    }
+  }
 }

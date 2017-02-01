@@ -79,6 +79,7 @@ $popover-footer-y-padding: 12px;
 $modal-header-height: 100px;
 $modal-form-width-small: 440px;
 $modal-footer-padding: 24px 40px;
+$modal-footer-small-padding: 12px 20px;
 
 // Prompt modal
 $modal-prompt-text-padding-y: 24px;
@@ -226,3 +227,6 @@ $splash-medium-height: 45vh;
 $splash-wizard-width: 1025px;
 $splash-wizard-padding-top: 145px;
 $splash-large-wizard-width: 1400px;
+
+// Calendar & Date Picker
+$date-picker-dimension: 36px;
