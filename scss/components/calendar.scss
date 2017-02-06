@@ -206,7 +206,7 @@
       @include button-border('top', 'right', true);
     }
 
-    &:nth-child(-1):not(:nth-child(2n)), &:last-child:nth-child(2n+1) {
+    &:nth-last-child(2):not(:nth-child(2n)), &:last-child:nth-child(2n+1) {
       @include button-border('bottom', 'left');
     }
 
