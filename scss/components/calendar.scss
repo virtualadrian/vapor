@@ -46,11 +46,11 @@
       color: $dark-grey;
       text-transform: uppercase;
 
-      border-bottom: 1px solid $light-grey;
+      border-bottom: $calendar-border;
     }
 
     td {
-      border: 1px solid $light-grey;
+      border: $calendar-border;
       border-top: none;
       border-left: none;
 
@@ -198,6 +198,7 @@
       cursor: pointer;
     }
 
+    // Here we change the border radius of the options in the corners (the options are shown in a 2xX grid)
     &:first-child {
       @include button-border('top', 'left', true);
     }
