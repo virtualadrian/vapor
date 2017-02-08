@@ -260,6 +260,10 @@
       color: $pure-white;
     }
   }
+
+  > span {
+    order: 1;
+  }
 }
 
 .mod-inline {
