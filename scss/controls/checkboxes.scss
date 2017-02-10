@@ -76,11 +76,6 @@ input[type=checkbox].coveo-checkbox {
     }
   }
 
-  &:checked:disabled + button {
-    background-color: $dark-grey;
-    border-color: $dark-grey;
-  }
-
   &:indeterminate + button {
     position: relative;
 
