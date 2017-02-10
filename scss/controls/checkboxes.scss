@@ -50,10 +50,6 @@ input[type=checkbox].coveo-checkbox {
     }
   }
 
-  & + button:disabled {
-    border-color: $dark-grey;
-  }
-
   &:checked + button {
     background-color: $green;
     border-color: $green;
@@ -74,6 +70,11 @@ input[type=checkbox].coveo-checkbox {
       border-width: 0 2px 2px 0;
       transform: rotate(40deg); // Rotate the L 40 degrees to turn it into a checkmark
     }
+  }
+
+  &:disabled + button {
+      background-color: $dark-grey;
+      border-color: $dark-grey;
   }
 
   &:indeterminate + button {
