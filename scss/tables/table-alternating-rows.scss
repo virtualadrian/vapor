@@ -16,6 +16,10 @@ table.mod-alternate {
       tr, tr:hover, tr.collapsible-row, tr.collapsible-row:hover {
         td, td:hover {
           background-color: $white;
+
+          .source-activity-error-container {
+            background-color: $white;
+          }
         }
       }
     }
