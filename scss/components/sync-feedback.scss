@@ -1,0 +1,38 @@
+.sync-feedback {
+  display: flex;
+  align-items: center;
+
+  &.mod-error {
+    color: $red;
+
+    .sync-feedback-icon svg {
+      fill: $red;
+    }
+  }
+
+  &.mod-success .sync-feedback-icon svg {
+    fill: $green;
+  }
+
+  .sync-feedback-icon {
+    vertical-align: middle;
+    margin-right: 3px;
+    line-height: 0;
+  }
+
+  .status-dot {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+
+    vertical-align: -2px;
+
+    border-radius: 50%;
+
+    &.syncing {
+      background-color: $dark-grey;
+
+      animation: scaleout 1.0s infinite ease-in-out;
+    }
+  }
+}
