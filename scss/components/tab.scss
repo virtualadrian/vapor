@@ -1,0 +1,73 @@
+.tab-navigation {
+  min-height: 36px;
+  padding: 0 $header-padding;
+
+  border-bottom: 1px solid $medium-grey;
+
+  $tab-bottom-border-height: 4px;
+
+  .tab {
+    position: relative;
+    bottom: -1px;
+
+    display: inline-block;
+    padding: 10px 0 5px;
+    margin-right: 30px;
+
+    color: $medium-blue;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+
+    border-bottom: $tab-bottom-border-height solid transparent;
+
+    transition: all 0.2s ease;
+
+    cursor: pointer;
+
+    &.active {
+      color: $medium-blue;
+
+      border-bottom: $tab-bottom-border-height solid $medium-blue;
+    }
+
+    &.disabled {
+      color: $medium-grey;
+
+      cursor: default;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.sub-tabs {
+    .tab {
+      font-size: 12px;
+      font-weight: 400;
+
+      border-bottom-width: 2px;
+    }
+  }
+}
+
+.tab-pane {
+  display: none;
+
+  visibility: hidden;
+
+  &.active {
+    display: block;
+
+    visibility: visible;
+
+    @extend .slideInLeft;
+  }
+
+  .loading, & > .spinner {
+    margin-top: 50px;
+  }
+}
