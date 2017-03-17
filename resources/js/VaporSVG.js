@@ -50,7 +50,7 @@
     }
 
     function isSvgStringValid(svgString) {
-        return /^(<svg(\s.+)?>)(.+)?(<\/svg>)$/i.test(svgString);
+        return /^<svg(\s.+)?>.*<\/svg>$/i.test(svgString);
     }
 
     var VaporSVG = {};
