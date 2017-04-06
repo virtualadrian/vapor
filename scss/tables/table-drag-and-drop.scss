@@ -27,7 +27,7 @@ table.drag-and-drop-table-view {
 
     text-align: center;
 
-    cursor: move;
+    cursor: move; // grab is not available for ie 11
     cursor: grab;
 
     &:active {
