@@ -7,7 +7,7 @@ table.drag-and-drop-table-view {
 
   tr th.drag-column {
     width: $table-column-draggable-width;
-    padding: 7px 10px;
+    padding: $table-column-draggable-padding;
   }
 
   tr.drag-over {
