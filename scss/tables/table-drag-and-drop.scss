@@ -1,5 +1,4 @@
 table.drag-and-drop-table-view {
-
   [draggable] {
     user-select: none;
 
@@ -23,8 +22,10 @@ table.drag-and-drop-table-view {
   }
 
   .handle {
-    text-align: center;
     padding: 9px 10px;
+
+    text-align: center;
+
     cursor: move;
     cursor: grab;
 
@@ -33,9 +34,9 @@ table.drag-and-drop-table-view {
     }
 
     .icon {
-      fill: $medium-grey;
-
       pointer-events: none;
+
+      fill: $medium-grey;
     }
   }
 }
