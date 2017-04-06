@@ -129,6 +129,10 @@ stylesheet: '/scss/tables/table.scss'
 
     var dragAndDropTableRow = $('.drag-and-drop-table-view').find('tbody tr');
 
+    dragAndDropTableRow.on('dragenter dragend dragleave dragover dragexit drop', function(e) {
+        e.preventDefault();
+    });
+
     dragAndDropTableRow.on('dragstart', function(e) {
         e = e.originalEvent || e;
 
@@ -137,27 +141,16 @@ stylesheet: '/scss/tables/table.scss'
         e.dataTransfer.setData('text', 'drag');
     });
 
-    dragAndDropTableRow.on('dragenter', function(e) {
+    dragAndDropTableRow.on('dragenter', function() {
         dragAndDropTableRow.removeClass('drag-over');
         $(this).addClass('drag-over');
-        e.preventDefault();
     });
 
-    dragAndDropTableRow.on('dragend', function(e) {
-        e.preventDefault();
-    });
-
-    dragAndDropTableRow.on('dragover', function(e) {
-        e.preventDefault();
+    dragAndDropTableRow.on('dragover', function() {
         return false;
     });
 
-    dragAndDropTableRow.on('dragleave', function(e) {
-        e.preventDefault();
-    });
-
-    dragAndDropTableRow.on('drop', function(e) {
-        e.preventDefault();
+    dragAndDropTableRow.on('drop', function() {
         $(this).removeClass('drag-over');
     });
 </script>
