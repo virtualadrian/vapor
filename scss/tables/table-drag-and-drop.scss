@@ -5,8 +5,9 @@ table.drag-and-drop-table-view {
     -webkit-user-drag: element;
   }
 
-  .drag-column {
+  tr th.drag-column {
     width: $table-column-draggable-width;
+    padding: 7px 10px;
   }
 
   tr.drag-over {
@@ -22,7 +23,7 @@ table.drag-and-drop-table-view {
   }
 
   .handle {
-    padding: 9px 10px;
+    padding: 0;
 
     text-align: center;
 
