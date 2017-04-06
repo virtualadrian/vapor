@@ -1,0 +1,41 @@
+table.drag-and-drop-table-view {
+
+  [draggable] {
+    user-select: none;
+
+    -webkit-user-drag: element;
+  }
+
+  .drag-column {
+    width: $table-column-draggable-width;
+  }
+
+  tr.drag-over {
+    background-color: $table-row-drag-over-color;
+
+    td.drag-feedback {
+      background-color: $table-row-drag-over-color;
+    }
+  }
+
+  .drag-feedback {
+    position: relative;
+  }
+
+  .handle {
+    text-align: center;
+    padding: 9px 10px;
+    cursor: move;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    .icon {
+      fill: $medium-grey;
+
+      pointer-events: none;
+    }
+  }
+}
