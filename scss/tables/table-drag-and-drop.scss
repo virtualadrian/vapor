@@ -27,7 +27,7 @@ table.drag-and-drop-table-view {
 
     text-align: center;
 
-    cursor: move; // grab is not available for ie 11
+    cursor: move; // grab is not available for ie 11 ref: https://msdn.microsoft.com/library/aa358795(v=vs.85).aspx
     cursor: grab;
 
     &:active {
