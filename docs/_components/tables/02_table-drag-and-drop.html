@@ -47,7 +47,7 @@ stylesheet: '/scss/tables/table.scss'
             </svg>
         </td>
         <td class="drag-feedback">Data 1</td>
-        <td class="drag-feedback">Data 2</td>
+        <td class="drag-feedback">Data 1</td>
         <td class="drag-feedback">
             <label class="coveo-checkbox-label">
                 <input type="checkbox" class="coveo-checkbox">
@@ -65,7 +65,7 @@ stylesheet: '/scss/tables/table.scss'
                 </g>
             </svg>
         </td>
-        <td class="drag-feedback">Data 1</td>
+        <td class="drag-feedback">Data 2</td>
         <td class="drag-feedback">Data 2</td>
         <td class="drag-feedback">
             <label class="coveo-checkbox-label">
@@ -84,8 +84,8 @@ stylesheet: '/scss/tables/table.scss'
                 </g>
             </svg>
         </td>
-        <td class="drag-feedback">Data 1</td>
-        <td class="drag-feedback">Data 2</td>
+        <td class="drag-feedback">Data 3</td>
+        <td class="drag-feedback">Data 3</td>
         <td class="drag-feedback">
             <label class="coveo-checkbox-label">
                 <input type="checkbox" class="coveo-checkbox">
@@ -103,8 +103,8 @@ stylesheet: '/scss/tables/table.scss'
                 </g>
             </svg>
         </td>
-        <td class="drag-feedback">Data 1</td>
-        <td class="drag-feedback">Data 2</td>
+        <td class="drag-feedback">Data 4</td>
+        <td class="drag-feedback">Data 4</td>
         <td class="drag-feedback">
             <label class="coveo-checkbox-label">
                 <input type="checkbox" class="coveo-checkbox">
@@ -128,10 +128,7 @@ stylesheet: '/scss/tables/table.scss'
     });
 
     var dragAndDropTableRow = $('.drag-and-drop-table-view').find('tbody tr');
-
-    dragAndDropTableRow.on('dragenter dragend dragleave dragover dragexit drop', function(e) {
-        e.preventDefault();
-    });
+    var elementDragged;
 
     dragAndDropTableRow.on('dragstart', function(e) {
         e = e.originalEvent || e;
@@ -139,6 +136,8 @@ stylesheet: '/scss/tables/table.scss'
         e.dataTransfer.effectAllowed = 'move';
         e.dataTransfer.dropEffect = 'move';
         e.dataTransfer.setData('text', 'drag');
+
+        elementDragged = e.currentTarget;
     });
 
     dragAndDropTableRow.on('dragenter', function() {
@@ -150,8 +149,21 @@ stylesheet: '/scss/tables/table.scss'
         return false;
     });
 
-    dragAndDropTableRow.on('drop', function() {
+    dragAndDropTableRow.off('drop');
+    dragAndDropTableRow.on('drop', function(e) {
         $(this).removeClass('drag-over');
+        const table = e.currentTarget.parentNode;
+        if (elementDragged.previousElementSibling === e.currentTarget) {
+            table.insertBefore(elementDragged, e.currentTarget);
+        } else {
+            const previousCurrentTarget = e.currentTarget.nextElementSibling;
+            table.insertBefore(e.currentTarget, elementDragged);
+            table.insertBefore(elementDragged, previousCurrentTarget);
+        }
+    });
+
+    dragAndDropTableRow.on('dragenter dragend dragleave dragover dragexit drop', function(e) {
+        e.preventDefault();
     });
 </script>
 
