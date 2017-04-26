@@ -3,7 +3,7 @@
   padding: $header-padding-y $header-padding;
 
   &:not(.mod-no-border-bottom) {
-    border-bottom: solid 1px $medium-grey;
+    border-bottom: $default-border;
   }
 
   .action-bar {
