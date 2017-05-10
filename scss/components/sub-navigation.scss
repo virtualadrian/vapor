@@ -2,7 +2,9 @@
   overflow: auto;
 
   background-color: $white;
-  border-right: $sub-navigation-border;
+  border-right: $sub-navigation-min-width;
+
+  min-width: 200px;
 
   @include slim-scroll($medium-grey, $dark-grey);
 
