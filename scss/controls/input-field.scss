@@ -48,7 +48,6 @@
     position: absolute;
     top: 10px;
     left: 0;
-    align-items: center;
 
     display: flex; // Used for inline-help-tooltip placement
 
@@ -58,9 +57,13 @@
     transition: $input-transition;
 
     pointer-events: none;
+    height: 100%;
+
+    box-sizing: content-box;
 
     &.active {
       top: -1 * $input-margin-top;
+      padding-bottom: $input-margin-top;
 
       color: $medium-blue;
       font-size: $form-control-label-font-size;
@@ -105,7 +108,7 @@
   }
 
   // Validation feedback
-  &.validate input, .validate input {
+  &.validate input, .validate input, &.validate textarea, .validate textarea {
     transition: 0.2s margin-bottom ease, 0.2s color ease;
 
     &.valid, &.invalid {
@@ -139,7 +142,8 @@
 
       &:after {
         position: absolute;
-        top: 30.1px; // The .1 is a fix for Chrome. Without it, Chrome makes the element bounce... Works in all other browsers.
+        top: 100%;
+        margin-top: $input-message-position;
         left: 0;
 
         display: block;
@@ -148,11 +152,11 @@
 
         transition: 0.2s all ease;
       }
-    }
 
-    &:valid, &:focus, &:disabled {
-      & + label:after {
-        top: 55px;
+      &.active {
+        &:after {
+          margin-top: $input-message-position / 2;
+        }
       }
     }
   }
