@@ -24,4 +24,12 @@
       opacity: 0;
     }
   }
+
+  .clear-file {
+    position: absolute;
+    right: 0;
+    top: $input-clear-position;
+    z-index: 2;
+    cursor: pointer;
+  }
 }
