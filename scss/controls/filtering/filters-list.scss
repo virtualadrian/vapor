@@ -1,0 +1,158 @@
+.add-filter-popup .filter-choices, .filter-badge .edit-filter-values {
+  .back {
+    display: none;
+  }
+
+  input.search {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+  }
+
+  .selected-filter {
+    box-sizing: border-box;
+    width: 100% !important;
+  }
+}
+
+.add-filter-popup, .edit-filter-popup, .filter-type-popup {
+  width: 292px;
+
+  .operator, .select-operator, .value-selector {
+    .admin-select {
+      width: 100%;
+
+      .dropdown-toggle {
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 5px;
+
+        text-align: left;
+
+        i {
+          position: absolute;
+          right: 8px;
+
+          margin-top: 5px;
+        }
+      }
+
+      .dropdown-menu {
+        width: 235px;
+      }
+    }
+  }
+}
+
+.add-filter-popup.left {
+  right: 35px;
+}
+
+.edit-filter-popup.left {
+  right: 3px;
+}
+
+.filter-type-popup {
+  width: 90px;
+}
+
+.filter-choices, .columns-picker {
+  .popup-content {
+    .section {
+      display: inline-block;
+      width: 100%;
+      padding-left: 15px;
+      margin-top: 7px;
+
+      color: $medium-blue;
+      text-transform: uppercase;
+
+      i {
+        float: left;
+        margin-top: 8px;
+        margin-right: 5px;
+        margin-left: 4px;
+      }
+    }
+
+    .list {
+      @include slim-scroll($light-grey, $medium-grey);
+    }
+  }
+}
+
+.filter-choices .popup-content {
+  max-height: 300px;
+  overflow: auto;
+
+  @include slim-scroll($light-grey, $medium-grey);
+}
+
+.filter-choices, .edit-filter-values {
+  .popup-header {
+    background-color: $white;
+    border-bottom: $default-border;
+  }
+}
+
+.filter-choices .popup-header {
+  .coveo-filter-container {
+    width: $filter-box-width-small-screen;
+
+    .filter-icon {
+      right: $icon-offset-small-screen;
+    }
+
+    input.filter-box {
+      width: $filter-box-width-small-screen;
+
+      & + span {
+        right: $icon-offset-small-screen;
+      }
+    }
+  }
+
+  .icon-filter {
+    height: 35px;
+  }
+
+  .event-type {
+    width: 224px;
+    margin-bottom: 16px;
+  }
+}
+
+.available-filters, .edit-filter-values {
+  ul {
+    margin: 0;
+  }
+
+  .filter:not(.selected-filter) {
+    box-sizing: content-box;
+    min-height: 20px;
+    padding: 6px 25px;
+    margin-right: 1px;
+    overflow-x: hidden;
+
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    background-color: $pure-white;
+
+    cursor: pointer;
+
+    .type {
+      color: #999999;
+      font-size: 10px;
+    }
+  }
+
+  li.filter:hover, li.filter.active {
+    background-color: #ececec;
+  }
+
+  label.filter {
+    cursor: default;
+  }
+}
