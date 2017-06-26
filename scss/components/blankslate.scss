@@ -17,4 +17,26 @@
 
     color: $medium-blue;
   }
+
+  &.mod-small {
+    padding: $blankslate-padding-small;
+    h1 {
+      margin-top: 0px;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+  &.mod-danger {
+    background-color: rgba($red, .1);
+    border-color: $red;
+    h1, p {
+      color: $red;
+    }
+  }
 }
