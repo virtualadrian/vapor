@@ -61,6 +61,10 @@
 
     @include arrow-down-icon($medium-blue);
   }
+
+  &.mod-search {
+    text-align: left;
+  }
 }
 
 .dropdown-toggle .value-icon, .dropdown-menu li .value-icon {
@@ -125,6 +129,7 @@
 
       &.state-selected {
         font-weight: bold;
+        color: $dark-blue;
       }
 
       &.disabled {
@@ -148,5 +153,23 @@
 
       cursor: default;
     }
+  }
+}
+
+// Dropdown Search
+
+.dropdown.mod-search {
+  .dropdown-button-search-container, .filter-container {
+    min-width: $dropdown-button-min-width;
+    width: inherit;
+
+    input.filter-box {
+      min-width: $dropdown-button-min-width;
+      width: inherit;
+    }
+  }
+
+  .dropdown-menu {
+    width: $dropdown-button-min-width;
   }
 }
