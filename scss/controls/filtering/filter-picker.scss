@@ -1,154 +1,101 @@
-.filters {
-  background-color: $white;
-}
-
-.admin-filterbox {
-  position: relative;
-  align-items: center;
-
-  display: flex;
-  padding: 20px;
-  margin-bottom: 1px;
-
-  .filter-badge {
-    box-sizing: border-box;
-    height: 34px;
-
-    font-weight: normal;
-    text-transform: initial;
-  }
-
-  .filter-badge {
-    display: inline-block;
-    margin-left: 3px;
-    overflow: visible;
-
-    color: #333333;
-    font-size: 13px;
-
-    background-color: white;
-
-    cursor: pointer;
-
-    .special-value {
-      font-style: italic;
-    }
-
-    &.predefined {
-      background-color: #f5f9fd;
-
-      .pinned-filter-icon {
-        align-items: center;
-        justify-content: center;
-
-        display: inline-flex;
-        width: 16px;
-        height: 16px;
-        margin-right: 5px;
-
-        background-color: #c5c5c5;
-        border-radius: 20px;
-      }
-
-      &.static {
-        padding-right: 5px;
-
-        cursor: default;
-      }
-    }
-
-    .edit-filter {
-      box-sizing: border-box;
-    }
-
-    .edit-filter-content {
-      font-size: 13px;
-      line-height: 16px;
-    }
-
-    .filter-operator {
-      &.mod-negative {
-        color: #ce3f00;
-      }
-      &.mod-positive {
-        color: #05c3a2;
-      }
-    }
-
-    .filter-value-join {
-      color: #67768b;
-    }
-
-    .dropdown-toggle:disabled {
-      .filter-operator, .filter-value-join {
-        color: #bcc3ca;
-      }
-    }
-  }
-
-  .filterbox-filters-container {
-    flex-grow: 2;
-
-    padding: 4px 4px 3px;
-
-    background-color: #e9e9e9;
-  }
-
+.coveo-filter-picker {
   .filters {
+    background-color: $white;
+  }
+
+  .admin-filterbox {
     position: relative;
+    align-items: center;
 
-    display: inline;
-    margin-right: 5px;
+    display: flex;
+    padding: $filterpickerbox-padding;
+    margin-bottom: $filterpickerbox-margin-bottom;
 
-    vertical-align: baseline;
-
-    &:empty {
-      margin-right: 0;
+    &.mod-small {
+      padding: $filterpickerbox-small-padding;
     }
 
-    .active-filters {
+    .filter-badge {
+      box-sizing: border-box;
+      height: 34px;
+
+      font-weight: normal;
+      text-transform: initial;
+    }
+
+    .filter-badge {
+      display: inline-block;
+      margin-left: 3px;
+      overflow: visible;
+
+      color: $dark-grey;
+      font-size: 13px;
+
+      background-color: $pure-white;
+
+      cursor: pointer;
+
+      .edit-filter {
+        box-sizing: border-box;
+      }
+
+      .edit-filter-content {
+        font-size: 13px;
+        line-height: 16px;
+      }
+
+      .filter-operator {
+        &.mod-negative {
+          color: $red;
+        }
+        &.mod-positive {
+          color: $green;
+        }
+      }
+
+      .filter-value-join {
+        color: $dark-grey;
+      }
+
+      .dropdown-toggle:disabled {
+        .filter-operator, .filter-value-join {
+          color: $medium-grey;
+        }
+      }
+    }
+
+    .filterbox-filters-container {
+      flex-grow: 2;
+
+      padding: 4px 4px 3px;
+
+      background-color: $medium-grey;
+    }
+
+    .filters {
+      position: relative;
+
       display: inline;
-    }
+      margin-right: 5px;
 
-    .editable-filters, .editable-filter {
-      display: inline;
+      vertical-align: baseline;
+
+      &:empty {
+        margin-right: 0;
+      }
+
+      .active-filters {
+        display: inline;
+      }
+
+      .editable-filters, .editable-filter {
+        display: inline-flex;
+      }
     }
   }
-}
 
-.filters .btn.dropdown-toggle, .filters .filter-badge, .filters .predefined-filter {
-  box-shadow: none;
-  outline: none;
-
-  .filter-badge-actions {
-    position: absolute;
-    right: 0;
-    bottom: 100%;
-
-    display: none;
-    width: 100%;
-    padding-bottom: 3px;
-
-    text-align: right;
-  }
-
-  &:hover .filter-badge-actions {
-    display: block;
-  }
-
-  .filter-badge-actions span {
-    display: inline-flex;
-    padding: 3px;
-    margin-right: 5px;
-
-    background-color: #ffffff;
-    border: 1px solid #bcc3ca;
-    border-radius: 2px;
-
-    cursor: pointer;
-
-    &:hover {
-      background-color: #e5ecf0;
-    }
+  .filters .btn.dropdown-toggle, .filters .filter-badge, .filters .predefined-filter {
+    box-shadow: none;
+    outline: none;
   }
 }

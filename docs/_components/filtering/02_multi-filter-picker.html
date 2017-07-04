@@ -4,55 +4,52 @@ title: Filter Pickers
 usage: This is the standard multiple filter pickers control.
 stylesheet: '/scss/controls/multi-filter-picker.scss'
 ---
-<div class="multi-filters-container">
-    <div class="multi-filter">
-        <div class="multi-filter-picker">
-            <div>
-                <div class="filters coveo-form">
-                    <div class="admin-filterbox">
-                        <div class="pre-operator">at least</div>
-                        <div class="filter-type">
-                            <div class="admin-select dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-                                    <span class="dropdown-selected-value">an event</span>
-                                    <span class="dropdown-toggle-arrow"></span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="filter-where">WHERE</div>
-                        <div class="filters">
-                            <div class="editable-filter">
-                                <div class="filter-badge filter-popup ">
-                                    <button class="btn edit-filter dropdown-toggle mod-light">
-                                        <span class="edit-filter-content">                                   
-                                            <span class="filter-dimension">Browser</span>
-                                            <span class="filter-operator mod-positive">is</span>
-                                            <span class="filter-values">Chrome</span>
-                                            <span class="dropdown-toggle-arrow"></span>
-                                        </span>
+<div class="coveo-filter-picker">
+    <div class="multi-filters-container">
+        <div class="multi-filter">
+            <div class="multi-filter-picker">
+                <div>
+                    <div class="filters coveo-form">
+                        <div class="admin-filterbox">
+                            <div class="pre-operator">at least</div>
+                            <div class="filter-type">
+                                <div class="admin-select dropdown">
+                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                        <span class="dropdown-selected-value">an event</span>
+                                        <span class="dropdown-toggle-arrow"></span>
                                     </button>
-                                    <div class="filter-badge-actions text-medium-blue fill-medium-blue">
-                                        <span class="js-reverse-filter" title="" data-original-title="Reverse operator"><svg viewBox="0 0 12 14" class="icon mod-lg icon-small"><path fill="currentColor" d="M12.009 2.804L9.439.229a.782.782 0 0 0-1.106 1.104L9.57 2.572H.783a.78.78 0 1 0 0 1.563h8.789L8.334 5.374a.782.782 0 0 0 1.105 1.105l2.57-2.571a.782.782 0 0 0 0-1.104zM11.714 9.865H2.931l1.237-1.239a.78.78 0 1 0-1.106-1.104l-2.57 2.574a.781.781 0 0 0 0 1.104l2.57 2.571a.782.782 0 0 0 1.105-1.105l-1.238-1.239h8.785a.783.783 0 0 0 .788-.781.787.787 0 0 0-.788-.781z"></path></svg></span>                                                               
-                                        <span class="js-toggle-filter" title="" data-original-title="Disable"><svg width="512" height="512" viewBox="0 0 512 512" class="icon mod-lg icon-small"><path d="M256 0C114.615 0 0 114.615 0 256s114.615 256 256 256 256-114.615 256-256S397.385 0 256 0zm0 80c32.001 0 62.005 8.544 87.862 23.47L103.608 344.096C88.598 318.186 80 288.098 80 256c0-97.202 78.798-176 176-176zm0 352c-32.184 0-62.346-8.646-88.303-23.73l240.59-240.54C423.362 193.679 432 223.829 432 256c0 97.202-78.799 176-176 176z"></path></svg></span>                                               
-                                        <span class="delete-filter" title="" data-original-title="Remove"><svg viewBox="0 0 16 16" class="icon mod-lg icon-small"><path d="M7 6H6v7h1zM10 6H9v7h1z"></path><path d="M12.5 4.5v9.4c0 .3-.3.5-.4.6H3.8c-.1 0-.3-.2-.3-.5V4.5zM14 3H2v11c0 1.1.9 2 1.8 2h8.3c.9 0 1.8-1 1.8-2V3zM6 0v1H0v1h16V1h-6V0z"></path></svg></span>
+                                </div>
+                            </div>
+                            <div class="filter-where">WHERE</div>
+                            <div class="filters">
+                                <div class="editable-filter">
+                                    <div class="filter-badge filter-popup ">
+                                        <button class="btn edit-filter dropdown-toggle mod-light">
+                                            <span class="edit-filter-content">
+                                                <span class="filter-dimension">Browser</span>
+                                                <span class="filter-operator mod-positive">is</span>
+                                                <span class="filter-values">Chrome</span>
+                                                <span class="dropdown-toggle-arrow"></span>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="filter-popup">
-                            <div class="filter-actions">
-                                <a class="btn add-filter">
-                                    <span><svg width="512" height="512" viewBox="0 0 512 512" class="icon mod-lg icon-small"><path d="M384 118.182c0-48.514-78.798-87.843-176-87.843-97.203 0-176 39.329-176 87.843 0 28.32 32.148 43.663 68.545 69.569C120.201 201.741 159.716 264.094 160 288c.305 25.727 0 96 0 96l96 48s.306-118.273 0-144c-.283-23.869 38.967-85.978 58.978-100.068C351.713 162.068 384 146.608 384 118.182zm-301.715-.158c0-27.771 56.285-50.285 125.714-50.285 69.431 0 125.714 22.514 125.714 50.285 0 27.773-56.283 50.287-125.714 50.287-69.429 0-125.714-22.514-125.714-50.287zM512 352h-64v-64h-64v64h-64v64l64 .188V480h64v-64h64z"></path></svg></span>
-                                </a>
-                                <a class="btn clear-all-filters">
-                                    <span><svg viewBox="0 0 10 10" class="icon mod-lg icon-small"><path d="M9.79.212A.72.72 0 0 0 8.77.211L5 3.981 1.229.211A.717.717 0 0 0 .211.212H.21A.72.72 0 0 0 .211 1.23l3.771 3.769L.211 8.77a.718.718 0 0 0 0 1.018.718.718 0 0 0 1.018 0L5 6.017l3.771 3.771A.72.72 0 0 0 9.789 8.77L6.018 4.999 9.789 1.23A.72.72 0 0 0 9.79.212"></path></svg></span>
-                                </a>
+                            <div class="filter-popup">
+                                <div class="filter-actions">
+                                    <a class="btn add-filter">
+                                        <span><svg width="512" height="512" viewBox="0 0 512 512" class="icon mod-lg icon-small"><path d="M384 118.182c0-48.514-78.798-87.843-176-87.843-97.203 0-176 39.329-176 87.843 0 28.32 32.148 43.663 68.545 69.569C120.201 201.741 159.716 264.094 160 288c.305 25.727 0 96 0 96l96 48s.306-118.273 0-144c-.283-23.869 38.967-85.978 58.978-100.068C351.713 162.068 384 146.608 384 118.182zm-301.715-.158c0-27.771 56.285-50.285 125.714-50.285 69.431 0 125.714 22.514 125.714 50.285 0 27.773-56.283 50.287-125.714 50.287-69.429 0-125.714-22.514-125.714-50.287zM512 352h-64v-64h-64v64h-64v64l64 .188V480h64v-64h64z"></path></svg></span>
+                                    </a>
+                                    <a class="btn clear-all-filters">
+                                        <span><svg viewBox="0 0 10 10" class="icon mod-lg icon-small"><path d="M9.79.212A.72.72 0 0 0 8.77.211L5 3.981 1.229.211A.717.717 0 0 0 .211.212H.21A.72.72 0 0 0 .211 1.23l3.771 3.769L.211 8.77a.718.718 0 0 0 0 1.018.718.718 0 0 0 1.018 0L5 6.017l3.771 3.771A.72.72 0 0 0 9.789 8.77L6.018 4.999 9.789 1.23A.72.72 0 0 0 9.79.212"></path></svg></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="add-container">
-                    <div class="add right"><span><svg viewBox="0 0 18 18" class="icon icon-small"><path d="M13 8h-3V5a1 1 0 0 0-2 0v3H5a1 1 0 0 0 0 2h3v3a1 1 0 1 0 2 0v-3h3a1 1 0 1 0 0-2"></path><path d="M8.991 16C5.136 16 2 12.86 2 9s3.136-7 6.991-7c3.865 0 7.01 3.14 7.01 7s-3.144 7-7.01 7m0-16C4.023 0 0 4.03 0 9c0 4.968 4.02 9 8.991 9 4.977 0 9.01-4.03 9.01-9 0-4.968-4.03-9-9.01-9"></path></svg></span></div>
+                    <div class="add-container">
+                        <div class="add right"><span><svg viewBox="0 0 18 18" class="icon icon-small"><path d="M13 8h-3V5a1 1 0 0 0-2 0v3H5a1 1 0 0 0 0 2h3v3a1 1 0 1 0 2 0v-3h3a1 1 0 1 0 0-2"></path><path d="M8.991 16C5.136 16 2 12.86 2 9s3.136-7 6.991-7c3.865 0 7.01 3.14 7.01 7s-3.144 7-7.01 7m0-16C4.023 0 0 4.03 0 9c0 4.968 4.02 9 8.991 9 4.977 0 9.01-4.03 9.01-9 0-4.968-4.03-9-9.01-9"></path></svg></span></div>
+                    </div>
                 </div>
             </div>
         </div>

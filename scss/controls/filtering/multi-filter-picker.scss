@@ -1,78 +1,80 @@
-.multi-filter {
-  position: relative;
-
-  .multi-filter-picker {
+.coveo-filter-picker {
+  .multi-filter {
     position: relative;
 
-    margin-bottom: 20px;
+    .multi-filter-picker {
+      position: relative;
+
+      margin-bottom: 20px;
+
+      .admin-filterbox {
+        border-bottom: 2px solid $pure-white;
+      }
+    }
+
+    .add-container {
+      overflow: auto;
+
+      background-color: rgba($white, 0.4);
+
+      .add {
+        padding: $multi-filterpickerbox-add-padding;
+
+        cursor: pointer;
+        opacity: 1;
+
+        svg {
+          width: 20px;
+          height: 20px;
+
+          vertical-align: text-bottom;
+
+          fill: $orange;
+        }
+      }
+    }
 
     .admin-filterbox {
-      border-bottom: 2px solid $pure-white;
-    }
-  }
+      .pre-operator {
+        display: inline-block;
+        padding: 2px 0 0 2px;
+        margin: 0 6px 0 0;
 
-  .add-container {
-    overflow: auto;
+        font-family: $base-font-family;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 33px;
+      }
 
-    background-color: rgba($white, 0.4);
+      .filter-where {
+        float: left;
+        padding: 0 4px;
+        margin-right: 5px;
+        margin-bottom: 0;
+        margin-left: 4px;
 
-    .add {
-      padding: 10px 20px;
+        line-height: 34px;
 
-      cursor: pointer;
-      opacity: 1;
+        background-color: $pure-white;
+      }
 
-      svg {
-        width: 20px;
-        height: 20px;
-
-        vertical-align: text-bottom;
-
-        fill: $orange;
+      .filter-type {
+        box-sizing: border-box;
       }
     }
-  }
 
-  .admin-filterbox {
-    .pre-operator {
-      display: inline-block;
-      padding: 2px 0 0 2px;
-      margin: 0 6px 0 0;
-
-      font-family: Arimo, Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: bold;
-      line-height: 33px;
-    }
-
-    .filter-where {
-      float: left;
-      padding: 0 4px;
-      margin-right: 5px;
+    .filter-popup {
       margin-bottom: 0;
-      margin-left: 4px;
 
-      line-height: 34px;
-
-      background-color: $pure-white;
-    }
-
-    .filter-type {
-      box-sizing: border-box;
-    }
-  }
-
-  .filter-popup {
-    margin-bottom: 0;
-
-    .filter-actions {
-      .btn + .btn {
-        margin: 0;
+      .filter-actions {
+        .btn + .btn {
+          margin: 0;
+        }
       }
-    }
 
-    .event-type {
-      display: none;
+      .event-type {
+        display: none;
+      }
     }
   }
 }

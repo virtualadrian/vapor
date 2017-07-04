@@ -1,115 +1,31 @@
-.edit-filter-values {
-  position: relative;
+.coveo-filter-picker {
+  .edit-filter-values {
+    position: relative;
 
-  overflow: visible;
+    overflow: visible;
 
-  .popup-navigation-section {
-    align-items: center;
-    flex-direction: column;
+    .popup-main-section {
+      width: 100%;
 
-    display: flex;
-    width: 30px;
-
-    background-color: $white;
-    border-right: $default-border;
-    border-radius: 1px 0 0 1px;
-
-    cursor: pointer;
-
-    .back {
-      margin-top: 15px;
-    }
-  }
-
-  .popup-main-section {
-    width: 100%;
-
-    .popup-header {
-      background-color: $pure-white;
-    }
-
-    .selected-filter {
-      height: 50px;
-      padding-left: 20px;
-
-      color: $medium-blue;
-      font-size: 15px;
-      font-weight: bold;
-      line-height: 50px;
-    }
-
-    .popover-body {
-      .apply {
-        margin: 10px 0 0;
+      .popup-header {
+        background-color: $pure-white;
       }
 
-      .string-filters {
-        padding-top: 22px;
+      .selected-filter {
+        height: $selected-filter-height;
+        padding-left: $selected-filter-padding-left;
+
+        color: $medium-blue;
+        font-size: $default-font-size;
+        font-weight: bold;
+        line-height: $selected-filter-height;
+      }
+
+      .popover-body .string-filters {
+        padding-top: $string-filter-padding-top;
 
         label {
           line-height: 18px;
-        }
-      }
-
-      .value-autocomplete-dimensions, .value-autocomplete-numbers {
-        &:empty {
-          display: none;
-        }
-
-        .values {
-          max-height: 200px;
-          padding: 3px 0;
-          margin-top: -3px;
-          margin-bottom: 7px;
-          overflow-x: hidden;
-          overflow-y: auto;
-
-          .input-wrapper:last-child {
-            padding-bottom: 0;
-          }
-
-          .suggestion {
-            height: 30px;
-            padding-left: 6px;
-            clear: both;
-
-            line-height: 30px;
-
-            border-bottom: 1px solid #e9e9e9;
-
-            .autocomplete {
-              float: left;
-              width: calc(100% - 25px);
-
-              .admin-popover-container {
-                width: calc(100% + 27px);
-                margin-left: -6px;
-              }
-            }
-
-            .suggestion-value {
-              display: inline-block;
-              max-width: calc(100% - 24px);
-              overflow: hidden;
-
-              text-overflow: ellipsis;
-              white-space: nowrap;
-            }
-
-            &:last-child {
-              margin-bottom: 5px;
-
-              border-bottom: none;
-            }
-          }
-        }
-
-        & > div {
-          position: relative;
-        }
-
-        .admin-popover-container .admin-popover ul li {
-          padding-left: 6px;
         }
       }
     }
