@@ -128,8 +128,8 @@
       }
 
       &.state-selected {
-        font-weight: bold;
         color: $dark-blue;
+        font-weight: bold;
       }
 
       &.disabled {
@@ -160,12 +160,12 @@
 
 .dropdown.mod-search {
   .dropdown-button-search-container, .filter-container {
-    min-width: $dropdown-button-min-width;
     width: inherit;
+    min-width: $dropdown-button-min-width;
 
     input.filter-box {
-      min-width: $dropdown-button-min-width;
       width: inherit;
+      min-width: $dropdown-button-min-width;
     }
   }
 
