@@ -131,9 +131,10 @@ $(document).ready(function() {
 
     $('.mod-search .filter-box').blur(function(event) {
         var filterElement = $(event.currentTarget).parent();
-        filterElement.find('filter-box').context.value = '';
         var dropdownEl = filterElement.parent();
+        filterElement.find('filter-box').context.value = '';
         filterElement.addClass('hidden');
+
         dropdownEl.removeClass('open');
         dropdownEl.find('button.dropdown-button-search-container').removeClass('hidden');
     });
