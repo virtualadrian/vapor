@@ -294,12 +294,14 @@
         padding: 0 (2 * $chosen-multi-search-choice-padding + $chosen-clear-icon-size) 0 $chosen-multi-search-choice-padding;
         margin: $chosen-multi-search-choice-margin $chosen-multi-search-choice-margin 0 0;
 
-        color: $dark-grey;
+        color: $medium-blue;
         font-size: 11px;
         line-height: 22px;
 
         border: 1px solid $medium-grey;
         border-radius: $border-radius;
+
+        background-color: #E6ECF0;
 
         cursor: default;
 
@@ -316,7 +318,7 @@
           width: $chosen-clear-icon-size;
           height: $chosen-clear-icon-size;
 
-          @include clear-icon($medium-grey);
+          @include clear-icon($medium-blue);
         }
       }
 
