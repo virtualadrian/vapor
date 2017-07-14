@@ -1,14 +1,14 @@
-.coveo-filter-picker {
+.filter-expression-picker {
   .multi-filter {
     position: relative;
 
     .multi-filter-picker {
       position: relative;
 
-      margin-bottom: 20px;
+      margin-bottom: $multi-filter-picker-margin-bottom;
 
       .admin-filterbox {
-        border-bottom: 2px solid $pure-white;
+        border-bottom: $multi-filter-picker-border-bottom;
       }
     }
 
@@ -24,8 +24,8 @@
         opacity: 1;
 
         svg {
-          width: 20px;
-          height: 20px;
+          width: $multi-filter-picker-add-icon-width;
+          height: $multi-filter-picker-add-icon-width;
 
           vertical-align: text-bottom;
 
@@ -37,23 +37,23 @@
     .admin-filterbox {
       .pre-operator {
         display: inline-block;
-        padding: 2px 0 0 2px;
-        margin: 0 6px 0 0;
+        padding: $pre-operator-padding;
+        margin: $pre-operator-margin;
 
         font-family: $base-font-family;
-        font-size: 12px;
+        font-size: $pre-operator-font-size;
         font-weight: bold;
-        line-height: 33px;
+        line-height: $pre-operator-line-height;
       }
 
       .filter-where {
         float: left;
-        padding: 0 4px;
-        margin-right: 5px;
-        margin-bottom: 0;
-        margin-left: 4px;
+        padding: $filter-where-padding;
+        margin-right: $filter-where-margin-right;
+        margin-bottom: $filter-where-margin-bottom;
+        margin-left: $filter-where-margin-left;
 
-        line-height: 34px;
+        line-height: $filter-where-line-height;
 
         background-color: $pure-white;
       }

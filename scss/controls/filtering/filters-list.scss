@@ -1,4 +1,4 @@
-.coveo-filter-picker {
+.filter-expression-picker {
   .add-filter-popup .filter-choices, .filter-badge .edit-filter-values {
     .back {
       display: none;
@@ -7,7 +7,7 @@
     input.search {
       box-sizing: border-box;
       width: 100%;
-      height: 30px;
+      height: $filter-pop-up-search-input-height;
     }
 
     .selected-filter {
@@ -20,7 +20,7 @@
     position: absolute;
     z-index: 999;
 
-    width: 292px;
+    width: $filter-pop-up-width;
 
     .operator, .select-operator, .value-selector {
       .admin-select {
@@ -29,35 +29,19 @@
         .dropdown-toggle {
           box-sizing: border-box;
           width: 100%;
-          margin-bottom: 5px;
 
           text-align: left;
-
-          i {
-            position: absolute;
-            right: 8px;
-
-            margin-top: 5px;
-          }
-        }
-
-        .dropdown-menu {
-          width: 235px;
         }
       }
     }
   }
 
   .add-filter-popup.left {
-    right: 35px;
+    right: $add-filter-popup-right;
   }
 
   .edit-filter-popup.left {
-    right: 3px;
-  }
-
-  .filter-type-popup {
-    width: 90px;
+    right: $edit-filter-popup-right;
   }
 
   .filter-choices, .columns-picker {
@@ -65,18 +49,11 @@
       .section {
         display: inline-block;
         width: 100%;
-        padding-left: 15px;
-        margin-top: 7px;
+        padding-left: $filter-choices-section-padding-left;
+        margin-top: $filter-choices-section-margin-top;
 
         color: $medium-blue;
         text-transform: uppercase;
-
-        i {
-          float: left;
-          margin-top: 8px;
-          margin-right: 5px;
-          margin-left: 4px;
-        }
       }
 
       .list {
@@ -116,13 +93,9 @@
       }
     }
 
-    .icon-filter {
-      height: 35px;
-    }
-
     .event-type {
-      width: 224px;
-      margin-bottom: 16px;
+      width: $filter-event-type-width;
+      margin-bottom: $filter-event-type-margin-bottom;
     }
   }
 
@@ -133,12 +106,12 @@
 
     .filter:not(.selected-filter) {
       box-sizing: content-box;
-      min-height: 20px;
+      min-height: $filter-not-selected-min-height;
       padding: $filter-padding;
-      margin-right: 1px;
+      margin-right: $filter-not-selected-margin-right;
       overflow-x: hidden;
 
-      line-height: 18px;
+      line-height: $filter-not-selected-line-height;
       text-overflow: ellipsis;
       white-space: nowrap;
 
@@ -148,7 +121,7 @@
 
       .type {
         color: $medium-grey;
-        font-size: 10px;
+        font-size: $filter-type-font-size;
       }
     }
 

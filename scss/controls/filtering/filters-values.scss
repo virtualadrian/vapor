@@ -1,4 +1,4 @@
-.coveo-filter-picker {
+.filter-expression-picker {
   .edit-filter-values {
     position: relative;
 
@@ -25,7 +25,7 @@
         padding-top: $string-filter-padding-top;
 
         label {
-          line-height: 18px;
+          line-height: $filter-string-filter-label-line-height;
         }
       }
     }

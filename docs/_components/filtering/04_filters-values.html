@@ -6,7 +6,7 @@ stylesheet: '/scss/controls/filters-values.scss'
 ---
 
 <button type="button" class="btn js-tether-target-values">Form Toggle</button>
-<div class="coveo-filter-picker js-tether-element-values">
+<div class="filter-expression-picker js-tether-element-values">
     <div class="edit-filter-popup popover">
         <div class="edit-filter-values popover-row flex">
             <div class="popover-navigation-section">
@@ -20,66 +20,64 @@ stylesheet: '/scss/controls/filters-values.scss'
                 </div>
 
                 <div class="popover-body">
-                    <form>
-                        <div class="coveo-form">
-                            <div class="form-group">
-                                <div class="operator value">
-                                    <div class="admin-select dropdown">
-                                        <button class="btn dropdown-toggle" type="button">
-                                            <span class="dropdown-selected-value">Is</span>
-                                            <span class="dropdown-toggle-arrow"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li>
-                                                <span class="enabled selected-value state-selected  " title="">
-                                                    Is
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="enabled" title="">
-                                                    Is not
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="enabled" title="">
-                                                    Contains
-                                                </span>
-                                            </li>
-                                            <li>
-                                                <span class="enabled" title="">
-                                                    Does not contain
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="input-field multiline-field form-group">
-                                    <ul>
-                                        <li class="input-wrapper">
-                                            <input type="text" class="js-value-input" value="Chrome" required>
-                                            <label>Value</label>
-                                            <div class="input-actions">
-                                                <button class="js-delete-value-button" type="button">
-                                                    <i class="delete-action" title="Delete this entry"></i>
-                                                </button>
-                                            </div>
+                    <div class="coveo-form">
+                        <div class="form-group">
+                            <div class="operator value">
+                                <div class="admin-select dropdown">
+                                    <button class="btn dropdown-toggle" type="button">
+                                        <span class="dropdown-selected-value">Is</span>
+                                        <span class="dropdown-toggle-arrow"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <span class="enabled selected-value state-selected  " title="">
+                                                Is
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="enabled" title="">
+                                                Is not
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="enabled" title="">
+                                                Contains
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="enabled" title="">
+                                                Does not contain
+                                            </span>
                                         </li>
                                     </ul>
-                                    <div class="input-wrapper">
-                                        <input type="text" class="js-new-value-input" placeholder="Enter filter value" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-field multiline-field form-group">
+                                <ul>
+                                    <li class="input-wrapper">
+                                        <input type="text" class="js-value-input" value="Chrome" required>
+                                        <label>Value</label>
                                         <div class="input-actions">
-                                            <button class="js-add-value-button">
-                                                <i class="add-action" title="Add a new entry"></i>
+                                            <button class="js-delete-value-button" type="button">
+                                                <i class="delete-action" title="Delete this entry"></i>
                                             </button>
                                         </div>
+                                    </li>
+                                </ul>
+                                <div class="input-wrapper">
+                                    <input type="text" class="js-new-value-input" placeholder="Enter filter value" required>
+                                    <div class="input-actions">
+                                        <button class="js-add-value-button">
+                                            <i class="add-action" title="Add a new entry"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
 
                     <div class="string-filters popover-row">
                         <div class="form-control coveo-checkbox-labels-group">

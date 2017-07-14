@@ -1,4 +1,4 @@
-.coveo-filter-picker {
+.filter-expression-picker {
   .filters {
     background-color: $white;
   }
@@ -17,7 +17,7 @@
 
     .filter-badge {
       box-sizing: border-box;
-      height: 34px;
+      height: $filter-badge-height;
 
       font-weight: normal;
       text-transform: initial;
@@ -25,11 +25,11 @@
 
     .filter-badge {
       display: inline-block;
-      margin-left: 3px;
+      margin-left: $filter-badge-margin-left;
       overflow: visible;
 
       color: $dark-grey;
-      font-size: 13px;
+      font-size: $filter-badge-font-size;
 
       background-color: $pure-white;
 
@@ -40,8 +40,8 @@
       }
 
       .edit-filter-content {
-        font-size: 13px;
-        line-height: 16px;
+        font-size: $filter-badge-font-size;
+        line-height: $edit-filter-content-line-height;
       }
 
       .filter-operator {
@@ -67,7 +67,7 @@
     .filterbox-filters-container {
       flex-grow: 2;
 
-      padding: 4px 4px 3px;
+      padding: $filterbox-filters-container-padding;
 
       background-color: $medium-grey;
     }
@@ -76,7 +76,7 @@
       position: relative;
 
       display: inline;
-      margin-right: 5px;
+      margin-right: $filters-margin-right;
 
       vertical-align: baseline;
 

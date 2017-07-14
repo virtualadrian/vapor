@@ -29,15 +29,15 @@
   flex-direction: column;
 
   display: flex;
-  width: 30px;
+  width: $popover-navigation-section-width;
 
   background-color: $white;
   border-right: $default-border;
-  border-radius: 1px 0 0 1px;
+  border-radius: $popover-navigation-section-border-radius;
 
   cursor: pointer;
 
   .back {
-    margin-top: 15px;
+    margin-top: $popover-back-margin-top;
   }
 }
