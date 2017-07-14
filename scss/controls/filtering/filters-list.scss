@@ -1,21 +1,4 @@
 .filter-expression-picker {
-  .add-filter-popup .filter-choices, .filter-badge .edit-filter-values {
-    .back {
-      display: none;
-    }
-
-    input.search {
-      box-sizing: border-box;
-      width: 100%;
-      height: $filter-pop-up-search-input-height;
-    }
-
-    .selected-filter {
-      box-sizing: border-box;
-      width: 100% !important;
-    }
-  }
-
   .add-filter-popup, .edit-filter-popup, .filter-type-popup {
     position: absolute;
     z-index: 999;
