@@ -1,8 +1,8 @@
 .multiselect-input {
   display: inline-flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
 
   border: 1px solid $medium-grey;
@@ -10,8 +10,12 @@
 
   padding: $drowdown-multiselect-margin;
 
+  width: $dropdown-button-min-width;
+
   input {
     border: none;
+    height: $dropdown-multiselect-option-height;
+    width: 100%;
   }
 
   input:focus {

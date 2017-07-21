@@ -11,7 +11,7 @@
 
   height: $dropdown-multiselect-option-height;
   max-width: 100%;
-  margin: 0 $drowdown-multiselect-margin 0 0;
+  margin: $drowdown-multiselect-margin;
 
   color: $medium-blue;
   font-size: 11px;
@@ -32,7 +32,7 @@
 
 .selected-option-value {
   @extend .selected-option-item;
-  margin-left: $drowdown-multiselect-margin;
+  margin-left: $drowdown-multiselect-items-margin;
 }
 
 .selected-option-separator {
@@ -40,7 +40,7 @@
 
   width: 1px;
   height: $dropdown-multiselect-option-height;
-  margin-left: $drowdown-multiselect-margin;
+  margin-left: $drowdown-multiselect-items-margin;
   background-color: $medium-grey;
 }
 
