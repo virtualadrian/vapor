@@ -2,16 +2,14 @@
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 
   position: relative;
 
   height: $chosen-multi-search-choice-height;
   max-width: 100%;
-  padding: 0 (2 * $chosen-multi-search-choice-padding + $chosen-clear-icon-size) 0 $chosen-multi-search-choice-padding;
-  margin: $chosen-multi-search-choice-margin $chosen-multi-search-choice-margin 0 0;
+  margin: 0 $chosen-multi-search-choice-margin 0 0;
 
   color: $medium-blue;
   font-size: 11px;
@@ -20,7 +18,7 @@
   border: 1px solid $medium-grey;
   border-radius: $border-radius;
 
-  background-color: #E6ECF0;
+  background-color: $light-grey;
 
   cursor: default;
 }
@@ -32,6 +30,7 @@
 
 .selected-option-value {
   @extend .selected-option-item;
+  margin-left: $chosen-multi-search-choice-margin;
 }
 
 .selected-option-separator {
@@ -45,14 +44,20 @@
 
 .remove-option{
   @extend .selected-option-item;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: (2 * $chosen-multi-search-choice-margin);
+  transition: all .05s ease-in;
+}
 
-  position: absolute;
-  top: calc(50% - #{$chosen-clear-icon-size} / 2);
-  right: $chosen-clear-icon-size;
+.remove-option:hover {
+  background-color: #dee4e8;
+  cursor: pointer;
+}
 
-  display: inline-block;
-  width: $chosen-clear-icon-size;
-  height: $chosen-clear-icon-size;
-
-  @include clear-icon($medium-blue);
+.remove-option:active {
+  background-color: #d4dade;
 }
