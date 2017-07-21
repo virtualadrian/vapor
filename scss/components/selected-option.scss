@@ -1,4 +1,6 @@
 .selected-option {
+  flex: 0 1 auto;
+
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -7,9 +9,9 @@
 
   position: relative;
 
-  height: $chosen-multi-search-choice-height;
+  height: $dropdown-multiselect-option-height;
   max-width: 100%;
-  margin: 0 $chosen-multi-search-choice-margin 0 0;
+  margin: 0 $drowdown-multiselect-margin 0 0;
 
   color: $medium-blue;
   font-size: 11px;
@@ -30,15 +32,15 @@
 
 .selected-option-value {
   @extend .selected-option-item;
-  margin-left: $chosen-multi-search-choice-margin;
+  margin-left: $drowdown-multiselect-margin;
 }
 
 .selected-option-separator {
   @extend .selected-option-item;
 
   width: 1px;
-  height: $chosen-multi-search-choice-height;
-  margin-left: $chosen-multi-search-choice-margin;
+  height: $dropdown-multiselect-option-height;
+  margin-left: $drowdown-multiselect-margin;
   background-color: $medium-grey;
 }
 
@@ -49,7 +51,7 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  width: (2 * $chosen-multi-search-choice-margin);
+  width: $selected-option-close-width;
   transition: all .05s ease-in;
 }
 

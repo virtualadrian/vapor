@@ -1,0 +1,20 @@
+.multiselect-input {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid $medium-grey;
+  border-radius: $border-radius;
+
+  padding: $drowdown-multiselect-margin;
+
+  input {
+    border: none;
+  }
+
+  input:focus {
+      outline:none;
+  }
+}
