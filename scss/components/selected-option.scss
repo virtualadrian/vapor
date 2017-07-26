@@ -6,12 +6,13 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-
   position: relative;
 
+
   height: $dropdown-multiselect-option-height;
-  max-width: 100%;
   margin: $drowdown-multiselect-margin;
+
+  max-width: 100%;
 
   color: $medium-blue;
   font-size: 11px;
@@ -33,6 +34,8 @@
 .selected-option-value {
   @extend .selected-option-item;
   margin-left: $drowdown-multiselect-items-margin;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .selected-option-separator {

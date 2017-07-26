@@ -4,7 +4,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: $drowdown-multiselect-margin;
 
   border: 1px solid $medium-grey;
   border-radius: $border-radius;
@@ -19,6 +18,8 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
+  padding: $drowdown-multiselect-margin;
 
   input {
     border: none;
@@ -33,7 +34,7 @@
 
 .remove-all-selected-options {
   flex: 0 1;
-  margin: $drowdown-multiselect-margin;
+  padding: $drowdown-multiselect-items-margin;
 }
 
 .remove-all-selected-options:hover {
