@@ -8,17 +8,16 @@
   align-items: center;
   position: relative;
 
-
-  height: $dropdown-multiselect-option-height;
-  margin: $drowdown-multiselect-margin;
-
+  height: 100%;
+  min-height: $dropdown-multiselect-option-height;
   max-width: 100%;
 
+  margin: $drowdown-multiselect-margin;
   color: $medium-blue;
-  font-size: 11px;
-  line-height: 22px;
+  font-size: $button-small-font-size;
+  line-height: $dropdown-multiselect-option-height;
 
-  border: 1px solid $medium-grey;
+  border: $default-border;
   border-radius: $border-radius;
 
   background-color: $light-grey;
@@ -38,15 +37,6 @@
   overflow: hidden;
 }
 
-.selected-option-separator {
-  @extend .selected-option-item;
-
-  width: 1px;
-  height: $dropdown-multiselect-option-height;
-  margin-left: $drowdown-multiselect-items-margin;
-  background-color: $medium-grey;
-}
-
 .remove-option{
   @extend .selected-option-item;
   display: flex;
@@ -54,7 +44,10 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  width: $selected-option-close-width;
+  height: 100%;
+  min-width: $dropdown-multiselect-option-height;
+  margin-left: $drowdown-multiselect-items-margin;
+  border-left: $default-border;
   transition: all .05s ease-in;
 }
 
