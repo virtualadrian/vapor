@@ -48,7 +48,7 @@
   min-width: $dropdown-multiselect-option-height;
   margin-left: $drowdown-multiselect-items-margin;
   border-left: $default-border;
-  transition: all .05s ease-in;
+  transition: $button-color-transition;
 }
 
 .remove-option:hover {
