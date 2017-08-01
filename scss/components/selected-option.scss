@@ -52,10 +52,10 @@
 }
 
 .remove-option:hover {
-  background-color: #dee4e8;
+  background-color: darken($light-grey, 5%);
   cursor: pointer;
 }
 
 .remove-option:active {
-  background-color: #d4dade;
+  background-color: darken($light-grey, 10%);
 }
