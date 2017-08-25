@@ -137,6 +137,11 @@
 
         cursor: default;
       }
+
+      &.no-search-results {
+        word-break: break-word;
+        white-space: normal;
+      }
     }
 
     &.active {

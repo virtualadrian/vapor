@@ -4,7 +4,6 @@ $title-font-size: 16px;
 $default-font-size: 15px;
 $default-border: 1px solid $medium-grey;
 $big-title-font-size: 24px;
-$tooltip-spacing: 10px;
 
 //Typography
 $big-line-height: 21px;
@@ -26,6 +25,7 @@ $button-small-height: 24px;
 $button-large-height: 50px;
 $button-confirm-icon-width: 15px;
 $button-confirm-margin-bottom: 20px;
+$button-color-transition: all 0.05s ease-in;
 
 // Checkboxes and radios
 $checkbox-size: 18px;
@@ -260,6 +260,12 @@ $dropdown-choice-font-size: 13px;
 $dropdown-menu-max-height: 240px;
 $dropdown-button-min-width: 260px;
 
+//Dropdown Multiselect
+$drowdown-multiselect-margin: 2px;
+$drowdown-multiselect-items-margin: 4px;
+$dropdown-multiselect-option-height: 24px;
+$selected-option-close-width: 22px;
+
 // Chosen
 $chosen-clear-icon-size: 10px;
 $chosen-filter-icon-size: 16px;
@@ -315,6 +321,10 @@ $selected-date-offset: 2px;
 $selected-date-height: 28px;
 $calendar-limit-border-width: 2px;
 $calendar-limit-border-length: 5px;
+
+// Tooltip
+$tooltip-z-index: 10000;
+$tooltip-spacing: 10px;
 
 // Home card
 $home-card-padding: 1rem; // Based on white space utility p2 (0.5rem * 2)
