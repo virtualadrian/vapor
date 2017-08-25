@@ -1,0 +1,17 @@
+.home-card {
+  border: $default-border;
+  background: $pure-white;
+  margin-bottom: $home-card-margin;
+  border-radius: $border-radius;
+}
+
+.home-card-header {
+  border-bottom: $default-border;
+  padding: $home-card-padding;
+  color: $medium-blue;
+  text-align: center;
+
+  h2 {
+    font-size: 17px;
+  }
+}
