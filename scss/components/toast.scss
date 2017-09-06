@@ -2,7 +2,7 @@ $toast-width: 400px;
 $toast-z-index: 9999;
 $toast-margin: 20px;
 $toast-padding: 20px;
-$toast-text-color: #fff;
+$toast-text-color: #ffffff;
 $toast-title-font-size: 16px;
 $toast-description-font-size: 12px;
 $toast-description-margin-top: 15px;
@@ -10,29 +10,32 @@ $toast-close-size: 16px;
 
 @keyframes toastFadeIn {
   from {
-    opacity: 0;
     transform: translate(0, 100%);
+
+    opacity: 0;
   }
   to {
-    opacity: 1;
     transform: translate(0, 0);
+
+    opacity: 1;
   }
 }
 
 .toast-container {
-  z-index: $toast-z-index;
   position: fixed;
-  width: $toast-width;
-  box-sizing: border-box;
-
-  bottom: $toast-margin;
   right: $toast-margin;
+  bottom: $toast-margin;
+  z-index: $toast-z-index;
+
+  box-sizing: border-box;
+  width: $toast-width;
 
   .toast {
     display: block;
     padding: $toast-padding;
-    background-color: $green;
     margin-top: $toast-margin;
+
+    background-color: $green;
 
     &.mod-warning {
       background-color: $yellow;
@@ -47,10 +50,11 @@ $toast-close-size: 16px;
     }
 
     &.mod-animated {
-      opacity: 0;
       animation: toastFadeIn ease-in 1;
-      animation-fill-mode: forwards;
       animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+
+      opacity: 0;
     }
 
     a {
@@ -60,23 +64,25 @@ $toast-close-size: 16px;
   }
 
   .toast-close {
-    cursor: pointer;
     float: right;
 
+    cursor: pointer;
+
     svg {
-      height: $toast-close-size;
       width: $toast-close-size;
+      height: $toast-close-size;
     }
   }
 
   .toast-title {
-    font-size: $toast-title-font-size;
     color: $toast-text-color;
+    font-size: $toast-title-font-size;
   }
 
   .toast-description {
-    font-size: $toast-description-font-size;
-    color: $toast-text-color;
     margin-top: $toast-description-margin-top;
+
+    color: $toast-text-color;
+    font-size: $toast-description-font-size;
   }
 }
