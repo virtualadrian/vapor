@@ -1,9 +1,6 @@
 .list-box {
-  top: 100%;
-  left: 0;
   z-index: 1000;
 
-  float: left;
   max-height: $list-box-max-height;
   min-width: 100%;
   padding: $list-box-padding-top 0;
@@ -13,9 +10,9 @@
   color: $dark-blue;
 
   background-color: $pure-white;
-  box-shadow: 0 2px 4px rgba($black, 0.41);
+  box-shadow: $list-box-box-shadow;
   border: $default-border;
-  border-radius: 0 0 2px 2px;
+  border-radius: $list-box-border-radius;
 
   @include slim-scroll($light-grey, $medium-grey);
 }
