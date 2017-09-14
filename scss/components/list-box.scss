@@ -14,8 +14,8 @@
   @include slim-scroll($light-grey, $medium-grey);
 }
 
-.box-item {
-  padding: $box-item-padding-y $box-item-padding-x;
+.item-box {
+  padding: $item-box-padding-y $item-box-padding-x;
   overflow: hidden;
 
   color: $dark-grey;
@@ -52,9 +52,9 @@
   }
 
   &.divider {
-    height: $box-item-divider-height;
+    height: $item-box-divider-height;
     padding: 0;
-    margin: $box-item-padding-y 0;
+    margin: $item-box-padding-y 0;
 
     background-color: $medium-grey;
 
