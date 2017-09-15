@@ -8,6 +8,7 @@
 @import 'variables';
 @import 'animations';
 @import 'helpers';
+
 // Utility
 .coveo-styleguide {
   @import 'typography/utility';
@@ -23,9 +24,11 @@
 
 //Progress bar
 @import 'elements/progress-bar';
+
 // Buttons
 @import 'elements/btn';
 @import 'elements/btn-append-prepend';
+
 // Typography
 @import 'typography/headings';
 @import 'typography/elements';
@@ -34,6 +37,7 @@
 // Icons
 @import 'icons/icons';
 @import 'icons/svgs';
+
 // Controls
 @import 'controls/checkboxes';
 @import 'controls/collapsable';
@@ -51,6 +55,12 @@
 @import 'controls/input-field';
 @import 'controls/multiline-field';
 @import 'controls/file-input';
+
+// filters
+@import 'controls/filtering/filter-picker';
+@import 'controls/filtering/filters-list';
+@import 'controls/filtering/filters-values';
+@import 'controls/filtering/multi-filter-picker';
 
 .coveo-styleguide {
   // Tables
@@ -86,6 +96,10 @@
   @import 'components/calendar';
   @import 'components/tab';
   @import 'components/sync-feedback';
+  @import 'components/selected-option';
+  @import 'components/multiselect-input';
+  @import 'components/home-card';
+  @import 'components/toast';
   // Forms
   @import 'forms/form-sections';
   @import 'forms/form-child';

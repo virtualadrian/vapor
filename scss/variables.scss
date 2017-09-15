@@ -4,7 +4,6 @@ $title-font-size: 16px;
 $default-font-size: 15px;
 $default-border: 1px solid $medium-grey;
 $big-title-font-size: 24px;
-$tooltip-spacing: 10px;
 
 //Typography
 $big-line-height: 21px;
@@ -26,6 +25,7 @@ $button-small-height: 24px;
 $button-large-height: 50px;
 $button-confirm-icon-width: 15px;
 $button-confirm-margin-bottom: 20px;
+$button-color-transition: all 0.05s ease-in;
 
 // Checkboxes and radios
 $checkbox-size: 18px;
@@ -64,6 +64,50 @@ $filter-box-width-mod-small: 200px;
 $icon-offset-large-screen: 20px;
 $icon-offset-small-screen: 10px;
 
+// Filter Picker
+// Component
+$filterpickerbox-padding: 20px;
+$filterpickerbox-margin-bottom: 1px;
+$filterpickerbox-small-padding: 13px 20px;
+$multi-filterpickerbox-add-padding: 10px 20px;
+$multi-filter-picker-margin-bottom: 20px;
+$multi-filter-picker-border-bottom: 2px solid $pure-white;
+$multi-filter-picker-add-icon-width: 20px;
+$filters-margin-right: 5px;
+$filterbox-filters-container-padding: 4px 4px 3px;
+// Single filter variables
+$filter-padding: 6px 25px;
+$string-filter-padding-top: 30px;
+$selected-filter-padding-left: 20px;
+$selected-filter-height: 50px;
+$filter-badge-height: 34px;
+$filter-badge-margin-left: 3px;
+$filter-badge-font-size: 13px;
+$edit-filter-content-line-height: 16px;
+$pre-operator-padding: 2px 0 0 2px;
+$pre-operator-margin: 0 6px 0 0;
+$pre-operator-font-size: 12px;
+$pre-operator-line-height: 33px;
+$filter-where-padding: 0 4px;
+$filter-where-margin-right: 5px;
+$filter-where-margin-bottom: 0;
+$filter-where-margin-left: 4px;
+$filter-where-line-height: 34px;
+// filter form
+$filter-pop-up-width: 292px;
+$filter-pop-up-search-input-height: 30px;
+$add-filter-popup-right: 35px;
+$edit-filter-popup-right: 3px;
+$filter-choices-section-padding-left: 15px;
+$filter-choices-section-margin-top: 7px;
+$filter-event-type-width: 224px;
+$filter-event-type-margin-bottom: 16px;
+$filter-not-selected-min-height: 20px;
+$filter-not-selected-margin-right: 1px;
+$filter-not-selected-line-height: 18px;
+$filter-type-font-size: 10px;
+$filter-string-filter-label-line-height: 18px;
+
 // Flat select
 $flat-select-option-size: 26px;
 
@@ -78,6 +122,9 @@ $description-margin-top: 5px;
 // Popover
 $popover-min-width: 320px;
 $popover-footer-y-padding: 12px;
+$popover-back-margin-top: 15px;
+$popover-navigation-section-border-radius: 1px 0 0 1px;
+$popover-navigation-section-width: 30px;
 
 // Modal
 $modal-header-height: 100px;
@@ -216,6 +263,13 @@ $dropdown-icon-text-spacing: 10px;
 $dropdown-button-font-size: 13px;
 $dropdown-choice-font-size: 13px;
 $dropdown-menu-max-height: 240px;
+$dropdown-button-min-width: 260px;
+
+//Dropdown Multiselect
+$drowdown-multiselect-margin: 2px;
+$drowdown-multiselect-items-margin: 4px;
+$dropdown-multiselect-option-height: 24px;
+$selected-option-close-width: 22px;
 
 // Chosen
 $chosen-clear-icon-size: 10px;
@@ -272,3 +326,11 @@ $selected-date-offset: 2px;
 $selected-date-height: 28px;
 $calendar-limit-border-width: 2px;
 $calendar-limit-border-length: 5px;
+
+// Tooltip
+$tooltip-z-index: 10000;
+$tooltip-spacing: 10px;
+
+// Home card
+$home-card-padding: 1rem; // Based on white space utility p2 (0.5rem * 2)
+$home-card-margin: 15px;
