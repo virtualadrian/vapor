@@ -3,7 +3,7 @@
 
   max-height: $list-box-max-height;
   min-width: 100%;
-  padding: $list-box-padding-top 0;
+  padding: $list-box-vertical-spacing 0;
   margin: 0;
   overflow-y: auto;
 
@@ -15,7 +15,7 @@
 }
 
 .item-box {
-  padding: $item-box-padding-y $item-box-padding-x;
+  padding: $item-box-vertical-spacing $item-box-horizontal-spacing;
   overflow: hidden;
 
   color: $dark-grey;
@@ -54,7 +54,7 @@
   &.divider {
     height: $item-box-divider-height;
     padding: 0;
-    margin: $item-box-padding-y 0;
+    margin: $item-box-vertical-spacing 0;
 
     background-color: $medium-grey;
 
