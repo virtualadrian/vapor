@@ -9,9 +9,22 @@
     height: 0.7em;
   }
 
+  &.mod-normal {
+    width: 1em;
+    height: 1em;
+  }
+
   &.mod-16 {
     width: 16px;
     height: 16px;
+
+    line-height: 16px;
+    vertical-align: -2px;
+  }
+
+  &.mod-20 {
+    width: 20px;
+    height: 20px;
 
     line-height: 16px;
     vertical-align: -2px;
