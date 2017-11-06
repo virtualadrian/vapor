@@ -6,8 +6,9 @@
 }
 
 .breadcrumb-arrow {
+  margin-top: $breadcrumb-icon-vertical-alignment;
+
   @extend .icon;
   @extend .mod-normal;
-  margin-top: $breadcrumb-icon-vertical-alignment;
   fill: $medium-grey;
 }
