@@ -1,58 +1,58 @@
-input[type=checkbox].coveo-slide-toggle {
+.coveo-slide-toggle {
   display: none;
-
-  & + button {
-    position: relative;
-
-    width: 32px;
-    height: 20px;
-
-    border: none;
-
-    cursor: pointer;
-
-    &:before, &:after {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-
-      display: block;
-      width: 32px;
-
-      content: ' ';
-
-      background-color: $medium-grey;
-
-      transition: all 0.2s linear;
-    }
-
-    &:after {
-      top: 2px;
-      bottom: 2px;
-
-      width: 18px;
-      margin-left: 2px;
-
-      background-color: $white;
-    }
-  }
 
   &:checked {
     + button:before {
       background-color: $green;
     }
 
-    + button:after {
+    + .slide-toggle-button:after {
       margin-left: 12px;
     }
   }
 
-  &:disabled + button {
+  &:disabled + .slide-toggle-button {
     outline: none;
 
     cursor: default;
     opacity: 0.4;
+  }
+}
+
+.slide-toggle-button{
+  position: relative;
+
+  width: 32px;
+  height: 20px;
+
+  border: none;
+
+  cursor: pointer;
+
+  &:before, &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 32px;
+
+    content: ' ';
+
+    background-color: $medium-grey;
+
+    transition: all 0.2s linear;
+  }
+
+  &:after {
+    top: 2px;
+    bottom: 2px;
+
+    width: 18px;
+    margin-left: 2px;
+
+    background-color: $white;
   }
 }
 
@@ -78,27 +78,27 @@ input[type=checkbox].coveo-slide-toggle {
 
     border: solid 1px $medium-grey;
 
-    .toggle-description {
-      display: block;
-      margin-top: 8px;
-
-      color: $dark-grey;
-      font-size: 13px;
-      line-height: 16px;
-    }
-
-    button {
+    .slide-toggle-button {
       float: right;
     }
   }
+}
 
-  .toggle-label {
-    font-size: $title-font-size;
-  }
+.toggle-label {
+  font-size: $title-font-size;
+}
 
-  button + .toggle-label, .toggle-label + .coveo-slide-toggle + button {
-    margin-left: $checkbox-label-margin;
-  }
+.slide-toggle-button + .toggle-label, .toggle-label + .coveo-slide-toggle + .slide-toggle-button {
+  margin-left: $checkbox-label-margin;
+}
+
+.toggle-description {
+  display: block;
+  margin-top: 8px;
+
+  color: $dark-grey;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 label[for].coveo-slide-toggle-label {

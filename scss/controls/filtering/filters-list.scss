@@ -1,120 +1,98 @@
-.filter-expression-picker {
-  .add-filter-popup, .edit-filter-popup, .filter-type-popup {
-    position: absolute;
-    z-index: 999;
+.add-filter-popup, .edit-filter-popup, .filter-type-popup {
+  position: absolute;
+  z-index: 999;
 
-    width: $filter-pop-up-width;
+  width: $filter-pop-up-width;
+}
 
-    .operator, .select-operator, .value-selector {
-      .admin-select {
-        width: 100%;
+.operator-admin-select {
+  width: 100%;
+}
 
-        .dropdown-toggle {
-          box-sizing: border-box;
-          width: 100%;
+.operator-dropdown-toggle {
+  box-sizing: border-box;
+  width: 100%;
 
-          text-align: left;
-        }
-      }
-    }
-  }
+  text-align: left;
+}
 
-  .add-filter-popup.left {
-    right: $add-filter-popup-right;
-  }
+.add-filter-popup.left, .edit-filter-popup.left {
+  right: $add-filter-popup-right;
+}
 
-  .edit-filter-popup.left {
-    right: $edit-filter-popup-right;
-  }
+.filter-listing {
+  margin: 0;
+  @include slim-scroll($light-grey, $medium-grey);
+}
 
-  .filter-choices, .columns-picker {
-    .popup-content {
-      .section {
-        display: inline-block;
-        width: 100%;
-        padding-left: $filter-choices-section-padding-left;
-        margin-top: $filter-choices-section-margin-top;
+.filter-popup-section {
+  display: inline-block;
+  width: 100%;
+  padding-left: $filter-choices-section-padding-left;
+  margin-top: $filter-choices-section-margin-top;
 
-        color: $medium-blue;
-        text-transform: uppercase;
-      }
+  color: $medium-blue;
+  text-transform: uppercase;
+}
 
-      .list {
-        @include slim-scroll($light-grey, $medium-grey);
-      }
-    }
-  }
+.filter-popup-content {
+  max-height: 300px;
+  overflow: auto;
 
-  .filter-choices .popup-content {
-    max-height: 300px;
-    overflow: auto;
+  @include slim-scroll($light-grey, $medium-grey);
+}
 
-    @include slim-scroll($light-grey, $medium-grey);
-  }
+.filter-popup-header {
+  background-color: $white;
+  border-bottom: $default-border;
+}
 
-  .filter-choices, .edit-filter-values {
-    .popup-header {
-      background-color: $white;
-      border-bottom: $default-border;
-    }
-  }
+.filter-container {
+  width: $filter-box-width-small-screen;
+}
 
-  .filter-choices .popup-header {
-    /// @deprecated the prefix coveo is no longer used.
-    .coveo-filter-container, .filter-container {
-      width: $filter-box-width-small-screen;
+.filter-icon {
+  right: $icon-offset-small-screen;
+}
 
-      .filter-icon {
-        right: $icon-offset-small-screen;
-      }
+.filter-box {
+  width: $filter-box-width-small-screen;
+}
 
-      input.filter-box {
-        width: $filter-box-width-small-screen;
+.filter-box-clear {
+  right: $icon-offset-small-screen;
+}
 
-        & + span {
-          right: $icon-offset-small-screen;
-        }
-      }
-    }
+.event-type {
+  width: $filter-event-type-width;
+  margin-bottom: $filter-event-type-margin-bottom;
+}
 
-    .event-type {
-      width: $filter-event-type-width;
-      margin-bottom: $filter-event-type-margin-bottom;
-    }
-  }
+.filter:not(.selected-filter) {
+  box-sizing: content-box;
+  min-height: $filter-not-selected-min-height;
+  padding: $filter-padding;
+  margin-right: $filter-not-selected-margin-right;
+  overflow-x: hidden;
 
-  .available-filters, .edit-filter-values {
-    ul {
-      margin: 0;
-    }
+  line-height: $filter-not-selected-line-height;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-    .filter:not(.selected-filter) {
-      box-sizing: content-box;
-      min-height: $filter-not-selected-min-height;
-      padding: $filter-padding;
-      margin-right: $filter-not-selected-margin-right;
-      overflow-x: hidden;
+  background-color: $pure-white;
 
-      line-height: $filter-not-selected-line-height;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+  cursor: pointer;
+}
 
-      background-color: $pure-white;
+.filter-option:hover, .filter-option.active {
+  background-color: $light-grey;
+}
 
-      cursor: pointer;
+.filter-label {
+  cursor: default;
+}
 
-      .type {
-        color: $medium-grey;
-        font-size: $filter-type-font-size;
-      }
-    }
-
-    li.filter:hover, li.filter.active {
-      background-color: $light-grey;
-    }
-
-    label.filter {
-      cursor: default;
-    }
-  }
+.filter-type {
+  color: $medium-grey;
+  font-size: $filter-type-font-size;
 }

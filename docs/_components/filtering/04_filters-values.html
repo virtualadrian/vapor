@@ -14,38 +14,38 @@ stylesheet: '/scss/controls/filters-values.scss'
                     <span><svg viewBox="0 0 20 20" class="icon arrow-left-rounded mod-lg"><path d="M11.5 4.8L7.2 9.3c-.3.4-.3.9 0 1.3l4.3 4.6c.3.4.9.4 1.2 0 .3-.4.3-.9 0-1.3L9 9.9 12.7 6c.3-.4.3-.9 0-1.3-.3-.3-.9-.3-1.2.1z"></path></svg></span>
                 </div>
             </div>
-            <div class="popup-main-section">
-                <div class="popup-header">
-                    <label class="selected-filter filter">Browser</label>
+            <div class="popup-main-section filter-values-main-section">
+                <div class="popup-header filter-values-header">
+                    <label class="selected-filter filter filter-label">Browser</label>
                 </div>
 
                 <div class="popover-body">
                     <div class="coveo-form">
                         <div class="form-group">
                             <div class="operator value">
-                                <div class="admin-select dropdown">
-                                    <button class="btn dropdown-toggle" type="button">
+                                <div class="admin-select operator-admin-select dropdown">
+                                    <button class="btn dropdown-toggle operator-dropdown-toggle" type="button">
                                         <span class="dropdown-selected-value">Is</span>
                                         <span class="dropdown-toggle-arrow"></span>
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li>
-                                            <span class="enabled selected-value state-selected  " title="">
+                                        <li class="dropdown-menu-item">
+                                            <span class="enabled selected-value state-selected dropdown-item" title="">
                                                 Is
                                             </span>
                                         </li>
-                                        <li>
-                                            <span class="enabled" title="">
+                                        <li class="dropdown-menu-item">
+                                            <span class="enabled dropdown-item" title="">
                                                 Is not
                                             </span>
                                         </li>
-                                        <li>
-                                            <span class="enabled" title="">
+                                        <li class="dropdown-menu-item">
+                                            <span class="enabled dropdown-item" title="">
                                                 Contains
                                             </span>
                                         </li>
-                                        <li>
-                                            <span class="enabled" title="">
+                                        <li class="dropdown-menu-item">
+                                            <span class="enabled dropdown-item" title="">
                                                 Does not contain
                                             </span>
                                         </li>
@@ -56,21 +56,21 @@ stylesheet: '/scss/controls/filters-values.scss'
 
                         <div class="form-group">
                             <div class="input-field multiline-field form-group">
-                                <ul>
+                                <ul class="multiline-list">
                                     <li class="input-wrapper">
-                                        <input type="text" class="js-value-input" value="Chrome" required>
-                                        <label>Value</label>
+                                        <input class="js-value-input input multiline-input" value="Chrome" required>
+                                        <label class="input-label multiline-label">Value</label>
                                         <div class="input-actions">
-                                            <button class="js-delete-value-button" type="button">
+                                            <button class="js-delete-value-button toggle-value-button" type="button">
                                                 <i class="delete-action" title="Delete this entry"></i>
                                             </button>
                                         </div>
                                     </li>
                                 </ul>
                                 <div class="input-wrapper">
-                                    <input type="text" class="js-new-value-input" placeholder="Enter filter value" required>
+                                    <input class="js-new-value-input input multiline-input" placeholder="Enter filter value" required>
                                     <div class="input-actions">
-                                        <button class="js-add-value-button">
+                                        <button class="js-add-value-button toggle-value-button">
                                             <i class="add-action" title="Add a new entry"></i>
                                         </button>
                                     </div>
@@ -81,12 +81,12 @@ stylesheet: '/scss/controls/filters-values.scss'
 
                     <div class="string-filters popover-row">
                         <div class="form-control coveo-checkbox-labels-group">
-                            <label class="coveo-checkbox-label">
+                            <label class="coveo-checkbox-label string-filter-label">
                                 <input type="checkbox" class="coveo-checkbox empty-filter">
                                 <button type="button"></button>
                                 <span class="label">Include blank values in filter</span>
                             </label>
-                            <label class="coveo-checkbox-label">
+                            <label class="coveo-checkbox-label string-filter-label">
                                 <input type="checkbox" class="coveo-checkbox null-filter">
                                 <button type="button"></button>
                                 <span class="label">Include n/a values in filter</span>

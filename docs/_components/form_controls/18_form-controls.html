@@ -6,22 +6,22 @@ usage: Almost all form controls grouped in a single coveo-form.
 
 <div class="coveo-form">
     <fieldset class="form-group input-field">
-        <input type="text" required/>
-        <label>An input</label>
+        <input class="input" required/>
+        <label class="input-label">An input</label>
     </fieldset>
 
     <fieldset class="form-group input-field">
-        <input type="text" required value="My value"/>
-        <label>A filled input</label>
+        <input class="input" required value="My value"/>
+        <label class="input-label">A filled input</label>
     </fieldset>
 
     <fieldset class="form-group">
         <label class="form-control-label">A checkbox</label> <!-- The form-control-label label is optional -->
         <div class="form-control">
             <label class="coveo-checkbox-label">
-                <input type="checkbox" class="coveo-checkbox">
-                <button></button>
-                <span class="label">Checked</span>
+                <input type="checkbox" class="coveo-checkbox checkbox">
+                <button class="checkbox-button"></button>
+                <span class="label checkbox-label">Checked</span>
             </label>
         </div>
     </fieldset>
@@ -29,28 +29,28 @@ usage: Almost all form controls grouped in a single coveo-form.
     <fieldset class="form-group">
         <label class="form-control-label">A group of checkboxes</label>
         <div class="form-control coveo-checkbox-labels-group">
-            <label class="coveo-checkbox-label coveo-checkbox-group-option">
-                <input type="checkbox" class="coveo-checkbox">
-                <button></button>
-                <span class="label">Checkbox 1</span>
+            <label class="coveo-checkbox-label coveo-checkbox-group-option checkbox-group-label">
+                <input type="checkbox" class="coveo-checkbox checkbox">
+                <button class="checkbox-button"></button>
+                <span class="label checkbox-label">Checkbox 1</span>
             </label>
-            <label class="coveo-checkbox-label coveo-checkbox-group-option">
-                <input type="checkbox" class="coveo-checkbox">
-                <button></button>
-                <span class="label">Checkbox 2</span>
+            <label class="coveo-checkbox-label coveo-checkbox-group-option checkbox-group-label">
+                <input type="checkbox" class="coveo-checkbox checkbox">
+                <button class="checkbox-button"></button>
+                <span class="label checkbox-label">Checkbox 2</span>
             </label>
         </div>
     </fieldset>
 
     <label class="form-group coveo-checkbox-label">
-        <input type="checkbox" class="coveo-checkbox">
-        <button></button>
-        <span class="label">A single checkbox (without a form-control-label)</span>
+        <input type="checkbox" class="coveo-checkbox checkbox">
+        <button class="checkbox-button"></button>
+        <span class="label checkbox-label">A single checkbox (without a form-control-label)</span>
     </label>
 
     <fieldset class="form-group input-field">
-        <input type="text" required placeholder="With a placeholder"/>
-        <label>Another empty input</label>
+        <input class="input" required placeholder="With a placeholder"/>
+        <label class="input-label">Another empty input</label>
     </fieldset>
 
     <fieldset class="form-group">
@@ -89,9 +89,9 @@ usage: Almost all form controls grouped in a single coveo-form.
                     Option 3
                 </button>
                 <ul class="dropdown-menu">
-                    <li><span class="enabled" title="">Option 1</span></li>
-                    <li><span class="enabled" title="">Option 2</span></li>
-                    <li><span class="enabled" title="">Option 3</span></li>
+                    <li class="dropdown-menu-item"><span class="enabled dropdown-item" title="">Option 1</span></li>
+                    <li class="dropdown-menu-item"><span class="enabled dropdown-item" title="">Option 2</span></li>
+                    <li class="dropdown-menu-item"><span class="enabled dropdown-item" title="">Option 3</span></li>
                 </ul>
             </div>
         </div>

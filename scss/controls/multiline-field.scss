@@ -1,142 +1,118 @@
-.multiline-field {
-  .input-wrapper {
+.input-wrapper {
+  position: relative;
+
+  padding-bottom: 8px;
+
+  &:nth-child(1) .input-label {
+    visibility: visible;
+  }
+}
+
+.multiline-list:not(:empty) + .input-wrapper {
+  .input {
+    @include placeholder();
+  }
+
+  .first-label {
+    visibility: hidden;
+  }
+}
+
+.input-actions {
+  position: absolute;
+  top: 4px;
+  right: -2px;
+
+  .tooltip {
+    width: $tooltip-width;
+  }
+}
+
+.delete-action, .add-action {
+  position: relative;
+
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid $medium-blue;
+  border-radius: 18px;
+
+
+  &:before {
     position: relative;
+    top: 6px;
+    left: 2px;
 
-    padding-bottom: 8px;
+    display: block;
+    width: 10px;
+    height: 2px;
 
-    input {
-      padding-right: 22px;
-    }
+    content: '';
 
-    label {
-      visibility: hidden;
-      &:after {
-        visibility: visible;
-      }
+    background-color: $medium-blue;
+  }
+}
 
-      &.first-label {
-        visibility: visible;
-      }
-    }
+.add-action {
+  border-color: $orange;
 
-    &:nth-child(1) label {
-      visibility: visible;
-    }
-
-    .multiline-label .inline-help-tooltip {
-      width: 1em;
-      height: 1em;
-    }
+  &:before {
+    background-color: $orange;
   }
 
-  ul {
-    li {
-      &:first-child label {
-        display: flex;
-      }
-
-      input {
-        margin-bottom: 10px;
-
-        &::-ms-clear {
-          // ie: remove the X on right
-          display: none;
-        }
-      }
-    }
-
-    &:not(:empty) + .input-wrapper {
-      input {
-        @include placeholder();
-      }
-
-      label.first-label {
-        visibility: hidden;
-      }
-    }
-  }
-
-  // Action icons
-  .input-actions {
+  &:after {
     position: absolute;
-    top: 4px;
-    right: -2px;
+    top: 2px;
+    left: 6px;
 
-    .js-add-value-button, .js-delete-value-button {
-      position: relative;
+    display: block;
+    width: 2px;
+    height: 10px;
 
-      padding: 4px;
+    content: '';
 
-      &:hover {
-        cursor: pointer;
-      }
+    background-color: $orange;
+  }
+}
 
-      &:focus {
-        i {
-          box-shadow: 0 0 6px 1px $medium-blue;
-        }
-      }
-    }
+.toggle-value-button{
+  position: relative;
 
-    button {
-      width: auto;
+  padding: 4px;
+  width: auto;
 
-      background: none;
-      border: none;
-      outline: none;
-    }
+  background: none;
+  border: none;
+  outline: none;
 
-    .tooltip {
-      width: $tooltip-width;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 
+  &:focus {
     i {
-      position: relative;
-
-      display: block;
-      width: 18px;
-      height: 18px;
-
-      border: 2px solid $medium-blue;
-      border-radius: 18px;
-
-      &.add-action, &.delete-action {
-        &:before {
-          position: relative;
-          top: 6px;
-          left: 2px;
-
-          display: block;
-          width: 10px;
-          height: 2px;
-
-          content: '';
-
-          background-color: $medium-blue;
-        }
-      }
-
-      &.add-action {
-        border-color: $orange;
-
-        &:before {
-          background-color: $orange;
-        }
-
-        &:after {
-          position: absolute;
-          top: 2px;
-          left: 6px;
-
-          display: block;
-          width: 2px;
-          height: 10px;
-
-          content: '';
-
-          background-color: $orange;
-        }
-      }
+      box-shadow: 0 0 6px 1px $medium-blue;
     }
   }
+}
+
+.multiline-input {
+  padding-right: 22px;
+}
+
+.multiline-label {
+  visibility: hidden;
+  &:after {
+    visibility: visible;
+  }
+}
+
+.first-label {
+  visibility: visible;
+}
+
+.multiline .inline-help-tooltip {
+  width: 1em;
+  height: 1em;
 }

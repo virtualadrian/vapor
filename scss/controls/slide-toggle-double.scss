@@ -2,7 +2,7 @@
   display: inline-block;
 }
 
-label.coveo-slide-toggle-double {
+.coveo-slide-toggle-double-label {
   float: left;
   margin-bottom: 0;
 
@@ -19,31 +19,31 @@ label.coveo-slide-toggle-double {
   }
 }
 
-input.coveo-slide-toggle-double[type=checkbox] {
+.coveo-slide-toggle-double-input {
   display: none;
 
-  & + span {
-    box-sizing: initial;
-    display: inline-block;
-    float: left;
-    width: 33px;
-    height: 16px;
-
-    background: $medium-grey url('../images/misc/two_option_toggle.png') 0 0; // Ignore error
-    border: 3px solid $medium-grey;
-    border-radius: 3px;
-
-    transition: background-position 0.35s ease;
-
-    cursor: pointer;
-  }
-
-  &:checked + span {
+  &:checked + .double-toggler  {
     background-position: -15px;
   }
 
-  &:disabled + span {
+  &:disabled + .double-toggler  {
     cursor: default;
     opacity: 0.4;
   }
+}
+
+.double-toggler {
+  box-sizing: initial;
+  display: inline-block;
+  float: left;
+  width: 33px;
+  height: 16px;
+
+  background: $medium-grey url('../images/misc/two_option_toggle.png') 0 0; // Ignore error
+  border: 3px solid $medium-grey;
+  border-radius: 3px;
+
+  transition: background-position 0.35s ease;
+
+  cursor: pointer;
 }

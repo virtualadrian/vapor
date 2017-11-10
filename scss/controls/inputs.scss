@@ -1,6 +1,6 @@
 @include placeholder();
 
-select, textarea, input[type='text'], input[type='password'], input[type='datetime'], input[type='datetime-local'], input[type='date'], input[type='month'], input[type='time'], input[type='week'], input[type='number'], input[type='email'], input[type='url'], input[type='search'], input[type='tel'], input[type='color'] {
+.select, .textarea, .input {
   padding: 3px 6px;
 
   color: $dark-grey;
@@ -11,17 +11,7 @@ select, textarea, input[type='text'], input[type='password'], input[type='dateti
   border-radius: 2px;
 }
 
-input[type='text'], textarea {
-  &.admin-invisible-textbox {
-    padding: 4px 6px;
-    margin-bottom: 0;
-
-    background: transparent;
-    border-width: 0;
-
-    resize: none;
-  }
-
+.input, .textarea {
   &:-ms-input-placeholder {
     color: $medium-grey;
     font-family: $base-font-family;
@@ -32,20 +22,18 @@ input[type='text'], textarea {
   }
 }
 
+.admin-invisible-textbox {
+  padding: 4px 6px;
+  margin-bottom: 0;
+
+  background: transparent;
+  border-width: 0;
+
+  resize: none;
+}
+
 .input-group {
-  input {
+  .input {
     height: 30px;
-  }
-  .add-on {
-    display: inline-block;
-    height: 30px;
-    padding: 0;
-    margin-left: -5px;
-
-    vertical-align: top;
-
-    background-color: $medium-grey;
-    border: 1px solid darken($medium-grey, 10%);
-    border-radius: 0 2px 2px 0;
   }
 }

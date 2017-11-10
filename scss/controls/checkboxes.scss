@@ -15,42 +15,10 @@
   cursor: pointer;
 }
 
-input[type=checkbox].coveo-checkbox {
+.coveo-checkbox {
   display: none;
 
-  & + button {
-    @extend .coveo-checkbox-button;
-
-    &:after {
-      position: absolute;
-      top: 7px;
-      left: 7px;
-
-      display: inline-block;
-      width: 0;
-      height: 0;
-
-      content: '';
-
-      background-color: transparent;
-      border-radius: 100%;
-
-      transition: all 300ms ease;
-    }
-
-    &:focus:after {
-      top: -6px;
-      left: -6px;
-
-      display: inline-block;
-      width: 26px;
-      height: 26px;
-
-      background-color: rgba(0, 0, 0, 0.08);
-    }
-  }
-
-  &:checked + button {
+  &:checked + .checkbox-button {
     background-color: $green;
     border-color: $green;
 
@@ -72,12 +40,12 @@ input[type=checkbox].coveo-checkbox {
     }
   }
 
-  &:disabled + button {
+  &:disabled + .checkbox-button {
     background-color: $dark-grey;
     border-color: $dark-grey;
   }
 
-  &:indeterminate + button {
+  &:indeterminate + .checkbox-button {
     position: relative;
 
     &:before {
@@ -96,15 +64,45 @@ input[type=checkbox].coveo-checkbox {
     }
   }
 
-  &:indeterminate:disabled + button:before {
+  &:indeterminate:disabled + .checkbox-button:before {
     border-color: $pure-white;
   }
 
-  &:disabled + button {
+  &:disabled + .checkbox-button {
     background-color: $dark-grey;
 
     cursor: default;
     opacity: 0.2;
+  }
+}
+
+.checkbox-button {
+  &:after {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+
+    display: inline-block;
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    background-color: transparent;
+    border-radius: 100%;
+
+    transition: all 300ms ease;
+  }
+
+  &:focus:after {
+    top: -6px;
+    left: -6px;
+
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+
+    background-color: rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -117,35 +115,28 @@ input[type=checkbox].coveo-checkbox {
   line-height: 16px;
   vertical-align: middle; // Required to properly position checkboxes into tables
 
-  .label {
-    cursor: pointer;
-  }
-
-  &.disabled .label {
+  &.disabled .checkbox-label {
     cursor: default;
     opacity: 0.4;
   }
+}
 
-  button + .label, .label + .coveo-checkbox + button {
-    margin-left: $checkbox-label-margin;
-  }
+.checkbox-label {
+  cursor: pointer;
 }
 
 label[for].coveo-checkbox-label {
   cursor: pointer;
 }
 
-.coveo-checkbox-labels-group {
-  .coveo-checkbox-label {
-    display: flex;
+.checkbox-button + .checkbox-label, .checkbox-label + .coveo-checkbox + .checkbox-button {
+  margin-left: $checkbox-label-margin;
+}
 
-    // Deprecated, use the coveo-checkbox-group-option class instead.
-    & + .coveo-checkbox-label {
-      margin-top: $checkbox-label-margin-top;
-    }
-  }
+.coveo-checkbox-group-label {
+  display: flex;
+}
 
-  .coveo-checkbox-group-option + .coveo-checkbox-group-option {
-    margin-top: $checkbox-label-margin-top;
-  }
+.coveo-checkbox-group-option + .coveo-checkbox-group-option {
+  margin-top: $checkbox-label-margin-top;
 }

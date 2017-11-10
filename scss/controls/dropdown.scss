@@ -67,7 +67,7 @@
   }
 }
 
-.dropdown-toggle .value-icon, .dropdown-menu li .value-icon {
+.value-icon {
   display: inline-flex;
   margin-right: 3px;
 
@@ -105,76 +105,73 @@
     right: 0;
     left: auto;
   }
+}
 
-  li {
-    > a, > span {
-      display: block;
-      width: 100%;
-      padding: 8px $button-padding-x;
-      overflow: hidden;
+.dropdown-menu-item {
+  &.active {
+    color: $dark-blue;
 
-      color: $dark-grey;
-      font-size: $dropdown-choice-font-size;
-      line-height: 16px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    background-color: $light-grey;
+  }
 
-      cursor: pointer;
+  &.divider {
+    height: 1px;
+    margin: 8px 0;
 
-      &:hover, &:focus {
-        color: $dark-blue;
+    background-color: $medium-grey;
 
-        background: $light-grey;
-      }
+    cursor: default;
+  }
+}
 
-      &.state-selected {
-        color: $dark-blue;
-        font-weight: bold;
-      }
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 8px $button-padding-x;
+  overflow: hidden;
 
-      &.disabled {
-        color: $medium-grey;
+  color: $dark-grey;
+  font-size: $dropdown-choice-font-size;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-        cursor: default;
-      }
+  cursor: pointer;
 
-      &.no-search-results {
-        word-break: break-word;
-        white-space: normal;
-      }
-    }
+  &:hover, &:focus {
+    color: $dark-blue;
 
-    &.active {
-      color: $dark-blue;
+    background: $light-grey;
+  }
 
-      background-color: $light-grey;
-    }
+  &.state-selected {
+    color: $dark-blue;
+    font-weight: bold;
+  }
 
-    &.divider {
-      height: 1px;
-      margin: 8px 0;
+  &.disabled {
+    color: $medium-grey;
 
-      background-color: $medium-grey;
+    cursor: default;
+  }
 
-      cursor: default;
-    }
+  &.no-search-results {
+    word-break: break-word;
+    white-space: normal;
   }
 }
 
 // Dropdown Search
+.dropdown-button-search-container, .filter-container.mod-search {
+  width: inherit;
+  min-width: $dropdown-button-min-width;
 
-.dropdown.mod-search {
-  .dropdown-button-search-container, .filter-container {
+  input.filter-box {
     width: inherit;
     min-width: $dropdown-button-min-width;
-
-    input.filter-box {
-      width: inherit;
-      min-width: $dropdown-button-min-width;
-    }
   }
+}
 
-  .dropdown-menu {
-    width: $dropdown-button-min-width;
-  }
+.dropdown-menu.mod-search {
+  width: $dropdown-button-min-width;
 }
