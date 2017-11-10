@@ -8,7 +8,7 @@
   }
 }
 
-.input, .textarea {
+.input:not(.spinner-input), .textarea {
   width: 100%;
   height: $input-height;
   padding: $input-padding;
@@ -75,7 +75,7 @@
   }
 }
 
-.input {
+.input:not(.spinner-input) {
   padding: $input-vertical-padding 0;
 
   color: transparent; // Make the input text color transparent when input is invalid (closed).
