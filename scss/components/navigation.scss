@@ -23,95 +23,89 @@
       background-color: $orange;
     }
   }
+}
 
-  .navigation-menu {
-    position: relative;
+.navigation-menu {
+  position: relative;
 
-    height: 100%;
-    overflow: auto;
+  height: 100%;
+  overflow: auto;
 
-    color: $white;
+  color: $white;
 
-    background-color: $navigation-background-color;
+  background-color: $navigation-background-color;
+}
 
-    .navigation-menu-sections {
-      .navigation-menu-section {
-        .navigation-menu-section-header {
-          align-items: center;
+.navigation-menu-section-header {
+  align-items: center;
 
-          display: flex;
-          height: 50px;
+  display: flex;
+  height: 50px;
 
-          font-size: 13px;
-          font-weight: 700;
-          text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
 
-          background-color: $medium-blue;
+  background-color: $medium-blue;
+}
 
-          .navigation-menu-section-header-icon {
-            margin: 0 $navigation-section-icon-margin;
-          }
-        }
+.navigation-menu-section-header-icon {
+  margin: 0 $navigation-section-icon-margin;
+}
 
-        .navigation-menu-section-items {
-          .navigation-menu-section-item {
-            font-weight: 400;
+.navigation-menu-section-item {
+  font-weight: 400;
 
-            border-left: $navigation-active-border-width solid transparent;
+  border-left: $navigation-active-border-width solid transparent;
 
-            cursor: pointer;
+  cursor: pointer;
 
-            .navigation-menu-section-item-link {
-              align-items: center;
-              justify-content: space-between;
+  &.state-locked {
+    .icon-folder-locked {
+      display: inline-block;
 
-              display: flex;
-              height: 30px;
-              padding-left: 2 * $navigation-section-icon-margin + $navigation-section-icon-size - $navigation-active-border-width;
-              margin-right: 2 * $navigation-section-icon-margin + $navigation-section-icon-size - $navigation-active-border-width;
-
-              color: $white;
-
-              &.state-locked {
-                color: $navigation-locked-color;
-              }
-            }
-
-            &.state-locked {
-              .icon-folder-locked {
-                display: inline-block;
-
-                visibility: visible;
-              }
-            }
-
-            &.state-closed {
-              .icon-folder-closed {
-                display: inline-block;
-
-                visibility: visible;
-              }
-            }
-
-            &.state-opened {
-              .icon-folder-opened {
-                display: inline-block;
-
-                visibility: visible;
-              }
-            }
-
-            &.state-active {
-              background-color: $navigation-active-background-color;
-              border-left-color: $white;
-            }
-
-            &:hover {
-              background-color: $navigation-active-background-color;
-            }
-          }
-        }
-      }
+      visibility: visible;
     }
+  }
+
+  &.state-closed {
+    .icon-folder-closed {
+      display: inline-block;
+
+      visibility: visible;
+    }
+  }
+
+  &.state-opened {
+    .icon-folder-opened {
+      display: inline-block;
+
+      visibility: visible;
+    }
+  }
+
+  &.state-active {
+    background-color: $navigation-active-background-color;
+    border-left-color: $white;
+  }
+
+  &:hover {
+    background-color: $navigation-active-background-color;
+  }
+}
+
+.navigation-menu-section-item-link {
+  align-items: center;
+  justify-content: space-between;
+
+  display: flex;
+  height: 30px;
+  padding-left: 2 * $navigation-section-icon-margin + $navigation-section-icon-size - $navigation-active-border-width;
+  margin-right: 2 * $navigation-section-icon-margin + $navigation-section-icon-size - $navigation-active-border-width;
+
+  color: $white;
+
+  &.state-locked {
+    color: $navigation-locked-color;
   }
 }

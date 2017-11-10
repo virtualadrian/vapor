@@ -6,12 +6,6 @@
   border-radius: $border-radius;
 }
 
-.limit-box-numbers {
-  label.form-control-label, .input-field input:valid + label {
-  color: $dark-medium-grey;
-  }
-}
-
 .limit-box-usage, .limit-box-limit {
   width: 50%;
 }

@@ -96,29 +96,29 @@
       border-right-color: $red;
     }
   }
+}
 
-  .tooltip-arrow {
-    position: absolute;
+.tooltip-arrow {
+  position: absolute;
 
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 
-    border-color: transparent;
-    border-style: solid;
-  }
+  border-color: transparent;
+  border-style: solid;
+}
 
-  .tooltip-inner {
-    max-width: 300px;
-    padding: 5px 10px;
+.tooltip-inner {
+  max-width: 300px;
+  padding: 5px 10px;
 
-    color: $pure-white;
-    text-decoration: none;
-    word-wrap: break-word;
-    white-space: normal;
+  color: $pure-white;
+  text-decoration: none;
+  word-wrap: break-word;
+  white-space: normal;
 
-    background-color: $dark-blue;
-    border-radius: 2px;
-  }
+  background-color: $dark-blue;
+  border-radius: 2px;
 }
 
 .tooltip-footer {

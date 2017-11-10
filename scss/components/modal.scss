@@ -11,7 +11,6 @@ $icon-size: (4em / 3);
   }
 }
 
-
 .modal-backdrop, .modal-container {
   position: fixed;
   top: 0;
@@ -35,25 +34,25 @@ $icon-size: (4em / 3);
 
   @include generate-layers(10, $base-backdrop-z-index);
 
-  &.prompt-backdrop {
-    position: absolute;
-
-    opacity: 0.5;
-    .mask {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-  }
-
   &.clear, &.closed {
     opacity: 0;
   }
 
   &.closed {
     visibility: hidden;
+  }
+}
+
+.prompt-backdrop {
+  position: absolute;
+
+  opacity: 0.5;
+  .mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -75,20 +74,6 @@ $icon-size: (4em / 3);
     > .modal-content {
       opacity: 1;
     }
-  }
-
-  .modal-content {
-    position: relative;
-    flex-direction: column;
-
-    display: flex;
-    width: 45%;
-    height: 50%;
-
-    transform: translate3d(0, 0, 0); // Required for drag and drop positioning with dragula inside the modal.
-
-    opacity: 0;
-    pointer-events: auto; // Required to reverse "pointer-events: none" effects on modal-content. Known issue: wont work on IE 10.
   }
 
   &.mod-medium > .modal-content {
@@ -147,6 +132,20 @@ $icon-size: (4em / 3);
   }
 }
 
+.modal-content {
+  position: relative;
+  flex-direction: column;
+
+  display: flex;
+  width: 45%;
+  height: 50%;
+
+  transform: translate3d(0, 0, 0); // Required for drag and drop positioning with dragula inside the modal.
+
+  opacity: 0;
+  pointer-events: auto; // Required to reverse "pointer-events: none" effects on modal-content. Known issue: wont work on IE 10.
+}
+
 .modal-header {
   align-items: center;
 
@@ -174,30 +173,30 @@ $icon-size: (4em / 3);
   &.mod-info {
     background-color: $medium-blue;
   }
+}
 
-  h1 {
-    flex-grow: 1;
+.modal-title {
+  flex-grow: 1;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    color: $medium-blue;
-    line-height: 30px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+  color: $medium-blue;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
-  .small-close {
-    position: absolute;
-    top: -($icon-size + pxtoem(10));
-    right: 0;
+.small-close {
+  position: absolute;
+  top: -($icon-size + pxtoem(10));
+  right: 0;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    // Make both the icon and his containing span the same size.
-    &, & .icon {
-      width: $icon-size;
-      height: $icon-size;
-    }
+  // Make both the icon and his containing span the same size.
+  &, & .icon {
+    width: $icon-size;
+    height: $icon-size;
   }
 }
 
@@ -208,10 +207,10 @@ $icon-size: (4em / 3);
   overflow: auto;
 
   background-color: $pure-white;
+}
 
-  .tab-content {
-    height: 100%;
-  }
+.tab-content {
+  height: 100%;
 }
 
 .modal-footer {

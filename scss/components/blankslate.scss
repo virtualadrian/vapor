@@ -8,16 +8,6 @@
   border: 1px solid $medium-blue;
   border-radius: $border-radius;
 
-  h1, h2, h3, h4, h5, h6 {
-    margin: $blankslate-margin 0 $blankslate-title-margin-bottom 0;
-  }
-
-  p {
-    margin-bottom: $blankslate-paragraph-margin-bottom;
-
-    color: $medium-blue;
-  }
-
   &.mod-small {
     padding: $blankslate-padding-small;
     h1 {
@@ -41,4 +31,14 @@
       color: $red;
     }
   }
+}
+
+.blankslate-title {
+  margin: $blankslate-margin 0 $blankslate-title-margin-bottom 0;
+}
+
+.blankslate-description {
+  margin-bottom: $blankslate-paragraph-margin-bottom;
+
+  color: $medium-blue;
 }

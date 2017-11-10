@@ -5,53 +5,45 @@
   &:not(.mod-no-border-bottom) {
     border-bottom: $default-border;
   }
+}
 
-  .action-bar {
-    flex-flow: row nowrap;
+.panel-header-action {
+  display: inline-block;
+  height: $button-height;
+  padding: 4px 5px;
+  margin-left: 5px;
 
-    display: flex;
+  vertical-align: bottom;
+
+  background-color: $pure-white;
+  border: 1px solid $medium-grey;
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  &.open, &:focus, &:active {
+    background-color: $light-grey;
   }
+}
 
-  .admin-description {
-    margin-top: $description-margin-top;
+.panel-header-action-bar {
+  flex-flow: row nowrap;
+
+  display: flex;
+}
+
+.panel-header-action-wrapper {
+  display: inline-block;
+
+  vertical-align: middle;
+
+  &.state-disabled {
+    color: $medium-grey;
+
+    cursor: default;
   }
+}
 
-  .action {
-    display: inline-block;
-    height: $button-height;
-    padding: 4px 5px;
-    margin-left: 5px;
-
-    vertical-align: bottom;
-
-    background-color: $pure-white;
-    border: 1px solid $medium-grey;
-    border-radius: 2px;
-
-    cursor: pointer;
-
-    &.open, &:focus, &:active {
-      background-color: $light-grey;
-    }
-
-    span {
-      display: inline-block;
-
-      vertical-align: middle;
-
-      &.state-disabled {
-        color: $medium-grey;
-
-        cursor: default;
-      }
-    }
-
-    .action-label {
-      display: none;
-    }
-
-    &.dropdown .dropdown-toggle {
-      padding: 0;
-    }
-  }
+.admin-description {
+  margin-top: $description-margin-top;
 }

@@ -14,27 +14,27 @@
   &.mod-success .sync-feedback-icon svg {
     fill: $green;
   }
+}
 
-  .sync-feedback-icon {
-    margin-right: 3px;
+.sync-feedback-icon {
+  margin-right: 3px;
 
-    line-height: 0;
-    vertical-align: middle;
-  }
+  line-height: 0;
+  vertical-align: middle;
+}
 
-  .status-dot {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
+.status-dot {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
 
-    vertical-align: -2px;
+  vertical-align: -2px;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    &.syncing {
-      background-color: $dark-grey;
+  &.syncing {
+    background-color: $dark-grey;
 
-      animation: scaleout 1.0s infinite ease-in-out;
-    }
+    animation: scaleout 1.0s infinite ease-in-out;
   }
 }

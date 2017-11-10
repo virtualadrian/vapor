@@ -9,7 +9,7 @@
   outline: none;
 }
 
-.lightbox-search .popover-container .lightbox-search-popover {
+.lightbox-search-popover {
   width: 100%;
   padding: 0;
   margin-top: 5px;
@@ -18,29 +18,29 @@
   background: $pure-white;
   border: none;
   border-radius: $border-radius;
+}
 
-  ul li {
-    height: auto;
-    padding: 0;
+.lightbox-search-option {
+  height: auto;
+  padding: 0;
 
-    color: $dark-grey;
-    line-height: inherit;
+  color: $dark-grey;
+  line-height: inherit;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover, &.admin-active {
-      color: $medium-blue;
+  &:hover, &.admin-active {
+    color: $medium-blue;
 
-      background-color: $white;
-    }
-
-    .autocomplete-value {
-      display: block;
-      padding: 10px 20px;
-
-      font-size: 1.8rem;
-
-      border-top: 1px solid $light-grey;
-    }
+    background-color: $white;
   }
+}
+
+.lightbox-search-autocomplete-value {
+  display: block;
+  padding: 10px 20px;
+
+  font-size: 1.8rem;
+
+  border-top: 1px solid $light-grey;
 }
