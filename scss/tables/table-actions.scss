@@ -102,6 +102,26 @@
   &.mod-align-header .coveo-table-actions:last-child {
     padding-right: $header-padding;
   }
+
+  &.small-actions-container {
+    .coveo-table-actions {
+      padding: 0 ($table-actions-margin / 2);
+
+      .action-label {
+        margin-left: 0;
+
+        font-size: $button-small-font-size;
+      }
+
+      .action-icon svg {
+        width: $table-small-svg-width;
+      }
+
+      .action + .action {
+        margin-left: ($table-actions-margin / 2);
+      }
+    }
+  }
 }
 
 .item-filter {
