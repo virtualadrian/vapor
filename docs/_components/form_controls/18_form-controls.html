@@ -19,8 +19,8 @@ usage: Almost all form controls grouped in a single coveo-form.
         <label class="form-control-label">A checkbox</label> <!-- The form-control-label label is optional -->
         <div class="form-control">
             <label class="coveo-checkbox-label">
-                <input type="checkbox" class="coveo-checkbox checkbox">
-                <button class="checkbox-button"></button>
+                <input type="checkbox" class="coveo-checkbox">
+                <button class="checkbox-button coveo-checkbox-button"></button>
                 <span class="label checkbox-label">Checked</span>
             </label>
         </div>
@@ -30,21 +30,21 @@ usage: Almost all form controls grouped in a single coveo-form.
         <label class="form-control-label">A group of checkboxes</label>
         <div class="form-control coveo-checkbox-labels-group">
             <label class="coveo-checkbox-label coveo-checkbox-group-option checkbox-group-label">
-                <input type="checkbox" class="coveo-checkbox checkbox">
-                <button class="checkbox-button"></button>
+                <input type="checkbox" class="coveo-checkbox">
+                <button class="checkbox-button coveo-checkbox-button"></button>
                 <span class="label checkbox-label">Checkbox 1</span>
             </label>
             <label class="coveo-checkbox-label coveo-checkbox-group-option checkbox-group-label">
-                <input type="checkbox" class="coveo-checkbox checkbox">
-                <button class="checkbox-button"></button>
+                <input type="checkbox" class="coveo-checkbox">
+                <button class="checkbox-button coveo-checkbox-button"></button>
                 <span class="label checkbox-label">Checkbox 2</span>
             </label>
         </div>
     </fieldset>
 
     <label class="form-group coveo-checkbox-label">
-        <input type="checkbox" class="coveo-checkbox checkbox">
-        <button class="checkbox-button"></button>
+        <input type="checkbox" class="coveo-checkbox">
+        <button class="checkbox-button coveo-checkbox-button"></button>
         <span class="label checkbox-label">A single checkbox (without a form-control-label)</span>
     </label>
 
@@ -58,7 +58,7 @@ usage: Almost all form controls grouped in a single coveo-form.
         <div class="form-control">
             <label class="coveo-slide-toggle-label">
                 <input type="checkbox" class="coveo-slide-toggle">
-                <button type="button"></button>
+                <button type="button" class="slide-toggle-button"></button>
                 <span class="toggle-label">Enabled</span>
             </label>
         </div>
@@ -68,9 +68,9 @@ usage: Almost all form controls grouped in a single coveo-form.
         <label class="form-control-label">A slide-toggle-double</label>
         <div class="form-control">
             <span class="coveo-slide-toggle-double-container">
-                <label class="coveo-slide-toggle-double first" for="DoubleChoice">Chose me</label>
-                <input type="checkbox" class="coveo-slide-toggle-double" id="DoubleChoice"><span></span>
-                <label class="coveo-slide-toggle-double second" for="DoubleChoice">Or me</label>
+                <label class="coveo-slide-toggle-double first coveo-slide-toggle-double-label" for="DoubleChoice">Chose me</label>
+                <input type="checkbox" class="coveo-slide-toggle-double coveo-slide-toggle-double-input" id="DoubleChoice"><span class="double-toggler"></span>
+                <label class="coveo-slide-toggle-double second coveo-slide-toggle-double-label" for="DoubleChoice">Or me</label>
             </span>
         </div>
     </fieldset>
