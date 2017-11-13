@@ -5,20 +5,20 @@ usage: Base style for all tables.
 stylesheet: '/scss/tables/table.scss'
 ---
 
-<table>
-    <thead>
-    <tr>
-        <th class="selection">
+<table class="table">
+    <thead class="table-header">
+    <tr class="table-header-row">
+        <th class="table-header-cell">
             <label class="coveo-checkbox-label">
                 <input type="checkbox" class="coveo-checkbox">
                 <button title="Select All" type="button"/>
             </label>
         </th>
-        <th class="admin-sort">
+        <th class="table-header-cell">
             Column 1
-            <div class="admin-sort-icon">
-                <span class="" title="">
-                    <svg viewBox="0 0 260 390" class="tables-sort icon">
+            <div class="table-sort">
+                <span>
+                    <svg viewBox="0 0 260 390" class="table-sort-icon icon">
                         <path class="asc-arrow" d="m258 131l-128-128-128 128"/>
                         <path class="desc-arrow" d="m1 259l128 128 128-128"/>
                     </svg>
@@ -26,15 +26,15 @@ stylesheet: '/scss/tables/table.scss'
             </div>
         </th>
         <th>Column 2</th>
-        <th class="admin-sort">
-            <label class="coveo-checkbox-label">
+        <th class="table-checkbox-header">
+            <label class="">
                 <input type="checkbox" class="coveo-checkbox">
                 <button type="button"></button>
             </label>
-            <span class="cell-content">Column 3</span>
-            <div class="admin-sort-icon">
+            <span class="">Column 3</span>
+            <div class="table-sort">
                 <span class="" title="">
-                    <svg viewBox="0 0 260 390" class="tables-sort icon">
+                    <svg viewBox="0 0 260 390" class="table-sort-icon icon">
                         <path class="asc-arrow" d="m258 131l-128-128-128 128"/>
                         <path class="desc-arrow" d="m1 259l128 128 128-128"/>
                     </svg>
@@ -44,8 +44,8 @@ stylesheet: '/scss/tables/table.scss'
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td class="selection">
+    <tr class="table-body-row">
+        <td class="table-body-cell mod-table-row-selected">
             <label class="coveo-checkbox-label">
                 <input type="checkbox" class="coveo-checkbox">
                 <button type="button"></button>
