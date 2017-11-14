@@ -7,120 +7,100 @@
   min-height: $table-actions-container-height;
 
   background-color: $white;
+}
 
-  .coveo-table-actions {
-    align-items: center;
+.coveo-table-actions + .coveo-table-actions {
+  border-left: $table-border;
+}
 
-    box-sizing: border-box; // Cancel the box-sizing: content-box for coveo-table-actions-container children.
-    display: flex;
-    height: $table-actions-container-height;
-    padding: 0 $table-actions-margin;
+.coveo-table-actions.predicate-filters + .coveo-table-actions:last-child {
+  padding-left: 0;
 
-    .actions-row {
-      align-items: center;
+  border-left: none;
+}
 
-      display: flex;
+.mod-align-header .coveo-table-actions:last-child {
+  padding-right: $header-padding;
+}
+
+.coveo-table-actions {
+  align-items: center;
+
+  box-sizing: border-box; // Cancel the box-sizing: content-box for coveo-table-actions-container children.
+  display: flex;
+  height: $table-actions-container-height;
+  padding: 0 $table-actions-margin;
+}
+
+.action {
+  line-height: 0; // Fix to make sure the action respect its children height.
+
+  border: 1px solid transparent;
+  border-radius: 2px;
+
+  cursor: pointer;
+  user-select: none;
+
+  .state-disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  & + .action {
+    margin-left: $table-actions-margin;
+  }
+
+  &.dropdown {
+    padding: 3px $table-actions-dropdown-padding-x;
+    margin-right: -$table-actions-dropdown-padding-x;
+    margin-left: calc(#{$table-actions-margin} - #{$table-actions-dropdown-padding-x});
+
+    .dropdown-toggle {
+      padding: 0;
     }
 
-    .admin-select {
-      &.dropdown {
-        vertical-align: super;
-      }
+    &.open {
+      background-color: $light-grey;
+      border-color: $medium-grey;
     }
 
-    .action {
-      line-height: 0; // Fix to make sure the action respect its children height.
-
-      border: 1px solid transparent;
-      border-radius: 2px;
-
-      cursor: pointer;
-      user-select: none;
-
-      .state-disabled {
-        cursor: default;
-        opacity: 0.3;
-      }
-
-      & + .action {
-        margin-left: $table-actions-margin;
-      }
-
-      &.dropdown {
-        padding: 3px $table-actions-dropdown-padding-x;
-        margin-right: -$table-actions-dropdown-padding-x;
-        margin-left: calc(#{$table-actions-margin} - #{$table-actions-dropdown-padding-x});
-
-        .dropdown-toggle {
-          padding: 0;
-        }
-
-        &.open {
-          background-color: $light-grey;
-          border-color: $medium-grey;
-        }
-
-        &:first-child {
-          margin-left: -$table-actions-dropdown-padding-x;
-        }
-      }
-
-      .action-label {
-        margin-top: 1px; // Hack to fix label vertical alignment...
-        margin-left: 10px;
-
-        color: $medium-blue;
-        font-size: 13px;
-        font-weight: bold;
-        line-height: 11px;
-        text-transform: uppercase;
-      }
-
-      .action-icon, .action-icon svg {
-        display: inline-block;
-        width: 26px;
-        height: 26px;
-      }
-
-      &.prompt-action {
-        padding: $button-padding-y $button-padding-x;
-        margin-left: $button-margin-width;
-      }
+    &:first-child {
+      margin-left: -$table-actions-dropdown-padding-x;
     }
   }
 
-  .coveo-table-actions + .coveo-table-actions {
-    border-left: $table-border;
+  .action-label {
+    margin-top: 1px; // Hack to fix label vertical alignment...
+    margin-left: $table-action-margin-left;
+
+    color: $medium-blue;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 11px;
+    text-transform: uppercase;
   }
 
-  .coveo-table-actions.predicate-filters + .coveo-table-actions:last-child {
-    padding-left: 0;
-
-    border-left: none;
+  .action-icon, .action-icon svg {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
   }
 
-  &.mod-align-header .coveo-table-actions:last-child {
-    padding-right: $header-padding;
+  &.prompt-action {
+    padding: $button-padding-y $button-padding-x;
+    margin-left: $button-margin-width;
   }
+}
 
-  &.small-actions-container {
-    .coveo-table-actions {
-      padding: 0 ($table-actions-margin / 2);
+.actions-row {
+  align-items: center;
 
-      .action-label {
-        margin-left: 0;
+  display: flex;
+}
 
-        font-size: $button-small-font-size;
-      }
-
-      .action-icon svg {
-        width: $table-small-svg-width;
-      }
-
-      .action + .action {
-        margin-left: ($table-actions-margin / 2);
-      }
-    }
+.admin-select {
+  &.dropdown {
+    vertical-align: super;
   }
 }
 
@@ -143,4 +123,24 @@
   outline: none;
 
   cursor: pointer;
+}
+
+.small-actions-container {
+  .coveo-table-actions {
+    padding: 0 ($table-actions-margin / 2);
+  }
+
+  .action-label {
+    margin-left: $table-action-margin-left / 2;
+
+    font-size: $button-small-font-size;
+  }
+
+  .action-icon, .action-icon svg {
+    width: $table-small-svg-width;
+  }
+
+  .action + .action {
+    margin-left: ($table-actions-margin / 2);
+  }
 }
