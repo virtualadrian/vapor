@@ -9,20 +9,6 @@
   background-color: $white;
 }
 
-.coveo-table-actions + .coveo-table-actions {
-  border-left: $table-border;
-}
-
-.coveo-table-actions.predicate-filters + .coveo-table-actions:last-child {
-  padding-left: 0;
-
-  border-left: none;
-}
-
-.mod-align-header .coveo-table-actions:last-child {
-  padding-right: $header-padding;
-}
-
 .coveo-table-actions {
   align-items: center;
 
@@ -30,77 +16,91 @@
   display: flex;
   height: $table-actions-container-height;
   padding: 0 $table-actions-margin;
-}
 
-.action {
-  line-height: 0; // Fix to make sure the action respect its children height.
+  .actions-row {
+    align-items: center;
 
-  border: 1px solid transparent;
-  border-radius: 2px;
-
-  cursor: pointer;
-  user-select: none;
-
-  .state-disabled {
-    cursor: default;
-    opacity: 0.3;
+    display: flex;
   }
 
-  & + .action {
-    margin-left: $table-actions-margin;
-  }
-
-  &.dropdown {
-    padding: 3px $table-actions-dropdown-padding-x;
-    margin-right: -$table-actions-dropdown-padding-x;
-    margin-left: calc(#{$table-actions-margin} - #{$table-actions-dropdown-padding-x});
-
-    .dropdown-toggle {
-      padding: 0;
-    }
-
-    &.open {
-      background-color: $light-grey;
-      border-color: $medium-grey;
-    }
-
-    &:first-child {
-      margin-left: -$table-actions-dropdown-padding-x;
+  .admin-select {
+    &.dropdown {
+      vertical-align: super;
     }
   }
 
-  .action-label {
-    margin-top: 1px; // Hack to fix label vertical alignment...
-    margin-left: $table-action-margin-left;
+  .action {
+    line-height: 0; // Fix to make sure the action respect its children height.
 
-    color: $medium-blue;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 11px;
-    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    cursor: pointer;
+    user-select: none;
+
+    .state-disabled {
+      cursor: default;
+      opacity: 0.3;
+    }
+
+    & + .action {
+      margin-left: $table-actions-margin;
+    }
+
+    &.dropdown {
+      padding: 3px $table-actions-dropdown-padding-x;
+      margin-right: -$table-actions-dropdown-padding-x;
+      margin-left: calc(#{$table-actions-margin} - #{$table-actions-dropdown-padding-x});
+
+      .dropdown-toggle {
+        padding: 0;
+      }
+
+      &.open {
+        background-color: $light-grey;
+        border-color: $medium-grey;
+      }
+
+      &:first-child {
+        margin-left: -$table-actions-dropdown-padding-x;
+      }
+    }
+
+    .action-label {
+      margin-top: 1px; // Hack to fix label vertical alignment...
+      margin-left: $table-action-margin-left;
+
+      color: $medium-blue;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 11px;
+      text-transform: uppercase;
+    }
+
+    .action-icon, .action-icon svg {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+    }
+
+    &.prompt-action {
+      padding: $button-padding-y $button-padding-x;
+      margin-left: $button-margin-width;
+    }
   }
 
-  .action-icon, .action-icon svg {
-    display: inline-block;
-    width: 26px;
-    height: 26px;
+  .coveo-table-actions + .coveo-table-actions {
+    border-left: $table-border;
   }
 
-  &.prompt-action {
-    padding: $button-padding-y $button-padding-x;
-    margin-left: $button-margin-width;
+  .coveo-table-actions.predicate-filters + .coveo-table-actions:last-child {
+    padding-left: 0;
+
+    border-left: none;
   }
-}
 
-.actions-row {
-  align-items: center;
-
-  display: flex;
-}
-
-.admin-select {
-  &.dropdown {
-    vertical-align: super;
+  &.mod-align-header .coveo-table-actions:last-child {
+    padding-right: $header-padding;
   }
 }
 
@@ -128,19 +128,19 @@
 .small-actions-container {
   .coveo-table-actions {
     padding: 0 ($table-actions-margin / 2);
-  }
 
-  .action-label {
-    margin-left: $table-action-margin-left / 2;
+    .action-label {
+      margin-left: $table-action-margin-left / 2;
 
-    font-size: $button-small-font-size;
-  }
+      font-size: $button-small-font-size;
+    }
 
-  .action-icon, .action-icon svg {
-    width: $table-small-svg-width;
-  }
+    .action-icon, .action-icon svg {
+      width: $table-small-svg-width;
+    }
 
-  .action + .action {
-    margin-left: ($table-actions-margin / 2);
+    .action + .action {
+      margin-left: ($table-actions-margin / 2);
+    }
   }
 }
