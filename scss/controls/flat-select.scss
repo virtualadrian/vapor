@@ -163,3 +163,11 @@
 
   display: flex;
 }
+
+.flat-select-prepend {
+  margin-right: 10px;
+
+  color: $medium-grey;
+  font-size: $default-font-size;
+  line-height: 18px;
+}
