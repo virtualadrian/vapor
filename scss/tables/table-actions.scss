@@ -94,6 +94,18 @@
   border-left: $table-border;
 }
 
+.coveo-table-actions {
+  &.mod-no-border-left,
+  &.mod-no-border-right {
+   border-left: none;
+  }
+}
+
+.coveo-table-actions.mod-no-border-right {
+  border-right: none;
+}
+
+
 .coveo-table-actions.predicate-filters + .coveo-table-actions:last-child {
   padding-left: 0;
 
