@@ -95,9 +95,12 @@
 }
 
 .coveo-table-actions {
-  &.mod-no-border-left,
+  &.mod-no-border-left {
+    border-left: none;
+  }
+
   &.mod-no-border-right {
-   border-left: none;
+    border-right: none;
   }
 }
 
