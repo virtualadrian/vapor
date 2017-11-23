@@ -90,18 +90,12 @@
   }
 }
 
-.coveo-table-actions + .coveo-table-actions {
+.coveo-table-actions {
   border-left: $table-border;
 }
 
-.coveo-table-actions {
-  &.mod-no-border-left {
-    border-left: none;
-  }
-
-  &.mod-no-border-right {
-    border-right: none;
-  }
+.coveo-table-actions:first-child {
+  border-left: none;
 }
 
 .coveo-table-actions.predicate-filters + .coveo-table-actions:last-child {
