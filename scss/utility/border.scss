@@ -7,9 +7,7 @@ $borders: border-top border-bottom border-left border-right;
 }
 
 @each $border in $borders {
-  .mod-no-#{$border},
-  :first-child.mod-no-#{$border},
-  :not(:first-child).mod-no-#{$border} {
+  .mod-no-#{$border} {
     #{$border}: none;
   }
 }
