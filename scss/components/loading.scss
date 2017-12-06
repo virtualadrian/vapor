@@ -53,6 +53,16 @@
   }
 }
 
+.table-container {
+  .loading-row {
+    display: none;
+  }
+
+  .spinner {
+    display: none;
+  } 
+}
+
 .loading-component {
   position: relative;
 
@@ -78,5 +88,13 @@
     transform: translate(-50%, -50%);
 
     opacity: 1;
+  }
+}
+
+.mod-loading-content {
+  pointer-events: none;
+
+  tbody {
+    opacity: 0.4;
   }
 }
