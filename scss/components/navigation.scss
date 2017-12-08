@@ -6,7 +6,7 @@
 
   user-select: none;
 
-  @include slim-scroll($purple-blue, $white);
+  @include slim-scroll($purple-blue, $pure-white);
 
   *, *:before, *:after {
     -webkit-font-smoothing: subpixel-antialiased;

@@ -21,6 +21,7 @@
 
 @mixin button-focus($offset) {
   background-color: $light-grey;
+
   @include focus-border($offset);
 }
 

@@ -1,15 +1,21 @@
 .loading-bg-grey {
   background: $white;
   background: linear-gradient(to right, #647686 8%, #778a9a 18%, #647686 33%);
-
   background-size: $navigation-loading-background-size;
 }
 
 .loading-bg-light-grey {
   background: $light-grey;
   background: linear-gradient(to right, #e9eef2 8%, #d1dbe3 18%, #e9eef2 33%);
-
   background-size: $navigation-loading-background-size;
+}
+
+.navigation-loading-animation {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: move-background-horizontal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .navigation-loading-item {
@@ -22,12 +28,7 @@
   background-size: $navigation-loading-background-size;
   border-radius: $navigation-loading-item-border-radius;
 
-
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-name: move-background-horizontal;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  @extend .navigation-loading-animation;
 }
 
 .navigation-loading-item-light-grey {

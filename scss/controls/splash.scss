@@ -17,8 +17,8 @@
 }
 
 .bg-polygon {
-  background-image: url('../images/dark_polyart.png');
-  background-repeat: repeat-x;
+  background: $purple-blue url('../images/dark-polyart.svg');
+  background-size: cover;
 }
 
 .splash-container {
