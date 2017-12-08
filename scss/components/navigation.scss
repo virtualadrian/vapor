@@ -43,7 +43,7 @@
           height: 50px;
 
           font-size: 13px;
-          font-weight: 400;
+          font-weight: $navigation-menu-header-font-weight;
           text-transform: uppercase;
 
           border-top: 1px solid $dark-grey;
@@ -56,7 +56,7 @@
 
         .navigation-menu-section-items {
           .navigation-menu-section-item {
-            font-weight: 200;
+            font-weight: $navigation-menu-item-font-weight;
 
             border-left: $navigation-active-border-width solid transparent;
 
