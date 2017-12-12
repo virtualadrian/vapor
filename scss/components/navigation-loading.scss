@@ -10,14 +10,6 @@
   background-size: $navigation-loading-background-size;
 }
 
-.navigation-loading-animation {
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: move-background-horizontal;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
 .navigation-loading-item {
   position: relative;
 
@@ -27,8 +19,6 @@
 
   background-size: $navigation-loading-background-size;
   border-radius: $navigation-loading-item-border-radius;
-
-  @extend .navigation-loading-animation;
 }
 
 .navigation-loading-item-light-grey {
