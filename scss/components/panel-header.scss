@@ -19,7 +19,7 @@
   .action {
     display: inline-block;
     height: $button-height;
-    padding: 7px 15px;
+    padding: $panel-header-action-padding-vertical $panel-header-action-padding-horizontal;
     margin-left: 5px;
 
     vertical-align: bottom;
