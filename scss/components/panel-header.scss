@@ -28,8 +28,6 @@
 
     cursor: pointer;
 
-
-
     &.open, &:focus, &:active {
       background-color: $light-grey;
     }
