@@ -28,13 +28,7 @@
 
     cursor: pointer;
 
-    &.link {
-      padding: $panel-header-action-padding-vertical $panel-header-action-padding-horizontal;
-    }
 
-    .trigger {
-      padding: $panel-header-action-padding-vertical $panel-header-action-padding-horizontal;
-    }
 
     &.open, &:focus, &:active {
       background-color: $light-grey;
@@ -54,9 +48,8 @@
       display: none;
     }
 
-    &.dropdown .dropdown-toggle {
+    &.mod-link, .trigger, &.dropdown .dropdown-toggle {
       padding: $panel-header-action-padding-vertical $panel-header-action-padding-horizontal;
-      line-height: inherit;
     }
   }
 }
