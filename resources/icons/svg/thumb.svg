@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 14">
+  <style type="text/css">
+    .st0{filter:url(#filter-2);}
+    .st1{fill:#FFFFFF;}
+    .st2{fill:none;stroke:#F0F0F0;stroke-width:0.8;stroke-linecap:square;}
+  </style>
+  <filter filterUnits="objectBoundingBox" height="142.9%" id="filter-2" width="121.4%" x="-10.7%" y="-21.4%">
+    <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+    <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1"></feGaussianBlur>
+    <feColorMatrix in="shadowBlurOuter1" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0"></feColorMatrix>
+  </filter>
+  <path d="M1.6,0h24.8C27.3,0,28,0.7,28,1.6v10.8c0,0.9-0.7,1.6-1.6,1.6H1.6C0.7,14,0,13.3,0,12.4V1.6
+					C0,0.7,0.7,0,1.6,0z"/>
+  <path class="st1" d="M1.6,0h24.8C27.3,0,28,0.7,28,1.6v10.8c0,0.9-0.7,1.6-1.6,1.6H1.6C0.7,14,0,13.3,0,12.4V1.6
+					C0,0.7,0.7,0,1.6,0z"/>
+  <g transform="translate(8.800000, 2.470588)">
+    <path id="Line" class="st2" d="M5.2,0.4v8.2"/>
+    <path id="Line_1_" class="st2" d="M9.2,1.2v6.6"/>
+    <path id="Line_2_" class="st2" d="M1.2,1.2v6.6"/>
+  </g>
+</svg>
