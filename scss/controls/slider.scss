@@ -35,8 +35,8 @@
   .rc-slider-handle {
     width: $handle-width;
     height: $handle-height;
-    margin-top: -6px;
-    margin-left: -18px;
+    margin-top: $handle-margin-top;
+    margin-left: $handle-margin-left;
 
     background: url('../../resources/icons/svg/thumb.svg');
     background-repeat: no-repeat;
