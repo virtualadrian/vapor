@@ -2,6 +2,7 @@
   .rc-slider-rail {
     height: $rail-height;
     margin-top: $rail-margin-top;
+
     background-color: $light-grey;
   }
 
@@ -14,14 +15,16 @@
 
   .rc-slider-dot {
     bottom: initial;
-    margin-left: $dot-margin-left;
-    margin-top: $dot-margin-top;
-    box-shadow: $dot-box-shadow;
-    height: $dot-height;
+
     width: $dot-width;
+    height: $dot-height;
+    margin-top: $dot-margin-top;
+    margin-left: $dot-margin-left;
+
     background-color: $pure-white;
-    border-radius: initial;
+    box-shadow: $dot-box-shadow;
     border: none;
+    border-radius: initial;
   }
 
   .rc-slider-dot-active {
@@ -34,28 +37,28 @@
     height: $handle-height;
     margin-top: -6px;
     margin-left: -18px;
+
     background: url('../../resources/icons/svg/thumb.svg');
     background-repeat: no-repeat;
     background-size: $handle-background-size;
     box-shadow: $handle-box-shadow;
-
     border: none;
     border-radius: $handle-border-radius;
   }
 }
 
 .vapor-slider-overlay {
-  padding: 0px;
+  padding: 0;
 
-  &[class*="rc-slider-tooltip-placement-"] {
+  &[class*='rc-slider-tooltip-placement-'] {
     .rc-slider-tooltip-arrow {
       display: none;
     }
 
     .rc-slider-tooltip-inner {
+      color: $dark-blue;
       font-size: $small-font-size;
       line-height: $default-line-height;
-      color: $dark-blue;
 
       background-color: transparent;
       box-shadow: none;
