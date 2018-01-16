@@ -1,49 +1,49 @@
 .vapor-slider.rc-slider {
   .rc-slider-rail {
-    height: $rail-height;
-    margin-top: $rail-margin-top;
+    height: $slider-rail-height;
+    margin-top: $slider-rail-margin-top;
 
     background-color: $light-grey;
   }
 
   .rc-slider-track {
-    height: $track-height;
+    height: $slider-track-height;
 
     background-color: $dark-blue;
-    border-radius: $track-border-radius;
+    border-radius: $slider-track-border-radius;
   }
 
   .rc-slider-dot {
     bottom: initial;
 
-    width: $dot-width;
-    height: $dot-height;
-    margin-top: $dot-margin-top;
-    margin-left: $dot-margin-left;
+    width: $slider-dot-width;
+    height: $slider-dot-height;
+    margin-top: $slider-dot-margin-top;
+    margin-left: $slider-dot-margin-left;
 
     background-color: $pure-white;
-    box-shadow: $dot-box-shadow;
+    box-shadow: $slider-dot-box-shadow;
     border: none;
     border-radius: initial;
   }
 
   .rc-slider-dot-active {
-    height: $dot-active-height;
+    height: $slider-dot-active-height;
     margin-top: initial;
   }
 
   .rc-slider-handle {
-    width: $handle-width;
-    height: $handle-height;
-    margin-top: $handle-margin-top;
-    margin-left: $handle-margin-left;
+    width: $slider-handle-width;
+    height: $slider-handle-height;
+    margin-top: $slider-handle-margin-top;
+    margin-left: $slider-handle-margin-left;
 
     background: url('../../resources/icons/svg/slider-handle.svg');
     background-repeat: no-repeat;
-    background-size: $handle-background-size;
-    box-shadow: $handle-box-shadow;
+    background-size: $slider-handle-background-size;
+    box-shadow: $slider-handle-box-shadow;
     border: none;
-    border-radius: $handle-border-radius;
+    border-radius: $slider-handle-border-radius;
   }
 }
 
