@@ -63,14 +63,6 @@
 
             cursor: pointer;
 
-            &:focus {
-              outline: 3px solid #f58020;
-              outline-width: 3px;
-              outline-offset: -2px;
-              box-shadow: 0px 0px 2px 2px #f58020;
-              outline-width: 3px;
-            }
-
             .navigation-menu-section-item-link {
               align-items: center;
               justify-content: space-between;
@@ -84,6 +76,7 @@
 
               &:focus {
                 border: none;
+                width: $navigation-focus-button-width;
               }
 
               &.state-locked {
