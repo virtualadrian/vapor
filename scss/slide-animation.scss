@@ -1,7 +1,7 @@
 .slide-y {
     height: 0;
     transition-property: none;
-    transition-duration: .5s;
+    transition-duration: $slide-y-transition-duration;
     transition-timing-function: ease-in-out;
 }
 
