@@ -12,14 +12,14 @@ const del = require('del');
 
 function Dictionary(from) {
     this.json = JSON.parse(fs.readFileSync(from));
-    this.merge = function(dict) {
+    this.merge = function (dict) {
         this.json = _.extend(this.json, dict.json);
     };
 
     this.writeSvgEnumFile = (to) => {
         let code = 'var svgEnum = {\n';
         const that = this;
-        _.each(_.keys(this.json), function(key) {
+        _.each(_.keys(this.json), function (key) {
             const camelizedKey = s.camelize(key);
             code += '        ' + camelizedKey + ': { name : \'' + camelizedKey + '\', render : function(svgClass, spanClass, title, attr) { return svgWrapper(' + JSON.stringify(that.json[key]) + ', svgClass, spanClass, title, attr); } }, \n';
         });
@@ -29,7 +29,7 @@ function Dictionary(from) {
     };
 }
 
-gulp.task('svg:concat', 'Concat all svg files into one in a json format and export it to dist/svg', function() {
+gulp.task('svg:concat', 'Concat all svg files into one in a json format and export it to dist/svg', function () {
     return gulp.src('./resources/icons/svg/*.svg')
         .pipe(svgmin({
             plugins: [{
@@ -42,9 +42,9 @@ gulp.task('svg:concat', 'Concat all svg files into one in a json format and expo
                 removeComments: true,
             }],
         }))
-        // tslint:disable
-        .pipe(cheerio(function($) {
-            $('svg').each(function() {
+        .pipe(cheerio(($) => {
+            // tslint:disable-next-line
+            $('svg').each(function () {
                 const svg = $(this);
                 if (svg) {
                     const attrs = svg[0].attribs;
@@ -56,7 +56,6 @@ gulp.task('svg:concat', 'Concat all svg files into one in a json format and expo
                 }
             });
         }))
-        // tslint:enable
         .pipe(filesToJson('CoveoStyleGuideSvg.json'))
         .pipe(gulp.dest('dist/svg'))
         .pipe(rename('icons.json'))
@@ -73,7 +72,7 @@ gulp.task('svg:enum', 'Enumerate the svgs in a variable', ['svg:concat'], () => 
     dict.writeSvgEnumFile('tmp/svg.js');
 
     gulp.src('resources/js/VaporSVG.js')
-        .pipe(gfi({ '/* SVG Enum */': 'tmp/svg.js'}))
+        .pipe(gfi({'/* SVG Enum */': 'tmp/svg.js'}))
         .pipe(gulp.dest('dist/js/'));
 });
 

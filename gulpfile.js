@@ -2,9 +2,9 @@
 // --min                        Flag to enable minification                                         Default: false
 // --gzip                       Flag to enable gziphication                                         Default: false
 
-let gulp = require('gulp-help')(require('gulp'));
-let requireDir = require('require-dir');
-let tasks = requireDir('./gulpTasks');
+const gulp = require('gulp-help')(require('gulp'));
+const requireDir = require('require-dir');
+const tasks = requireDir('./gulpTasks');
 
 gulp.task('default', 'Build sass, libs and sprites to the dist folder', [
     'sass',
