@@ -23,9 +23,9 @@ gulp.task('lib', 'Concat and export libs to dist folder', () => {
         './lib/js/*',
     ];
     dependencies.forEach((path) => {
-        fs.exists(path, function(exists) {
+        fs.exists(path, (exists) => {
             if (!exists) {
-                if (path.indexOf('*') == -1) {
+                if (path.indexOf('*') === -1) {
                     gutil.log(gutil.colors.red('File not found: ', path));
                     process.exit(1);
                 }

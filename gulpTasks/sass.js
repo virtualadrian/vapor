@@ -22,7 +22,7 @@ const useGzippedSources = gutil.env.gzip;
 gulp.task('sass', 'Compile sass files to dist folder', ['sprites'], (done) => {
     return gulp.src('./scss/guide.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', function(err) {
+        .pipe(sass().on('error', (err) => {
             sassError(err, done);
         }))
         .pipe(autoprefixer(autoprefixerOptions))

@@ -12,14 +12,14 @@ const del = require('del');
 
 function Dictionary(from) {
     this.json = JSON.parse(fs.readFileSync(from));
-    this.merge = function (dict) {
+    this.merge = (dict) => {
         this.json = _.extend(this.json, dict.json);
     };
 
     this.writeSvgEnumFile = (to) => {
         let code = 'var svgEnum = {\n';
         const that = this;
-        _.each(_.keys(this.json), function (key) {
+        _.each(_.keys(this.json), (key) => {
             const camelizedKey = s.camelize(key);
             code += '        ' + camelizedKey + ': { name : \'' + camelizedKey + '\', render : function(svgClass, spanClass, title, attr) { return svgWrapper(' + JSON.stringify(that.json[key]) + ', svgClass, spanClass, title, attr); } }, \n';
         });
@@ -29,7 +29,7 @@ function Dictionary(from) {
     };
 }
 
-gulp.task('svg:concat', 'Concat all svg files into one in a json format and export it to dist/svg', function () {
+gulp.task('svg:concat', 'Concat all svg files into one in a json format and export it to dist/svg', () => {
     return gulp.src('./resources/icons/svg/*.svg')
         .pipe(svgmin({
             plugins: [{
