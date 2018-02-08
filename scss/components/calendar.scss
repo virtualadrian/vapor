@@ -324,6 +324,10 @@
   font-size: $button-font-size;
   width: 100%;
   padding: $dropdown-choices-top-bottom-margin;
+
+  &:hover {
+    background-color: rgba($light-blue, 0.2);
+  }
 }
 
 .date-button {
