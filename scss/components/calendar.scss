@@ -23,7 +23,7 @@
 
 .date-picker-box {
   width: $date-picker-width;
-  
+
   background-color: $pure-white;
   border: $default-border;
   border-radius: $border-radius;
@@ -307,36 +307,36 @@
   }
 }
 
-%date-selection-button {
-  box-sizing: border-box;
-  display: block;
-  
-  background: none;
-  border: $default-border;
-  border-radius: $border-radius;
-  
-  cursor: pointer;
-}
 
-.clear-selection-button {
-  @extend %date-selection-button;
-  color: $medium-blue;
-  font-size: $button-font-size;
-  width: 100%;
-  padding: $dropdown-choices-top-bottom-margin;
+.date-selection {
+  .action-btn {
+    box-sizing: border-box;
+    display: block;
+    
+    background: none;
+    border: $default-border;
+    border-radius: $border-radius;
+    
+    cursor: pointer;
+  }
 
-  &:hover {
-    background-color: rgba($light-blue, 0.2);
+  .action-big {
+    color: $medium-blue;
+    font-size: $button-font-size;
+    width: 100%;
+    padding: $dropdown-choices-top-bottom-margin;
+    
+    &:hover {
+      background-color: rgba($light-blue, 0.2);
+    }
+  }
+
+  .action-small {
+    width: $date-picker-dimension;
+    height: $date-picker-dimension;
+    padding: $button-small-padding-x;
   }
 }
-
-.date-button {
-  @extend %date-selection-button;
-  width: $date-picker-dimension;
-  height: $date-picker-dimension;
-  padding: 10px;
-}
-
 
 .date-separator {
   font-size: $default-font-size;
