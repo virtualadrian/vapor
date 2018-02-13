@@ -310,6 +310,9 @@
 .date-button {
   box-sizing: border-box;
   display: block;
+  width: $date-picker-dimension;
+  height: $date-picker-dimension;
+  padding: $button-small-padding-x;
   
   background: none;
   border: $default-border;
@@ -317,26 +320,22 @@
   
   cursor: pointer;
   
-  width: $date-picker-dimension;
-  height: $date-picker-dimension;
-  padding: $button-small-padding-x;
 }
 
 .clear-selection-button {
   box-sizing: border-box;
   display: block;
+  width: 100%;
+  height: $date-picker-dimension;
+  padding: $dropdown-choices-top-bottom-margin;
   
-  color: $medium-blue;
-  font-size: $button-font-size;
   background: none;
-
   border: $default-border;
   border-radius: $border-radius;
-  
+
+  color: $medium-blue;
+  font-size: $button-font-size;
   cursor: pointer;
-  
-  width: 100%;
-  padding: $dropdown-choices-top-bottom-margin;
   
   &:hover {
     background-color: rgba($light-blue, 0.2);
