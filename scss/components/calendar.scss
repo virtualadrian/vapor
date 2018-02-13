@@ -253,7 +253,7 @@
     &:nth-child(1n) {
       button {
         &:hover, &.active {
-          background-color: rgba($light-blue, 0.2);
+          background-color: $date-picker-button-hover-bg;
         }
 
         &.active {
@@ -319,14 +319,16 @@
   border-radius: $border-radius;
   
   cursor: pointer;
-  
+
+  &:hover {
+    background-color: $date-picker-button-hover-bg;
+  }
 }
 
 .clear-selection-button {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  height: $date-picker-dimension;
   padding: $dropdown-choices-top-bottom-margin;
   
   background: none;
@@ -338,7 +340,7 @@
   cursor: pointer;
   
   &:hover {
-    background-color: rgba($light-blue, 0.2);
+    background-color: $date-picker-button-hover-bg;
   }
 }
 
