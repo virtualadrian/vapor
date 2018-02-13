@@ -307,34 +307,39 @@
   }
 }
 
+.date-button {
+  box-sizing: border-box;
+  display: block;
+  
+  background: none;
+  border: $default-border;
+  border-radius: $border-radius;
+  
+  cursor: pointer;
+  
+  width: $date-picker-dimension;
+  height: $date-picker-dimension;
+  padding: $button-small-padding-x;
+}
 
-.date-selection {
-  .action-btn {
-    box-sizing: border-box;
-    display: block;
-    
-    background: none;
-    border: $default-border;
-    border-radius: $border-radius;
-    
-    cursor: pointer;
-  }
+.clear-selection-button {
+  box-sizing: border-box;
+  display: block;
+  
+  color: $medium-blue;
+  font-size: $button-font-size;
+  background: none;
 
-  .action-big {
-    color: $medium-blue;
-    font-size: $button-font-size;
-    width: 100%;
-    padding: $dropdown-choices-top-bottom-margin;
-    
-    &:hover {
-      background-color: rgba($light-blue, 0.2);
-    }
-  }
-
-  .action-small {
-    width: $date-picker-dimension;
-    height: $date-picker-dimension;
-    padding: $button-small-padding-x;
+  border: $default-border;
+  border-radius: $border-radius;
+  
+  cursor: pointer;
+  
+  width: 100%;
+  padding: $dropdown-choices-top-bottom-margin;
+  
+  &:hover {
+    background-color: rgba($light-blue, 0.2);
   }
 }
 
