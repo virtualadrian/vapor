@@ -310,6 +310,79 @@ stylesheet: '/scss/components/facet.scss'
                 </li>
             </ul>
         </div>
+        <div class="facet facet-opened">
+            <div class="facet-header">
+                <div class="facet-header-eraser">
+                    <span class="icon fill-medium-grey">
+                        {{ site.data.icons['clear'] }}
+                    </span>
+                </div>
+                <div class="facet-header-title text-medium-blue">Facet with count</div>
+            </div>
+            <ul class="facet-values">
+                <li class="facet-value facet-selectable">
+                    <label class="coveo-checkbox-label facet-value-label">
+                        <input type="checkbox" checked class="coveo-checkbox facet-checkbox-input">
+                        <button type="button"></button>
+                        <span class="count">10</span>
+                        <span class="label">First facet value</span>
+                    </label>
+                </li>
+                <li class="facet-value facet-selectable">
+                    <label class="coveo-checkbox-label facet-value-label">
+                        <input type="checkbox" class="coveo-checkbox facet-checkbox-input">
+                        <button type="button"></button>
+                        <span class="count">3145</span>
+                        <span class="label">Second facet value</span>
+                    </label>
+                </li>
+                <li class="facet-value facet-selectable">
+                    <label class="coveo-checkbox-label facet-value-label">
+                        <input type="checkbox" class="coveo-checkbox facet-checkbox-input">
+                        <button type="button"></button>
+                        <span class="count">2</span>
+                        <span class="label">Third facet value</span>
+                    </label>
+                </li>
+                <li class="facet-value facet-selectable">
+                    <label class="coveo-checkbox-label facet-value-label">
+                        <input type="checkbox" class="coveo-checkbox facet-checkbox-input">
+                        <button type="button"></button>
+                        <span class="count">94398</span>
+                        <span class="label">Longer fourth facet value to see overflow</span>
+                    </label>
+                </li>
+            </ul>
+            <div class="facet-more-search">
+                <div class="facet-search">
+                    <div class="coveo-filter-container">
+                        <input type="text" class="filter-box" placeholder="Filter">
+                        <span class="hide"></span>
+                        <span class="filter-icon icon mod-lg fill-medium-grey">
+                        {{ site.data.icons['filter'] }}
+                    </span>
+                    </div>
+                </div>
+                <ul class="facet-search-results">
+                    <li class="facet-value facet-selectable facet-search-selectable">
+                        <label class="coveo-checkbox-label facet-value-label">
+                            <input type="checkbox" class="coveo-checkbox facet-checkbox-input">
+                            <button type="button"></button>
+                            <span class="count">21</span>
+                            <span class="label">Search result</span>
+                        </label>
+                    </li>
+                    <li class="facet-value facet-selectable facet-search-selectable">
+                        <label class="coveo-checkbox-label facet-value-label">
+                            <input type="checkbox" class="coveo-checkbox facet-checkbox-input">
+                            <button type="button"></button>
+                            <span class="count">35743</span>
+                            <span class="label">Second search result</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
