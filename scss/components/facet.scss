@@ -4,6 +4,7 @@
   max-width: $facet-column-max-width;
   padding: $facet-column-padding-y $facet-column-padding-right $facet-column-padding-y $facet-column-padding-left;
   margin-right: 0;
+
   border-right: 1px solid $medium-grey;
 }
 
@@ -28,10 +29,10 @@
 
   .facet-header {
     position: relative;
-  
+
     padding: $button-padding-x;
     clear: both;
-  
+
     background: $white;
     border-top-right-radius: $border-radius;
     border-top-left-radius: $border-radius;
@@ -40,21 +41,21 @@
       position: absolute;
       top: 0;
       right: 25px;
-    
+
       height: 100%;
-    
+
       cursor: pointer;
-    
+
       .icon {
         position: relative;
         top: 50%;
-    
+
         display: block;
         width: 10px;
         height: 10px;
-    
+
         transform: translateY(-50%);
-    
+
         &:hover {
           fill: $dark-grey;
         }
@@ -75,16 +76,16 @@
   .facet-values {
     padding-top: 5px;
     margin: 0;
-  
+
     list-style: none;
   }
 
   .facet-value {
     position: relative;
-  
+
     padding: 0 $button-padding-x;
     margin: 0;
-  
+
     &:hover {
       background-color: $light-grey;
     }
@@ -93,27 +94,29 @@
       display: block;
       padding: 5px 0;
       overflow: hidden;
-    
+
       font-size: $default-font-size;
       line-height: $facet-value-line-height;
       white-space: nowrap;
-    
+
       cursor: pointer;
 
       .label {
         display: block;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        margin-left: 0;
         padding-left: $checkbox-label-margin;
+        margin-left: 0;
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
-    
+
       .count {
         float: right;
+
         color: $medium-grey;
       }
-    
+
       button {
         float: left;
       }
@@ -121,33 +124,34 @@
 
     &.facet-more {
       .facet-more-button {
-        float: left;        
+        float: left;
+
         border: 2px dashed $medium-grey;
-      
+
         @extend .coveo-checkbox-button;
-      
+
         & + .label {
           top: -3px;
         }
-      
+
         &:before, &:after {
           position: absolute;
           top: 50%;
           left: 50%;
-      
+
           display: block;
-      
+
           content: '';
-      
+
           background-color: $medium-grey;
           transform: translate(-50%, -50%);
         }
-      
+
         &:before {
           width: $facet-checkbox-line-width;
           height: $facet-checkbox-mark-size;
         }
-      
+
         &:after {
           width: $facet-checkbox-mark-size;
           height: $facet-checkbox-line-width;
@@ -161,17 +165,16 @@
       &:hover .facet-more-button {
         border-style: solid;
       }
-
     }
   }
 
   .facet-search {
     margin: 10px $button-padding-x;
-  
+
     // @deprecated the prefix coveo is no longer used.
     .coveo-filter-container, .filter-container {
       width: 100%;
-  
+
       input.filter-box {
         width: 100%;
       }
@@ -183,20 +186,20 @@
     top: calc(100% - 25px);
     left: $button-padding-x;
     z-index: 999;
-  
+
     width: calc(100% - #{$button-padding-x} * 2);
     max-height: $facet-more-height;
     padding: $dropdown-choices-top-bottom-margin 0;
     margin: 3px 0;
     overflow-x: hidden;
     overflow-y: auto;
-  
+
     list-style: none;
-  
+
     background-color: $pure-white;
     border: 1px solid $medium-grey;
     border-radius: $border-radius;
-  
+
     @include slim-scroll($light-grey, $medium-grey);
   }
 }
