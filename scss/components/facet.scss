@@ -28,16 +28,6 @@
   background: $white;
   border-top-right-radius: $border-radius;
   border-top-left-radius: $border-radius;
-
-  .remove-selected-tooltip {
-    display: block;
-    height: 100%;
-  }
-}
-
-.facet-header-title {
-  font-family: $base-font-family;
-  font-size: $default-font-size;
 }
 
 .facet-header-eraser {
@@ -63,6 +53,16 @@
       fill: $dark-grey;
     }
   }
+}
+
+.remove-selected-tooltip {
+  display: block;
+  height: 100%;
+}
+
+.facet-header-title {
+  font-family: $base-font-family;
+  font-size: $default-font-size;
 }
 
 .facet-values {
