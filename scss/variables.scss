@@ -298,7 +298,7 @@ $selected-option-close-width: 22px;
 $dropdown-multiselect-icon-size: 12px;
 $dropdown-multiselect-icon-thickness: 2px;
 $dropdown-multiselect-icon-margin: 5px;
-$dropdown-multiselect-icon-position: calc($dropdown-multiselect-icon-size / 2 - $dropdown-multiselect-icon-thickness / 2);
+$dropdown-multiselect-icon-position: $dropdown-multiselect-icon-size / 2 - $dropdown-multiselect-icon-thickness / 2;
 
 // Chosen
 $chosen-clear-icon-size: 10px;
