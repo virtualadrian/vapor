@@ -1,0 +1,37 @@
+.logo-card {
+  border: $logo-card-border;
+  display: flex;
+  padding: $logo-card-padding;
+  margin: $logo-card-margin;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: default;
+
+    .logo-card-title {
+      color: $medium-grey;
+    }
+
+    .badge {
+      background-color: $medium-grey;
+    }
+
+    path {
+      fill: $medium-grey;
+    }
+  }
+}
+
+.logo-card-logo {
+  margin-right: 1rem;
+}
+
+.logo-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-card-title {
+  color: $logo-card-title-color;
+}
