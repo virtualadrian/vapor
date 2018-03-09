@@ -29,20 +29,20 @@
   &.top {
     top: $ribbon-y-offset;
     &.right {
-      transform: rotate(45deg);
+      transform: rotate($ribbon-rotation-angle);
     }
     &.left {
-      transform: rotate(-45deg);
+      transform: rotate(-$ribbon-rotation-angle);
     }
   }
 
   &.bottom {
     bottom: $ribbon-y-offset;
     &.right {
-      transform: rotate(-45deg);
+      transform: rotate(-$ribbon-rotation-angle);
     }
     &.left {
-      transform: rotate(45deg);
+      transform: rotate($ribbon-rotation-angle);
     }
   }
 }
