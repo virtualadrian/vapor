@@ -57,6 +57,7 @@
     VaporSVG.SVG = svgWrapper;
     VaporSVG.svgFromName = svgFromName;
     VaporSVG.svg = svgEnum;
+    VaporSVG.version = JSON.stringify(require('../../package.json').version);
 
     var root = this;
 
