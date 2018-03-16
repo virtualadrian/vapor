@@ -3,12 +3,15 @@
   z-index: $flippable-z-index;
 
   perspective: $flippable-perspective;
+
+  cursor: pointer;
 }
 
 .flipper {
   width: 100%;
 
   transform-style: preserve-3d;
+
   transition: transform $flippable-transition-duration;
 
   &.show-front {
@@ -29,6 +32,7 @@
 .flipper-back {
   position: absolute;
   top: 0;
+  right:  0;
 
   box-shadow: $flippable-shadow;
   transform: rotateY(-180deg);
@@ -37,7 +41,6 @@
 }
 
 %flipper-side {
-  width: 100%;
   margin: 0;
 
   background-color: $pure-white;
