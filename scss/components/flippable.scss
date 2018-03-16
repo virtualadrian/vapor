@@ -3,8 +3,6 @@
   z-index: $flippable-z-index;
 
   perspective: $flippable-perspective;
-
-  cursor: pointer;
 }
 
 .flipper {
@@ -25,6 +23,8 @@
 
 .flipper-front {
   transform: rotateY(0deg);
+
+  cursor: pointer;
 
   @extend %flipper-side;
 }
