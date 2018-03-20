@@ -14,7 +14,7 @@ gulp.task('palette', 'Generates the palette map with all the color variables', (
         paletteMap += `    ${sassVariable.slice(1)}: ${sassVariable},\n`;
     });
 
-    paletteMap += ');';
+    paletteMap += ');\n';
 
     fs.writeFile(to, paletteMap, done);
 });
