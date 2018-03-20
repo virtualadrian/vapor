@@ -38,7 +38,6 @@ $anakiwa: #4ED6FF;
 $java: #26E8CC;
 
 // Primary palette
-$coveo-blue: #004990;
 $science-blue: #0061C0;
 $dodger-blue: #3CA0FF;
 $tropilcal-rain-forest: #007766;
@@ -58,30 +57,30 @@ $coveo-salesforce-blue: #009ddc;
 
 // Grey palette
 $oxford-blue: #313a45;
-$coveo-grey: #94a9bf;
+$coveo-grey: $nepal;
 $grey-1: #f7f8f9;
 $grey-2: #eff3f7;
 $grey-3: #e4eaed;
 $grey-4: #cfd9e0;
-$grey-5: #b5c4cf;
+$grey-5: $heather;
 $grey-6: $coveo-grey;
-$grey-7: #8097aa;
-$grey-8: #5d7289;
+$grey-7: $bali-hai;
+$grey-8: $lynch;
 $grey-9: #4e5f71;
 $grey-10: #37424e;
 
 // Blue palette
 $blue-1: #cde7ff;
 $blue-2: #8fc9ff;
-$blue-3: #3ca0ff;
-$blue-4: #0d80ef;
-$blue-5: #0061c0;
+$blue-3: $dodger-blue;
+$blue-4: $azure;
+$blue-5: $science-blue;
 $blue-6: $coveo-blue;
 $blue-7: #00305c;
 $blue-8: #00284b;
 $blue-9: #00203a;
 $blue-10: #00101e;
-$astral: #296896;
+$astral: $light-blue;
 $matisse:#257BAB;
 $curious-blue-1:#218EC0;
 $curious-blue-2:#1DA2D5;
@@ -91,7 +90,7 @@ $onahau:#C6F2FF;
 $onahau-1:#B6EEFF;
 
 // Blue/Purple palette
-$coveo-blue-purple: #1E253F;
+$coveo-blue-purple: $mirage;
 $blue-purple-1: #3e5485;
 $blue-purple-2: #354878;
 $blue-purple-3: #2d385e;
@@ -108,13 +107,13 @@ $deep-teal: #003530;
 
 // Orange/Yellow palette
 $orange-1: #ffbc86;
-$orange-2: #ff9844;
+$orange-2: $neon-carrot;
 $orange-3: $coveo-orange;
 $orange-4: #ed731a;
-$orange-5: #e56613;
+$orange-5: $tango;
 $orange-6: #de590d;
 $orange-7: #d64c06;
-$orange-8: #ce3f00;
+$orange-8: $red;
 $tahiti-gold: #DC7704;
 $buttercup: #F39E08;
 $my-sin: #FFAC23;
