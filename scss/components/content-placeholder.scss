@@ -7,6 +7,7 @@
 	animation: content-placeholder-animated 1.5s infinite;
 }
 
+// inspired by https://github.com/buildo/react-placeholder/blob/master/src/reactPlaceholder.scss
 @keyframes content-placeholder-animated {
 	0% {
 	  opacity: .6;
