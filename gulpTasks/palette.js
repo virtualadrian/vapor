@@ -3,18 +3,13 @@ const fs = require('fs');
 const _ = require('underscore');
 
 gulp.task('palette', 'Generates the palette map with all the color variables', (done) => {
-    const from = './scss/common/palette.scss';
-    const to = './scss/common/palette-map.scss';
-    const paletteFileContent = fs.readFileSync(from, 'utf8');
-    const sassVariables = paletteFileContent.match(/\$.+(?=:)/g); //.exec(fileContent);
+    const paletteMap = fs.readFileSync('./scss/common/palette.scss', 'utf8')
+        .match(/\$.+(?=:)/g)
+        .reduce(
+        (partialPalette, sassVariable) => `${partialPalette}    ${sassVariable.slice(1)}: ${sassVariable},\n`,
+        '$palette: (\n'
+        )
+        .concat(');\n');
 
-    let paletteMap = '$palette: (\n';
-
-    _.each(sassVariables, (sassVariable) => {
-        paletteMap += `    ${sassVariable.slice(1)}: ${sassVariable},\n`;
-    });
-
-    paletteMap += ');\n';
-
-    fs.writeFile(to, paletteMap, done);
+    fs.writeFile('./scss/common/palette-map.scss', paletteMap, done);
 });
