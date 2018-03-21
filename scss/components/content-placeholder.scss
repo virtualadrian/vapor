@@ -10,12 +10,12 @@
 // inspired by https://github.com/buildo/react-placeholder/blob/master/src/reactPlaceholder.scss
 @keyframes content-placeholder-animated {
 	0% {
-	  opacity: .6;
+	  opacity: $content-placeholder-opacity-see-through;
 	}
 	50% {
-	  opacity: 1;
+	  opacity: $content-placeholder-opacity-full;
 	}
 	100% {
-	  opacity: .6;
+	  opacity: $content-placeholder-opacity-see-through;
 	}
 }
