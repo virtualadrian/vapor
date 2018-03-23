@@ -2,14 +2,14 @@
   background-color: $pure-white;
   box-shadow: $material-card-shadow;
   border-radius: $border-radius;
-}
 
-.material-card .color-bar-border .color-bar-color {
-  &:first-child {
-      border-bottom-left-radius: $border-radius;
-  }
-
-  &:last-child {
-      border-bottom-right-radius: $border-radius;
+  .color-bar-border .color-bar-color {
+    &:first-child {
+        border-bottom-left-radius: $border-radius;
+    }
+  
+    &:last-child {
+        border-bottom-right-radius: $border-radius;
+    }
   }
 }
