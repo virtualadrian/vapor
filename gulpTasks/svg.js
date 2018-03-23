@@ -21,7 +21,8 @@ function Dictionary(from) {
         const that = this;
         _.each(_.keys(this.json), (key) => {
             const camelizedKey = s.camelize(key);
-            code += '        ' + camelizedKey + ': { name : \'' + camelizedKey + '\', svgString : ' + JSON.stringify(that.json[key]) + ', render : function(svgClass, spanClass, title, attr) { return svgWrapper(' + JSON.stringify(that.json[key]) + ', svgClass, spanClass, title, attr); } }, \n';
+            const svgString = JSON.stringify(that.json[key]);
+            code += '        ' + camelizedKey + ': { name : \'' + camelizedKey + '\', svgString : ' + svgString + ', render : function(svgClass, spanClass, title, attr) { return svgWrapper(' + svgString + ', svgClass, spanClass, title, attr); } }, \n';
         });
         code += '    };';
 
