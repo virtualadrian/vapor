@@ -32,7 +32,7 @@ function Dictionary(from) {
     this.writeVaporSvgVersionFile = (to) => {
         const code = 'VaporSVG.version = ' + JSON.stringify(require('../package.json').version) + ';';
         fs.writeFileSync(to, code);
-    }
+    };
 }
 
 gulp.task('svg:concat', 'Concat all svg files into one in a json format and export it to dist/svg', () => {

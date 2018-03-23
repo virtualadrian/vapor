@@ -2,6 +2,7 @@
 @import 'dependencies';
 @import 'common/common';
 @import 'common/palette';
+@import 'common/palette-map';
 @import 'common/font';
 @import 'custom-reset';
 @import 'sprites';
@@ -101,6 +102,9 @@
   @import 'components/corner-ribbon';
   @import 'components/logo-card';
   @import 'components/flippable';
+  @import 'components/material-card';
+  @import 'components/content-placeholder';
+  @import 'components/search-bar';
   // Forms
   @import 'forms/form-sections';
   @import 'forms/form-child';
