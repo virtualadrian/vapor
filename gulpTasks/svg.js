@@ -36,11 +36,13 @@ function Dictionary(from) {
 }
 
 gulp.task('svg:concat', 'Concat all svg files into one in a json format and export it to dist/svg', () => {
-    return merge(
+    const src = merge(
         gulp.src('./resources/icons/svg/*.svg'),
         // taken from https://github.com/coveo/search-ui/tree/master/image/svg/filetypes . Update as needed.
         gulp.src('./resources/icons/svg/coveo-search-ui-filetypes/*.svg').pipe(rename({prefix: 'ft-'}))
-    )
+    );
+
+    return src
         .pipe(svgmin({
             plugins: [{
                 removeAttrs: {
