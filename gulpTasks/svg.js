@@ -23,7 +23,7 @@ function Dictionary(from) {
         _.each(_.keys(this.json), (key) => {
             const camelizedKey = s.camelize(key);
             const svgString = JSON.stringify(that.json[key]);
-            code += '        ' + camelizedKey + ': { name : \'' + camelizedKey + '\', svgString : ' + svgString + ', render : function(svgClass, spanClass, title, attr) { return svgWrapper(VaporSVG.svg[' + camelizedKey + '].svgString, svgClass, spanClass, title, attr); } }, \n';
+            code += '        ' + camelizedKey + ': { name : \'' + camelizedKey + '\', svgString : ' + svgString + ', render : function(svgClass, spanClass, title, attr) { return svgWrapper(VaporSVG.svg[\'' + camelizedKey + '\'].svgString, svgClass, spanClass, title, attr); } }, \n';
         });
         code += '    };';
 
