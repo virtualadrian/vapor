@@ -1,4 +1,5 @@
 const gulp = require('gulp-help')(require('gulp'));
+const merge = require('merge-stream');
 const svgmin = require('gulp-svgmin');
 const filesToJson = require('gulp-files-to-json');
 const cheerio = require('gulp-cheerio');
@@ -22,7 +23,7 @@ function Dictionary(from) {
         _.each(_.keys(this.json), (key) => {
             const camelizedKey = s.camelize(key);
             const svgString = JSON.stringify(that.json[key]);
-            code += '        ' + camelizedKey + ': { name : \'' + camelizedKey + '\', svgString : ' + svgString + ', render : function(svgClass, spanClass, title, attr) { return svgWrapper(' + svgString + ', svgClass, spanClass, title, attr); } }, \n';
+            code += '        ' + camelizedKey + ': { name : \'' + camelizedKey + '\', svgString : ' + svgString + ', render : function(svgClass, spanClass, title, attr) { return svgWrapper(VaporSVG.svg[' + camelizedKey + '].svgString, svgClass, spanClass, title, attr); } }, \n';
         });
         code += '    };';
 
@@ -36,7 +37,13 @@ function Dictionary(from) {
 }
 
 gulp.task('svg:concat', 'Concat all svg files into one in a json format and export it to dist/svg', () => {
-    return gulp.src('./resources/icons/svg/*.svg')
+    const src = merge(
+        gulp.src('./resources/icons/svg/*.svg'),
+        // taken from https://github.com/coveo/search-ui/tree/master/image/svg/filetypes . Update as needed.
+        gulp.src('./resources/icons/svg/coveo-search-ui-filetypes/*.svg').pipe(rename({ prefix: 'ft-' }))
+    );
+
+    return src
         .pipe(svgmin({
             plugins: [{
                 removeAttrs: {
@@ -80,8 +87,8 @@ gulp.task('svg:enum', 'Enumerate the svgs in a variable', ['svg:concat'], () => 
     dict.writeVaporSvgVersionFile('tmp/version.js');
 
     gulp.src('resources/js/VaporSVG.js')
-        .pipe(gfi({'/* SVG Enum */': 'tmp/svg.js'}))
-        .pipe(gfi({'/* VaporSVG version */': 'tmp/version.js'}))
+        .pipe(gfi({ '/* SVG Enum */': 'tmp/svg.js' }))
+        .pipe(gfi({ '/* VaporSVG version */': 'tmp/version.js' }))
         .pipe(gulp.dest('dist/js/'));
 });
 
