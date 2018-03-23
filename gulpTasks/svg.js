@@ -40,7 +40,7 @@ gulp.task('svg:concat', 'Concat all svg files into one in a json format and expo
     const src = merge(
         gulp.src('./resources/icons/svg/*.svg'),
         // taken from https://github.com/coveo/search-ui/tree/master/image/svg/filetypes . Update as needed.
-        gulp.src('./resources/icons/svg/coveo-search-ui-filetypes/*.svg').pipe(rename({ prefix: 'ft-' }))
+        gulp.src('./resources/icons/svg/coveo-search-ui-filetypes/*.svg').pipe(rename({prefix: 'ft-'}))
     );
 
     return src
@@ -57,7 +57,7 @@ gulp.task('svg:concat', 'Concat all svg files into one in a json format and expo
         }))
         .pipe(cheerio(($) => {
             // tslint:disable-next-line
-            $('svg').each(function () {
+            $('svg').each(function() {
                 const svg = $(this);
                 if (svg) {
                     const attrs = svg[0].attribs;
@@ -87,8 +87,8 @@ gulp.task('svg:enum', 'Enumerate the svgs in a variable', ['svg:concat'], () => 
     dict.writeVaporSvgVersionFile('tmp/version.js');
 
     gulp.src('resources/js/VaporSVG.js')
-        .pipe(gfi({ '/* SVG Enum */': 'tmp/svg.js' }))
-        .pipe(gfi({ '/* VaporSVG version */': 'tmp/version.js' }))
+        .pipe(gfi({'/* SVG Enum */': 'tmp/svg.js'}))
+        .pipe(gfi({'/* VaporSVG version */': 'tmp/version.js'}))
         .pipe(gulp.dest('dist/js/'));
 });
 
