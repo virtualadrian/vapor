@@ -7,16 +7,17 @@
     position: relative;
     bottom: 0;
     left: 0;
+
     line-height: $material-card-colored-border-height;
-    
+
     .color-bar-color {
-    &:first-child {
+      &:first-child {
         border-bottom-left-radius: $border-radius;
-    }
-  
-    &:last-child {
+      }
+
+      &:last-child {
         border-bottom-right-radius: $border-radius;
+      }
     }
   }
-}
 }
