@@ -49,3 +49,8 @@ input[type='text'], textarea {
     border-radius: 0 2px 2px 0;
   }
 }
+
+.coveo-form .form-group .half-input, .half-input {
+  display: inline-block;
+  width: $half-input-width;
+}
