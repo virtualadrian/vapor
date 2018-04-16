@@ -310,6 +310,7 @@ $dropdown-button-min-width: 260px;
 $dropdown-toggle-append-width: 40px;
 $dropdown-option-append-width: 60px;
 $dropdown-toggle-right-padding: $button-padding-x + $dropdown-arrow-icon-size + $dropdown-icon-text-spacing;
+$dropdown-toggle-with-append-right-padding: $default-margin + $dropdown-toggle-append-width;
 
 //Dropdown Multiselect
 $drowdown-multiselect-margin: 2px;

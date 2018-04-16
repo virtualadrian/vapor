@@ -34,12 +34,13 @@
   display: inline-block;
   width: 100%;
   overflow: hidden;
+
   text-overflow: ellipsis;
   text-transform: none;
   white-space: nowrap;
 
   &.with-append {
-    width: calc(100% - #{$default-margin + $dropdown-toggle-append-width});
+    width: calc(100% - #{$dropdown-toggle-with-append-right-padding});
   }
 }
 
@@ -70,9 +71,10 @@
   }
 
   .dropdown-option-append {
-    width: $dropdown-toggle-append-width;
-    color: $medium-blue;
     float: right;
+    width: $dropdown-toggle-append-width;
+
+    color: $medium-blue;
     text-align: right;
   }
 
@@ -113,7 +115,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .dropdown-menu {
@@ -162,8 +164,9 @@
     }
 
     > a, > span {
-      @extend %dropdown-option-line-style;
       width: 100%;
+
+      @extend %dropdown-option-line-style;
 
       &.state-selected {
         color: $dark-blue;
@@ -203,8 +206,9 @@
 
 
     .dropdown-option-append {
-      @extend %dropdown-option-line-style;
       width: $dropdown-option-append-width;
+
+      @extend %dropdown-option-line-style;
     }
   }
 }
