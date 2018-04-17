@@ -106,12 +106,12 @@
 
 %dropdown-option-line-style {
   display: inline-block;
-  padding: 8px $button-padding-x;
+  padding: $dropdown-option-padding;
   overflow: hidden;
 
   color: $dark-grey;
   font-size: $dropdown-choice-font-size;
-  line-height: 16px;
+  line-height: $default-line-height;
   text-overflow: ellipsis;
   white-space: nowrap;
 
