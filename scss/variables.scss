@@ -197,10 +197,10 @@ $navigation-section-icon-margin-left: 15px;
 $navigation-section-arrow-margin: 15px;
 $navigation-horizontal-space: $navigation-section-icon-margin-right + $navigation-section-icon-margin-left +
   $navigation-section-icon-size - $navigation-active-border-width;
+$navigation-right-margin: $navigation-section-arrow-margin;
 $navigation-locked-color: $medium-grey;
 $navigation-tag-font-size: 9px;
 $navigation-tag-padding: 2px 5px;
-$navigation-tag-right-margin: -20px;
 $navigation-menu-section-height: 35px;
 $navigation-loading-height: 12px;
 $navigation-loading-item-border-radius: 10px;
