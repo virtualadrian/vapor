@@ -192,11 +192,11 @@ $navigation-background-color: $purple-blue;
 $navigation-active-background-color: #354667;
 $navigation-active-border-width: 3px;
 $navigation-section-icon-size: 16px;
-$navigation-section-icon-margin-right: 10px;
+$navigation-section-icon-margin-right: 6px;
 $navigation-section-icon-margin-left: 15px;
 $navigation-section-arrow-margin: 15px;
 $navigation-horizontal-space: $navigation-section-icon-margin-right + $navigation-section-icon-margin-left +
-  $navigation-section-icon-size - $navigation-active-border-width;
+  $navigation-section-icon-size + $navigation-margin-for-scroll-bar;
 $navigation-right-margin: $navigation-section-arrow-margin;
 $navigation-locked-color: $medium-grey;
 $navigation-tag-font-size: 9px;
