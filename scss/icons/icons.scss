@@ -82,6 +82,7 @@
 .with-hover svg {
   position: relative;
   z-index: 2;
+  transition: fill 0.5s ease;
 }
 
 .icon-hover-right:hover {
