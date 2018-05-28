@@ -172,7 +172,7 @@ table:not(.datepicker-table) {
       &.enabled:active:hover {
         border-radius: $border-radius;
       }
-      
+
       &.disabled {
         cursor: default;
         opacity: 0.3;
