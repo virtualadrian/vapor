@@ -9,12 +9,6 @@
 
   @include slim-scroll($purple-blue, rgba(255,255,255,0.5));
   &::-webkit-scrollbar, ::-webkit-scrollbar {
-    display: none;
-  }
-  &:hover::-webkit-scrollbar, :hover::-webkit-scrollbar {
-    display: initial;
-  }
-  &::-webkit-scrollbar, ::-webkit-scrollbar {
     width: $slim-scroll-bar-width + $navigation-border-for-scroll-bar * 2;
     height: $slim-scroll-bar-width + $navigation-border-for-scroll-bar * 2;
   }
