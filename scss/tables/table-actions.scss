@@ -79,8 +79,8 @@
 
     .action-icon, .action-icon svg {
       display: inline-block;
-      width: 26px;
-      height: 26px;
+      width: $action-icons-size;
+      height: $action-icons-size;
     }
 
     &.prompt-action {
