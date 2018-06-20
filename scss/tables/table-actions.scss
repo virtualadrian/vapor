@@ -139,10 +139,6 @@
       font-size: $button-small-font-size;
     }
 
-    .action-icon, .action-icon svg {
-      width: $table-small-svg-width;
-    }
-
     .action + .action {
       margin-left: ($table-actions-margin / 2);
     }
