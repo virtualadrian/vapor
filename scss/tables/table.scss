@@ -94,10 +94,6 @@
     &:first-child {
       padding-left: 20px;
     }
-
-    .coveo-checkbox-label {
-      vertical-align: bottom;
-    }
   }
 
   thead.mod-no-border-top th {
@@ -186,8 +182,6 @@
     .coveo-checkbox-label {
       position: relative;
       top: -1px; // Small hack to make it work in all browsers...
-
-      vertical-align: text-bottom;
     }
   }
 
