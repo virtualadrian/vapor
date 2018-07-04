@@ -88,7 +88,6 @@
 
   display: flex;
   padding: $facet-value-spacing 0;
-  overflow: hidden;
 
   font-size: $default-font-size;
   line-height: $facet-value-line-height;
@@ -123,6 +122,86 @@
 
   .label {
     color: $blue;
+  }
+}
+
+.text-exclude {
+  text-decoration: line-through;
+}
+
+.facet-exclude {
+  padding-right: $facet-exclude-padding-right;
+
+  .exclude-icon {
+    display: none;
+    position: relative;
+    height: $facet-exclude-checkbox-icon-size;
+    width: $facet-exclude-checkbox-icon-size;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .facet-exclude-button {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width:  $facet-exclude-padding-right;
+    
+    .exclude-button {
+      display: none;
+
+      height: $facet-exclude-button-size;
+      width: $facet-exclude-button-size;
+
+      background:  $pure-white;
+      border: $default-border;
+      border-radius: $border-radius;
+
+      .icon {
+        display: block;
+        position: relative;
+
+        height: $facet-exclude-button-icon-size;
+        width: $facet-exclude-button-icon-size;
+
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &:hover .exclude-button {
+      display: flex;
+    }
+
+    .coveo-checkbox:checked + .exclude-button {
+      display: none;
+    }
+
+    + .coveo-checkbox-label > button.exclude-box,
+    &:hover + .coveo-checkbox-label > button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $pure-white;
+      border: $checkbox-default-border;
+
+      &:before {
+        content: none;
+      }
+
+      .exclude-icon {
+        display: block;
+      }
+    }
   }
 }
 
