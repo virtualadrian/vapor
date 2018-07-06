@@ -37,6 +37,16 @@
   @extend .selected-option-item;
 }
 
+.move-option {
+  justify-content: center;
+
+  display: inline-flex;
+  height: 100%;
+  margin-right: $dropdown-multiselect-items-margin;
+
+  cursor: move;
+}
+
 .remove-option {
   align-items: center;
   flex-direction: row;
