@@ -40,11 +40,8 @@
 .move-option {
   justify-content: center;
 
-  display: inline-flex;
   height: 100%;
   margin-right: $dropdown-multiselect-items-margin;
-
-  cursor: move;
 }
 
 .remove-option {
