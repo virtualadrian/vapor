@@ -202,3 +202,17 @@
     margin-left: $button-margin-width;
   }
 }
+
+.btn-hover {
+  color: $medium-grey;
+
+  &:hover {
+    svg {
+      fill: $links-color;
+    }
+
+    span {
+      color: $links-color;
+    }
+  }
+}
