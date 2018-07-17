@@ -221,3 +221,19 @@
     border-radius: 3px;
   }
 }
+
+.row-success {
+  > td:first-child {
+    border-left-color: $green;
+  }
+}
+.row-warning {
+  > td:first-child {
+    border-left-color: $orange-1;
+  }
+}
+.row-error {
+  > td:first-child {
+    border-left-color: $red;
+  }
+}
