@@ -204,9 +204,11 @@
 }
 
 .btn-hover:hover {
-  svg {
+  .icon {
     fill: $links-color;
   }
 
-  color: $links-color;
+  .btn-hover-text {
+    color: $links-color;
+  }
 }
