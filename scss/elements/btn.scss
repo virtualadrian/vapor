@@ -203,16 +203,10 @@
   }
 }
 
-.btn-hover {
-  color: $medium-grey;
-
-  &:hover {
-    svg {
-      fill: $links-color;
-    }
-
-    span {
-      color: $links-color;
-    }
+.btn-hover:hover {
+  svg {
+    fill: $links-color;
   }
+
+  color: $links-color;
 }
