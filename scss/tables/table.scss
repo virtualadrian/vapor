@@ -221,18 +221,48 @@
   }
 }
 
+.state-icon-row {
+  width: 25px;
+  height: 25px;
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+}
+
 .row-success {
   > td:first-child {
     border-left-color: $green;
+    color: $green;
+    svg {
+      fill: $green;
+    }
   }
 }
 .row-warning {
   > td:first-child {
     border-left-color: $orange-2;
+    color: $orange-2;
+    svg {
+      fill: $orange-2;
+    }
   }
 }
 .row-error {
   > td:first-child {
     border-left-color: $red;
+    color: $red;
+    svg {
+      fill: $red;
+    }
+  }
+}
+.row-disabled {
+  color: $dark-medium-grey;
+  > td:first-child {
+    border-left-color: $dark-medium-grey;
+  }
+  svg {
+    fill: $dark-medium-grey
   }
 }
