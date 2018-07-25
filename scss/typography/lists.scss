@@ -1,0 +1,60 @@
+.list-reset {
+  padding-left: 0;
+
+  list-style: none;
+}
+
+/* @deprecated use .list-disc instead */
+.bullet-list {
+  padding-left: $list-padding;
+
+  list-style: disc;
+
+  li {
+    margin-bottom: $box-spacing;
+  }
+}
+
+%list {
+  padding-left: $list-padding;
+
+  li {
+    margin-bottom: $box-spacing;
+  }
+}
+
+.list-decimal {
+  list-style: decimal;
+
+  @extend %list;
+}
+
+.list-circle {
+  list-style: circle;
+
+  @extend %list;
+}
+
+.list-disc {
+  list-style: disc;
+
+  @extend %list;
+}
+
+.list-square {
+  list-style: square;
+
+  @extend %list;
+}
+
+.list-lower-alpha {
+  list-style: lower-alpha;
+
+  @extend %list;
+}
+
+.list-upper-alpha {
+  list-style: upper-alpha;
+
+  @extend %list;
+}
