@@ -230,30 +230,20 @@
   }
 }
 
-.row-success {
-  > td:first-child {
-    border-left-color: $green;
-    color: $green;
-    svg {
-      fill: $green;
-    }
-  }
-}
-.row-warning {
-  > td:first-child {
-    border-left-color: $orange-2;
-    color: $orange-2;
-    svg {
-      fill: $orange-2;
-    }
-  }
-}
-.row-error {
-  > td:first-child {
-    border-left-color: $red;
-    color: $red;
-    svg {
-      fill: $red;
+$row-style: (
+  success: $green,
+  warning: $orange-2,
+  error: $red,
+);
+
+@each $style, $color in $row-style {
+  .row-#{$style} {
+    > td:first-child {
+      border-left-color: $color;
+      color: $color;
+      svg {
+        fill: $color;
+      }
     }
   }
 }
