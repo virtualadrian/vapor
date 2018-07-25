@@ -216,14 +216,14 @@
 .table-container {
   &.table-shadow {
     overflow: hidden;
-    box-shadow: 0px 2px 8px 1px $medium-grey;
-    border-radius: 3px;
+    box-shadow: $table-shadow;
+    border-radius: $border-radius;
   }
 }
 
 .state-icon-row {
-  width: 25px;
-  height: 25px;
+  width: $table-state-icon-size;
+  height: $table-state-icon-size;
   svg {
     width: inherit;
     height: inherit;
