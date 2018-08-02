@@ -13,14 +13,12 @@
   position: relative;
   z-index: $flippable-z-index;
 
+  width: 100%;
+
   perspective: $flippable-perspective;
   transform-style: preserve-3d;
 
   transition: z-index $flippable-transition-duration;
-}
-
-.flippable {
-  width: 100%;
 }
 
 .flipper {
@@ -56,6 +54,8 @@
 
   backface-visibility: hidden;
   transition: transform $flippable-transition-duration;
+
+  cursor: pointer;
 
   @extend %flipper-side;
 }
