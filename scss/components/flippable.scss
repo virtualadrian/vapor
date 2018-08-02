@@ -15,6 +15,7 @@
 
   perspective: $flippable-perspective;
   transform-style: preserve-3d;
+  transition: z-index $flippable-transition-duration;
 }
 
 .flippable {
@@ -26,7 +27,7 @@
 
   transform-style: preserve-3d;
 
-  transition: $flippable-transition-duration;
+  transition: transform $flippable-transition-duration;
 
   &.show-back {
     .flipper-back {
@@ -34,13 +35,13 @@
     }
 
     .flipper-front {
-      transform: rotateY(-180deg);
+      transform: rotateY(180deg);
     }
   }
 
   &.show-front {
     .flipper-back {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
     }
 
     .flipper-front {
@@ -53,7 +54,7 @@
   transform-style: preserve-3d;
 
   backface-visibility: hidden;
-  transition: $flippable-transition-duration;
+  transition: transform $flippable-transition-duration;
 
   @extend %flipper-side;
 }
@@ -61,7 +62,7 @@
 .flipper-front {
   z-index: 2;
 
-  transform: rotateY(180deg);
+  transform: rotateY(0);
 }
 
 .flipper-back {
