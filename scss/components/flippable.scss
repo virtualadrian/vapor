@@ -15,6 +15,7 @@
 
   perspective: $flippable-perspective;
   transform-style: preserve-3d;
+
   transition: z-index $flippable-transition-duration;
 }
 
