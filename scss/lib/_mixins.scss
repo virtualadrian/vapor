@@ -20,12 +20,27 @@
 }
 
 @mixin placeholder($text-color: $medium-grey, $font-family: $base-font-family) {
-  &::placeholder {
-    color: $text-color;
+  &::placeholder, &:-ms-input-placeholder {
     font-family: $font-family;
     font-size: inherit;
     text-transform: none;
-
+  }
+  
+  &::placeholder {
+    color: $text-color;
     transition: color 0.2s ease;
+  }
+
+  &:-ms-input-placeholder {
+    // IE11 treats input placeholders like input text. This bug has been known for some time but has yet
+    // to be fixed.
+    //
+    // The !important is necessary to ensure the Vapor CSS styles regarding the placeholder are applied.
+    // If the keyword is removed, and a Vapor user customizes the colour of the input text,
+    // the placeholder will always be visible in IE11 and will overlap with a label if present.
+    //
+    // Adding !important allows consumers of Vapor to customize the colour of input text without affecting
+    // the visibility of the placeholder inside IE11.
+    color: $text-color !important;
   }
 }
