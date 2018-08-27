@@ -157,4 +157,10 @@ $(document).ready(function () {
     $('.flippable').click(function () {
         $(this).find('.flipper').toggleClass('show-back').toggleClass('show-front');
     });
+
+    // handle side nav toggle
+    document.querySelector('label.header-hamburger').addEventListener('click', () => {
+        document.querySelector('.navigation').classList.toggle('navigation-opened');
+        document.querySelector('.application-container').classList.toggle('navigation-opened');
+    });
 });
