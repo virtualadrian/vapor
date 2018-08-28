@@ -173,10 +173,10 @@
   margin-left: -$navigation-width;
 
   transition: transform $navigation-side-nav-toggle-anim-duration ease-in-out;
+}
 
-  &.navigation-opened {
-    transform: translateX($navigation-width);
+.navigation-opened {
+  transform: translateX($navigation-width);
 
-    transition: transform $navigation-side-nav-toggle-anim-duration ease-in-out;
-  }
+  transition: transform $navigation-side-nav-toggle-anim-duration ease-in-out;
 }
