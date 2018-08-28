@@ -30,7 +30,7 @@
   background-color: transparent;
   border: none;
 
-  transition: opacity $navigation-side-nav-toggle-anim-duration ease;
+  transition: opacity $navigation-side-nav-toggle-anim-duration ease-in-out;
 
   cursor: pointer;
   opacity: 0.7;
@@ -43,7 +43,7 @@
 }
 
 .header-hamburger-opened {
-  transition: opacity $navigation-side-nav-toggle-anim-duration ease;
+  transition: opacity $navigation-side-nav-toggle-anim-duration ease-in-out;
 
   opacity: 0.3;
 }
