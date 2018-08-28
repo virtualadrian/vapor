@@ -24,17 +24,21 @@
   height: $panel-header-height;
 }
 
-.input-header-hamburger {
-  ~ .header-hamburger {
-    margin: $header-hamburger-margin;
-    cursor: pointer;
-    fill: $pure-white;
-    opacity: 0.7;
-    transition: opacity $navigation-side-nav-toggle-anim-duration ease;
-  }
+.header-hamburger {
+  background-color: transparent;
+  border: none;
+  padding: $header-hamburger-margin;
+  cursor: pointer;
+  fill: $pure-white;
+  opacity: 0.7;
+  transition: opacity $navigation-side-nav-toggle-anim-duration ease;
 
-  &:checked ~ .header-hamburger {
-    opacity: 0.3;
-    transition: opacity $navigation-side-nav-toggle-anim-duration ease;
+  &:focus {
+    outline-width: 0;
   }
+}
+
+.header-hamburger-opened {
+  opacity: 0.3;
+  transition: opacity $navigation-side-nav-toggle-anim-duration ease;
 }

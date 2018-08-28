@@ -159,8 +159,9 @@ $(document).ready(function () {
     });
 
     // handle side nav toggle
-    document.querySelector('label.header-hamburger').addEventListener('click', () => {
+    document.querySelector('.header-hamburger').addEventListener('click', () => {
         document.querySelector('.navigation').classList.toggle('navigation-opened');
-        document.querySelector('.application-container').classList.toggle('navigation-opened');
+        document.querySelector('.application-container').classList.toggle('application-container-with-navigation');
+        document.querySelector('.header-hamburger').classList.toggle('header-hamburger-opened');
     });
 });
