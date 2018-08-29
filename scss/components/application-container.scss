@@ -6,6 +6,12 @@
   overflow: auto;
 
   border-top-left-radius: 2px;
+
+  transition: padding-left $navigation-toggle-duration ease-in-out;
+}
+
+.application-container-with-navigation {
+  padding-left: $navigation-width;
 }
 
 .application-wrapper {

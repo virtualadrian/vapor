@@ -168,3 +168,12 @@
     transform: translateY(-50%) rotate(180deg);
   }
 }
+
+.navigation {
+  margin-left: -$navigation-width;
+  transition: transform $navigation-toggle-duration ease-in-out; 
+}
+
+.navigation-opened {
+  transform: translateX($navigation-width);
+}
