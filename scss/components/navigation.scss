@@ -170,10 +170,9 @@
 }
 
 .navigation {
-  margin-left: -$navigation-width;
-  transition: transform $navigation-toggle-duration ease-in-out; 
+  @extend %navigation-toggle-closed;   
 }
 
 .navigation-opened {
-  transform: translateX($navigation-width);
+  @extend %navigation-toggle-opened;
 }

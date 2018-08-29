@@ -26,7 +26,7 @@
 }
 
 .header-hamburger {
-  padding: 15px 20px;
+  padding: $header-hamburger-padding;
 
   background-color: transparent;
   border: none;
@@ -36,11 +36,11 @@
 
   transition: opacity $navigation-toggle-duration ease-in-out;
 
-  opacity: 0.7;
+  opacity: $transparency-2;
 }
 
 .header-hamburger-opened {
   transition: opacity $navigation-toggle-duration ease-in-out;
 
-  opacity: 0.3;
+  opacity: $transparency-4;
 }
