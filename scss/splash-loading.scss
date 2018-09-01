@@ -1,0 +1,81 @@
+@mixin dot-motion($anim-name) {
+  animation: $anim-name $splash-loading-duration ease-in-out reverse infinite;
+}
+
+.splash-loading-dot-container {
+  transform: scale(1.5);
+}
+.splash-loading-container {
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  display: flex;
+  width: 100%;
+  height: 80vh;
+}
+
+.splash-loading-text {
+  margin-top: $default-margin * 5;
+
+  font-family: sans-serif;
+  font-size: $big-font-size;
+}
+
+.splash-loading-dot-1, .splash-loading-dot-2, .splash-loading-dot-3 {
+  width: $default-font-size;
+  height: $default-font-size;
+  margin: $default-margin * 2;
+
+  background: $neon-carrot;
+  border-radius: 100%;
+}
+
+.splash-loading-dot-1 {
+  transform: translateX(-40px);
+
+  @include dot-motion(move-dot-1);
+}
+
+
+.splash-loading-dot-2 {
+  transform: translateX(40px) scale(1.5, 1.5);
+
+  @include dot-motion(move-dot-2);
+}
+
+.splash-loading-dot-3 {
+  transform: translateX(-40px) scale(1.8, 1.8);
+
+  @include dot-motion(move-dot-3);
+}
+
+@keyframes move-dot-1 {
+  33% {
+    transform: translate(-40px, 70px) scale(1.8, 1.8);
+  }
+
+  66% {
+    transform: translate(40px, 35px) scale(1.5, 1.5);
+  }
+}
+
+@keyframes move-dot-2 {
+  33% {
+    transform: translate(-40px, -35px);
+  }
+
+  66% {
+    transform: translate(-40px, 35px) scale(1.8, 1.8);
+  }
+}
+
+@keyframes move-dot-3 {
+  33% {
+    transform: translate(40px, -35px) scale(1.5, 1.5);
+  }
+
+  66% {
+    transform: translate(-40px, -70px);
+  }
+}
