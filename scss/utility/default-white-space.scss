@@ -11,9 +11,6 @@
     .#{$defaultOrHalf}-#{$whiteSpace} {
       #{$whiteSpace}: set-white-space($defaultOrHalf);
     }
-    .#{$defaultOrHalf}-#{$whiteSpace} {
-      #{$whiteSpace}: set-white-space($defaultOrHalf);
-    }
     
     .#{$defaultOrHalf}-#{$whiteSpace}-x {
       #{$whiteSpace}-right: set-white-space($defaultOrHalf);
