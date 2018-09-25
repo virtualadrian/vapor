@@ -14,4 +14,8 @@
   .border-#{nth($color, 1)} {
     border-color: nth($color, 2);
   }
+
+  .border-t-#{nth($color, 1)} {
+    border-top-color: nth($color, 2);
+  }
 }
