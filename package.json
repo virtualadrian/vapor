@@ -14,11 +14,10 @@
   "license": "MIT",
   "main": "dist/js/VaporSVG",
   "scripts": {
-    "test": "",
     "clean": "gulp clean",
-    "compile": "gulp docs",
+    "build": "gulp docs",
     "buildpages": "bundle exec jekyll build",
-    "start": "npm run",
+    "start": "npm run build && bundle exec jekyll server",
     "lint": "csscomb -l scss/**/*.scss",
     "version": "gulp clean && npm run compile",
     "reconstruct": "gulp clean --all && npm install && gulp",
@@ -26,7 +25,7 @@
   },
   "pre-commit": [
     "lint",
-    "compile"
+    "build"
   ],
   "repository": {
     "type": "git",
