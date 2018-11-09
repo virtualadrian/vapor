@@ -20,7 +20,7 @@ cache:
 
 script:
  - npm run-script lint
- - npm run-script compile
+ - npm run-script build
  - npm run-script buildpages
 
 notifications:
